@@ -93,14 +93,20 @@ the experiment settings and interpretations.
 ```bash
 # 25 agents: K = 1 and K = ceil(log2 N)
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_one_peer_n6 MAgent_AdvPursuit ExpoComm_AdvPursuit45_s0
+
+
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n6   MAgent_AdvPursuit ExpoComm_AdvPursuit45_s0
 
 # 45 agents
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_one_peer_n7 MAgent_AdvPursuit ExpoComm_AdvPursuit60_s0
+
+
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n7   MAgent_AdvPursuit ExpoComm_AdvPursuit60_s0
 
 # 61 agents
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_one_peer_n7 MAgent_AdvPursuit ExpoComm_AdvPursuit70_s0
+
+
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n7   MAgent_AdvPursuit ExpoComm_AdvPursuit70_s0
 ```
 
@@ -109,14 +115,20 @@ sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n7   MAgent_AdvPursuit Expo
 ```bash
 # 20 agents
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_one_peer_n6 MAgent_Battle ExpoComm_Battle25_s0
+
+
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n6   MAgent_Battle ExpoComm_Battle25_s0
 
 # 42 agents
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_one_peer_n7 MAgent_Battle ExpoComm_Battle35_s0
+
+
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n7   MAgent_Battle ExpoComm_Battle35_s0
 
 # 64 agents
 sbatch -p gpu-long --nodelist=xgpf7 run_reproduce_expocomm.sh iql_ExpoComm_one_peer_n7 MAgent_Battle ExpoComm_Battle40_s0
+
+
 sbatch run_reproduce_expocomm.sh iql_ExpoComm_static_n7   MAgent_Battle ExpoComm_Battle40_s0
 ```
 
