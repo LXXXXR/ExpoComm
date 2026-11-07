@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: magent
+Version: 0.1.14
+Summary: Multi-Agent Reinforcement Learning environments with very large numbers of agents
+Home-page: https://github.com/Farama-Foundation/MAgent
+Author: PettingZoo Team
+Author-email: justinkterry@gmail.com
+License: UNKNOWN
+Keywords: Reinforcement Learning,game,RL,AI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.18.0)
+Requires-Dist: pygame (>=2.0.0.dev10)
+
+# MAgent
+
+MAgent is a library for creating 2D environments with very large numbers of agents for conducting research in Multi-Agent Reinforcement Learning. These can look like this:
+
+<img src="magent-graph-1.gif" width="200"><img src="magent-graph-2.gif" width="200">
+
+This is a maintained fork from the original repo- https://github.com/geek-ai/MAgent. The code is signifigantly cleaned up in many aspects and some unfortunate names have been fixed, but there are no major differences.
+
+This maintainenace was primarily done in the service of the [PettingZoo library](https://github.com/Farama-Foundation/PettingZoo). PettingZoo is the easiest way to use environments in this library, and has comprehensive documentation of them.
+
+## Requirements
+MAgent supports Linux and macOS and Python 3.6+
+
+
+## Install instructions
+You can simply use `pip install magent`
+
+
+If you use this in your research, please cite the original paper:
+
+```
+@inproceedings{zheng2018magent,
+  title={MAgent: A many-agent reinforcement learning platform for artificial collective intelligence},
+  author={Zheng, Lianmin and Yang, Jiacheng and Cai, Han and Zhou, Ming and Zhang, Weinan and Wang, Jun and Yu, Yong},
+  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
+  year={2018}
+}
+```
+
+If you wish to cite this repo with it's modifications specifically, please cite:
+
+```
+@misc{magent2020,
+  author = {Terry, Jordan K and Black, Benjamin and Jayakumar, Mario},
+  title = {MAgent},
+  year = {2020},
+  publisher = {GitHub},
+  note = {GitHub repository},
+  howpublished = {\url{https://github.com/Farama-Foundation/MAgent}}
+}
+```
+
+

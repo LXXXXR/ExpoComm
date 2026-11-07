@@ -1,0 +1,11 @@
+gym_notices-0.1.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+gym_notices-0.1.0.dist-info/METADATA,sha256=6qR8Pug0AGA0SxPCGDyzCpsIXaQvbIYkEqLTGdpRulk,1220
+gym_notices-0.1.0.dist-info/RECORD,,
+gym_notices-0.1.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gym_notices-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gym_notices-0.1.0.dist-info/licenses/LICENSE.txt,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+gym_notices-0.1.0.dist-info/top_level.txt,sha256=KgY59gG5P771aCK2MTCI072fc7_zLeKVHfrIPeQ6Nuk,12
+gym_notices/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+gym_notices/__pycache__/__init__.cpython-311.pyc,,
+gym_notices/__pycache__/notices.cpython-311.pyc,,
+gym_notices/notices.py,sha256=hesPP1h5hkCIkUjMblx2Zum6twTsO7cCjnK1MtoD_5Q,6955

@@ -1,0 +1,1011 @@
+2026-10-13 16:06:38,383 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Current directory: /home/b/bach66/ExpoComm.
+2026-10-13 16:06:38,384 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Experiment Parameters:
+2026-10-13 16:06:38,386 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO -
+
+{   'action_selector': 'epsilon_greedy',
+    'add_value_last_step': True,
+    'agent': 'ExpoComm_one_peer',
+    'agent_output_type': 'q',
+    'aux_coef': 0.1,
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'double_q': True,
+    'env': 'MAgent_AdvPursuit',
+    'env_args': {   'global_reward': False,
+                    'map_name': 'adversarial_pursuit_view8',
+                    'map_size': 60,
+                    'max_cycles': 200,
+                    'minimap_mode': True,
+                    'pretrained_ckpt': 'adv_pursuit.pt',
+                    'seed': 0},
+    'epsilon_anneal_time': 500000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'evaluation_epsilon': 0.0,
+    'exp_name': 'ExpoComm_AdvPursuit60',
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hidden_dim': 64,
+    'hypergroup': None,
+    'label': 'default_label',
+    'learner': 'aux_q_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0005,
+    'mac': 'ExpoComm_mac',
+    'mixer': None,
+    'name': 'iql_ExpoComm_one_peer_n7',
+    'obs_agent_id': False,
+    'obs_individual_obs': False,
+    'obs_last_action': False,
+    'one_peer': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'pos_flag': False,
+    'render': False,
+    'repeat_id': 1,
+    'run_name': 'ExpoComm_AdvPursuit60_s0',
+    'runner': 'episode',
+    'runner_log_interval': 10000,
+    'save_model': True,
+    'save_model_interval': 50000,
+    'save_replay': False,
+    'seed': 0,
+    'standardise_returns': False,
+    'standardise_rewards': True,
+    't_max': 5050000,
+    'target_update_interval_or_tau': 200,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 100,
+    'topk_neighbors': 7,
+    'use_cuda': True,
+    'use_rnn': True,
+    'use_tensorboard': False,
+    'work_dir': 'work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626'}
+
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:157: UserWarning: The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.
+  warnings.warn("The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:165: UserWarning: The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.
+  warnings.warn("The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/wrappers/base.py:51: UserWarning: The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.
+  warnings.warn("The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/wrappers/base.py:59: UserWarning: The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.
+  warnings.warn("The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:61: UserWarning: The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.
+  warnings.warn("The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:69: UserWarning: The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.
+  warnings.warn("The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.")
+/home/b/bach66/ExpoComm/src/pretrained/magent.py:59: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  save_dict = torch.load(model_path, map_location=self.device)
+2026-10-13 16:07:19,352 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Beginning training for 5050000 timesteps
+/home/b/bach66/ExpoComm/src/envs/adv_pursuit_wrappers.py:240: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  actions = th.tensor(actions, dtype=th.long)
+2026-10-13 16:07:28,528 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 200 / 5050000
+2026-10-13 16:07:28,529 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 15 minutes, 23 seconds. Time passed: 9 seconds
+2026-10-13 16:15:19,164 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/200
+2026-10-13 16:39:30,689 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:      50000 | Episode:      250
+aux_loss:                  2.2427	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.9240
+grad_norm:                 1.1053	loss:                      0.7681	q_loss:                    0.5438	q_taken_mean:              0.0001
+return_mean:             -23.7341	return_std:                0.2268	target_mean:               0.0060	td_error_abs:              0.4595
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:        -39.9171	test_return_std:           0.4245
+
+2026-10-13 16:39:36,638 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 50200 / 5050000
+2026-10-13 16:39:36,640 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 5 hours, 33 minutes, 23 seconds. Time passed: 32 minutes, 17 seconds
+2026-10-13 16:47:38,282 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/50200
+2026-10-13 17:12:20,427 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     100000 | Episode:      500
+aux_loss:                  2.0492	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.8290
+grad_norm:                 1.3381	loss:                      0.5606	q_loss:                    0.3557	q_taken_mean:              0.0320
+return_mean:             -21.3721	return_std:                0.3136	target_mean:               0.0370	td_error_abs:              0.2632
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:        -19.9586	test_return_std:           0.2123
+
+2026-10-13 17:12:26,420 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 100200 / 5050000
+2026-10-13 17:12:26,421 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 6 hours, 10 minutes, 0 seconds. Time passed: 1 hours, 5 minutes, 7 seconds
+2026-10-13 17:20:30,497 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/100200
+2026-10-13 17:45:14,642 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     150000 | Episode:      750
+aux_loss:                  2.0437	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.7340
+grad_norm:                 1.7643	loss:                      0.5918	q_loss:                    0.3875	q_taken_mean:              0.0624
+return_mean:             -18.9818	return_std:                0.3507	target_mean:               0.0671	td_error_abs:              0.2659
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:        -13.3057	test_return_std:           0.1415
+
+2026-10-13 17:45:20,633 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 150200 / 5050000
+2026-10-13 17:45:20,636 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 5 hours, 44 minutes, 25 seconds. Time passed: 1 hours, 38 minutes, 1 seconds
+2026-10-13 17:53:23,665 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/150200
+2026-10-13 18:18:16,242 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     200000 | Episode:     1000
+aux_loss:                  2.0480	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.6390
+grad_norm:                 2.1551	loss:                      0.6122	q_loss:                    0.4074	q_taken_mean:              0.0916
+return_mean:             -16.6381	return_std:                0.3164	target_mean:               0.0960	td_error_abs:              0.2703
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         -9.9793	test_return_std:           0.1061
+
+2026-10-13 18:18:22,227 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 200200 / 5050000
+2026-10-13 18:18:22,228 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 5 hours, 23 minutes, 26 seconds. Time passed: 2 hours, 11 minutes, 2 seconds
+2026-10-13 18:26:24,839 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/200200
+2026-10-13 18:51:09,957 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     250000 | Episode:     1250
+aux_loss:                  2.0542	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.5440
+grad_norm:                 4.7491	loss:                      0.8583	q_loss:                    0.6528	q_taken_mean:              0.1189
+return_mean:             -14.1936	return_std:                0.3287	target_mean:               0.1274	td_error_abs:              0.4585
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         -7.9834	test_return_std:           0.0849
+
+2026-10-13 18:51:15,929 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 250200 / 5050000
+2026-10-13 18:51:15,932 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 4 hours, 37 minutes, 47 seconds. Time passed: 2 hours, 43 minutes, 56 seconds
+2026-10-13 18:59:12,019 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/250200
+2026-10-13 19:23:55,999 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     300000 | Episode:     1500
+aux_loss:                  2.0558	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.4490
+grad_norm:                 2.8888	loss:                      0.7226	q_loss:                    0.5171	q_taken_mean:              0.1495
+return_mean:             -11.6352	return_std:                0.3469	target_mean:               0.1538	td_error_abs:              0.2820
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:          0.0000	test_return_std:           0.0000
+
+2026-10-13 19:24:02,012 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 300200 / 5050000
+2026-10-13 19:24:02,017 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 3 hours, 52 minutes, 50 seconds. Time passed: 3 hours, 16 minutes, 42 seconds
+2026-10-13 19:31:58,348 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/300200
+2026-10-13 19:56:39,538 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     350000 | Episode:     1750
+aux_loss:                  2.0626	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.3540
+grad_norm:                 2.9794	loss:                      0.8765	q_loss:                    0.6702	q_taken_mean:              0.1744
+return_mean:              -7.7391	return_std:                1.2196	target_mean:               0.1784	td_error_abs:              0.3026
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:          0.1772	test_return_std:           0.2860
+
+2026-10-13 19:56:45,576 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 350200 / 5050000
+2026-10-13 19:56:45,578 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 3 hours, 16 minutes, 6 seconds. Time passed: 3 hours, 49 minutes, 26 seconds
+2026-10-13 20:04:46,651 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/350200
+2026-10-13 20:29:35,103 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     400000 | Episode:     2000
+aux_loss:                  2.0691	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.2590
+grad_norm:                 3.6937	loss:                      1.3067	q_loss:                    1.0998	q_taken_mean:              0.2000
+return_mean:               0.6448	return_std:                3.5026	target_mean:               0.2045	td_error_abs:              0.3765
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:          1.4740	test_return_std:           0.9875
+
+2026-10-13 20:29:41,080 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 400200 / 5050000
+2026-10-13 20:29:41,083 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 3 hours, 1 minutes, 53 seconds. Time passed: 4 hours, 22 minutes, 21 seconds
+2026-10-13 20:37:42,608 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/400200
+2026-10-13 21:02:30,025 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     450000 | Episode:     2250
+aux_loss:                  2.0794	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.1640
+grad_norm:                 9.6102	loss:                      2.7860	q_loss:                    2.5781	q_taken_mean:              0.2323
+return_mean:              12.9331	return_std:                5.2795	target_mean:               0.2421	td_error_abs:              0.6573
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:          5.1872	test_return_std:           2.2045
+
+2026-10-13 21:02:36,038 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 450200 / 5050000
+2026-10-13 21:02:36,040 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 2 hours, 28 minutes, 8 seconds. Time passed: 4 hours, 55 minutes, 16 seconds
+2026-10-13 21:10:37,650 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/450200
+2026-10-13 21:35:21,941 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     500000 | Episode:     2500
+aux_loss:                  2.0819	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0690
+grad_norm:                 7.3112	loss:                      3.5782	q_loss:                    3.3701	q_taken_mean:              0.2758
+return_mean:              19.5898	return_std:                7.0239	target_mean:               0.2810	td_error_abs:              0.5935
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:          9.6274	test_return_std:           3.6766
+
+2026-10-13 21:35:27,934 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 500200 / 5050000
+2026-10-13 21:35:27,937 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 1 hours, 50 minutes, 34 seconds. Time passed: 5 hours, 28 minutes, 8 seconds
+2026-10-13 21:43:29,858 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/500200
+2026-10-13 22:08:16,387 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     550000 | Episode:     2750
+aux_loss:                  2.0743	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:                 9.0881	loss:                      4.8678	q_loss:                    4.6603	q_taken_mean:              0.3158
+return_mean:              31.1141	return_std:                8.1191	target_mean:               0.3211	td_error_abs:              0.7124
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         16.2096	test_return_std:           5.0778
+
+2026-10-13 22:08:22,407 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 550200 / 5050000
+2026-10-13 22:08:22,409 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 1 hours, 21 minutes, 34 seconds. Time passed: 6 hours, 1 minutes, 3 seconds
+2026-10-13 22:16:21,156 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/550200
+2026-10-13 22:41:04,278 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     600000 | Episode:     3000
+aux_loss:                  2.0831	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:                 9.6540	loss:                      5.5595	q_loss:                    5.3512	q_taken_mean:              0.3503
+return_mean:              43.8402	return_std:                8.5940	target_mean:               0.3555	td_error_abs:              0.7860
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         25.0856	test_return_std:           6.3407
+
+2026-10-13 22:41:10,262 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 600200 / 5050000
+2026-10-13 22:41:10,264 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 38 minutes, 51 seconds. Time passed: 6 hours, 33 minutes, 50 seconds
+2026-10-13 22:49:12,033 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/600200
+2026-10-13 23:13:58,073 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     650000 | Episode:     3250
+aux_loss:                  2.0744	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:                35.9589	loss:                      7.1832	q_loss:                    6.9757	q_taken_mean:              0.3819
+return_mean:              46.9041	return_std:                8.2296	target_mean:               0.3921	td_error_abs:              1.0429
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         33.4194	test_return_std:           7.1161
+
+2026-10-13 23:14:04,056 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 650200 / 5050000
+2026-10-13 23:14:04,059 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 days, 14 minutes, 46 seconds. Time passed: 7 hours, 6 minutes, 44 seconds
+2026-10-13 23:22:04,773 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/650200
+2026-10-13 23:46:52,268 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     700000 | Episode:     3500
+aux_loss:                  2.0725	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:                74.3972	loss:                      8.4368	q_loss:                    8.2296	q_taken_mean:              0.4514
+return_mean:              49.0363	return_std:                9.3475	target_mean:               0.4568	td_error_abs:              1.0739
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         40.7428	test_return_std:           7.6567
+
+2026-10-13 23:46:58,236 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 700200 / 5050000
+2026-10-13 23:46:58,238 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 23 hours, 42 minutes, 25 seconds. Time passed: 7 hours, 39 minutes, 38 seconds
+2026-10-13 23:54:57,127 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/700200
+2026-10-14 00:19:46,588 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     750000 | Episode:     3750
+aux_loss:                  2.0692	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               183.9347	loss:                      9.7467	q_loss:                    9.5398	q_taken_mean:              0.4863
+return_mean:              48.7590	return_std:                8.3419	target_mean:               0.4957	td_error_abs:              1.2853
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         48.3576	test_return_std:           7.9101
+
+2026-10-14 00:19:52,604 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 750200 / 5050000
+2026-10-14 00:19:52,607 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 23 hours, 9 minutes, 47 seconds. Time passed: 8 hours, 12 minutes, 33 seconds
+2026-10-14 00:27:54,453 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/750200
+2026-10-14 00:52:38,865 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     800000 | Episode:     4000
+aux_loss:                  2.0721	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               266.8276	loss:                     10.5750	q_loss:                   10.3678	q_taken_mean:              0.5303
+return_mean:              51.5647	return_std:                8.1396	target_mean:               0.5315	td_error_abs:              1.3356
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         54.1089	test_return_std:           8.1400
+
+2026-10-14 00:52:44,810 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 800200 / 5050000
+2026-10-14 00:52:44,813 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 22 hours, 33 minutes, 49 seconds. Time passed: 8 hours, 45 minutes, 25 seconds
+2026-10-14 01:00:38,386 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/800200
+2026-10-14 01:25:24,767 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     850000 | Episode:     4250
+aux_loss:                  2.0642	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               381.8769	loss:                     11.2400	q_loss:                   11.0335	q_taken_mean:              0.5415
+return_mean:              52.5641	return_std:                6.9962	target_mean:               0.5507	td_error_abs:              1.4967
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         57.0140	test_return_std:           8.3446
+
+2026-10-14 01:25:30,756 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 850200 / 5050000
+2026-10-14 01:25:30,759 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 21 hours, 52 minutes, 11 seconds. Time passed: 9 hours, 18 minutes, 11 seconds
+2026-10-14 01:33:33,208 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/850200
+2026-10-14 01:58:19,322 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     900000 | Episode:     4500
+aux_loss:                  2.0602	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               545.1504	loss:                     12.1282	q_loss:                   11.9222	q_taken_mean:              0.6091
+return_mean:              52.6388	return_std:                6.6563	target_mean:               0.6112	td_error_abs:              1.5847
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         58.6092	test_return_std:           8.5158
+
+2026-10-14 01:58:25,152 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 900200 / 5050000
+2026-10-14 01:58:25,154 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 21 hours, 31 minutes, 6 seconds. Time passed: 9 hours, 51 minutes, 5 seconds
+2026-10-14 02:06:25,837 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/900200
+2026-10-14 02:29:37,312 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:     950000 | Episode:     4750
+aux_loss:                  2.0807	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               604.5532	loss:                     13.7884	q_loss:                   13.5803	q_taken_mean:              0.6502
+return_mean:              51.7691	return_std:                6.5632	target_mean:               0.6527	td_error_abs:              1.6777
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.5365	test_return_std:           8.3855
+
+2026-10-14 02:29:42,776 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 950200 / 5050000
+2026-10-14 02:29:42,778 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 18 hours, 45 minutes, 57 seconds. Time passed: 10 hours, 22 minutes, 23 seconds
+2026-10-14 02:37:00,188 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/950200
+2026-10-14 02:59:40,741 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1000000 | Episode:     5000
+aux_loss:                  2.0610	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               744.1253	loss:                     15.9931	q_loss:                   15.7870	q_taken_mean:              0.6849
+return_mean:              51.8102	return_std:                8.4817	target_mean:               0.6912	td_error_abs:              1.7929
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.5901	test_return_std:           8.0384
+
+2026-10-14 02:59:46,196 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1000200 / 5050000
+2026-10-14 02:59:46,198 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 16 hours, 34 minutes, 29 seconds. Time passed: 10 hours, 52 minutes, 26 seconds
+2026-10-14 03:07:01,586 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1000200
+2026-10-14 03:29:44,055 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1050000 | Episode:     5250
+aux_loss:                  2.0577	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               1109.1697	loss:                     16.5164	q_loss:                   16.3106	q_taken_mean:              0.7417
+return_mean:              54.1088	return_std:                6.8010	target_mean:               0.7493	td_error_abs:              1.8415
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.2220	test_return_std:           7.8463
+
+2026-10-14 03:29:49,542 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1050200 / 5050000
+2026-10-14 03:29:49,545 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 16 hours, 4 minutes, 20 seconds. Time passed: 11 hours, 22 minutes, 30 seconds
+2026-10-14 03:37:07,180 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1050200
+2026-10-14 03:59:46,953 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1100000 | Episode:     5500
+aux_loss:                  2.0585	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               1673.3095	loss:                     17.5074	q_loss:                   17.3016	q_taken_mean:              0.7791
+return_mean:              53.4367	return_std:                6.7093	target_mean:               0.7850	td_error_abs:              1.9142
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         58.8788	test_return_std:           7.5823
+
+2026-10-14 03:59:52,461 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1100200 / 5050000
+2026-10-14 03:59:52,464 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 15 hours, 33 minutes, 43 seconds. Time passed: 11 hours, 52 minutes, 33 seconds
+2026-10-14 04:07:09,046 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1100200
+2026-10-14 04:29:47,120 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1150000 | Episode:     5750
+aux_loss:                  2.0432	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               1765.4702	loss:                     19.8134	q_loss:                   19.6091	q_taken_mean:              0.8581
+return_mean:              53.8934	return_std:                7.0085	target_mean:               0.8612	td_error_abs:              2.0120
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.8031	test_return_std:           7.3627
+
+2026-10-14 04:29:52,585 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1150200 / 5050000
+2026-10-14 04:29:52,587 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 15 hours, 2 seconds. Time passed: 12 hours, 22 minutes, 33 seconds
+2026-10-14 04:37:08,664 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1150200
+2026-10-14 04:59:50,502 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1200000 | Episode:     6000
+aux_loss:                  2.0574	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               2398.7981	loss:                     21.1072	q_loss:                   20.9015	q_taken_mean:              0.8864
+return_mean:              53.0906	return_std:                6.2689	target_mean:               0.8918	td_error_abs:              2.0925
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.0471	test_return_std:           7.1856
+
+2026-10-14 04:59:55,981 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1200200 / 5050000
+2026-10-14 04:59:55,984 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 14 hours, 34 minutes, 14 seconds. Time passed: 12 hours, 52 minutes, 36 seconds
+2026-10-14 05:07:13,784 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1200200
+2026-10-14 05:30:38,332 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1250000 | Episode:     6250
+aux_loss:                  2.0557	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               2469.3100	loss:                     23.5709	q_loss:                   23.3654	q_taken_mean:              0.9414
+return_mean:              53.7036	return_std:                6.5398	target_mean:               0.9472	td_error_abs:              2.2394
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.9011	test_return_std:           7.3031
+
+2026-10-14 05:30:43,792 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1250200 / 5050000
+2026-10-14 05:30:43,795 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 15 hours, 26 seconds. Time passed: 13 hours, 23 minutes, 24 seconds
+2026-10-14 05:38:00,853 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1250200
+2026-10-14 06:00:41,184 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1300000 | Episode:     6500
+aux_loss:                  2.0290	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               2562.3257	loss:                     24.9624	q_loss:                   24.7595	q_taken_mean:              0.9862
+return_mean:              52.3998	return_std:                6.4032	target_mean:               0.9899	td_error_abs:              2.2737
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.7465	test_return_std:           7.3974
+
+2026-10-14 06:00:46,606 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1300200 / 5050000
+2026-10-14 06:00:46,608 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 13 hours, 33 minutes, 23 seconds. Time passed: 13 hours, 53 minutes, 27 seconds
+2026-10-14 06:08:03,581 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1300200
+2026-10-14 06:30:43,943 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1350000 | Episode:     6750
+aux_loss:                  2.0401	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               3449.0698	loss:                     27.1900	q_loss:                   26.9860	q_taken_mean:              1.0566
+return_mean:              53.4343	return_std:                7.3846	target_mean:               1.0579	td_error_abs:              2.2653
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.3964	test_return_std:           7.5740
+
+2026-10-14 06:30:49,424 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1350200 / 5050000
+2026-10-14 06:30:49,426 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 13 hours, 3 minutes, 21 seconds. Time passed: 14 hours, 23 minutes, 30 seconds
+2026-10-14 06:38:05,508 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1350200
+2026-10-14 07:00:47,036 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1400000 | Episode:     7000
+aux_loss:                  2.0169	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               3317.5407	loss:                     28.5749	q_loss:                   28.3732	q_taken_mean:              1.1040
+return_mean:              54.5133	return_std:                6.8105	target_mean:               1.1076	td_error_abs:              2.3490
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.3979	test_return_std:           7.7960
+
+2026-10-14 07:00:52,519 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1400200 / 5050000
+2026-10-14 07:00:52,522 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 12 hours, 33 minutes, 38 seconds. Time passed: 14 hours, 53 minutes, 33 seconds
+2026-10-14 07:08:09,247 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1400200
+2026-10-14 07:30:50,542 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1450000 | Episode:     7250
+aux_loss:                  2.0290	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               4231.2669	loss:                     30.7193	q_loss:                   30.5164	q_taken_mean:              1.1156
+return_mean:              54.0080	return_std:                7.0497	target_mean:               1.1193	td_error_abs:              2.4413
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.4908	test_return_std:           7.9392
+
+2026-10-14 07:30:56,054 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1450200 / 5050000
+2026-10-14 07:30:56,057 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 12 hours, 4 minutes, 7 seconds. Time passed: 15 hours, 23 minutes, 36 seconds
+2026-10-14 07:38:12,661 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1450200
+2026-10-14 08:00:52,200 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1500000 | Episode:     7500
+aux_loss:                  2.0352	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5367.8303	loss:                     30.8910	q_loss:                   30.6875	q_taken_mean:              1.1662
+return_mean:              53.8981	return_std:                7.1621	target_mean:               1.1697	td_error_abs:              2.4265
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.5444	test_return_std:           7.9408
+
+2026-10-14 08:00:57,697 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1500200 / 5050000
+2026-10-14 08:00:57,699 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 11 hours, 31 minutes, 49 seconds. Time passed: 15 hours, 53 minutes, 38 seconds
+2026-10-14 08:08:14,358 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1500200
+2026-10-14 08:30:53,326 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1550000 | Episode:     7750
+aux_loss:                  2.0387	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6219.4947	loss:                     33.4755	q_loss:                   33.2716	q_taken_mean:              1.1973
+return_mean:              53.1201	return_std:                7.5536	target_mean:               1.1975	td_error_abs:              2.4527
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         61.0801	test_return_std:           8.0465
+
+2026-10-14 08:30:58,797 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1550200 / 5050000
+2026-10-14 08:30:58,800 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 11 hours, 1 minutes, 9 seconds. Time passed: 16 hours, 23 minutes, 39 seconds
+2026-10-14 08:38:15,747 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1550200
+2026-10-14 09:00:57,887 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1600000 | Episode:     8000
+aux_loss:                  2.0300	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5204.4191	loss:                     32.4406	q_loss:                   32.2376	q_taken_mean:              1.2137
+return_mean:              51.0876	return_std:                7.1370	target_mean:               1.2164	td_error_abs:              2.4677
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.8505	test_return_std:           8.0662
+
+2026-10-14 09:01:03,353 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1600200 / 5050000
+2026-10-14 09:01:03,355 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 10 hours, 35 minutes, 7 seconds. Time passed: 16 hours, 53 minutes, 44 seconds
+2026-10-14 09:08:19,263 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1600200
+2026-10-14 09:31:00,407 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1650000 | Episode:     8250
+aux_loss:                  2.0301	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               4792.4845	loss:                     34.4215	q_loss:                   34.2185	q_taken_mean:              1.2288
+return_mean:              51.8069	return_std:                6.7689	target_mean:               1.2305	td_error_abs:              2.5270
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.3326	test_return_std:           7.7646
+
+2026-10-14 09:31:05,863 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1650200 / 5050000
+2026-10-14 09:31:05,866 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 10 hours, 2 minutes, 43 seconds. Time passed: 17 hours, 23 minutes, 46 seconds
+2026-10-14 09:38:22,031 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1650200
+2026-10-14 10:01:02,585 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1700000 | Episode:     8500
+aux_loss:                  2.0262	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6304.9322	loss:                     33.4587	q_loss:                   33.2560	q_taken_mean:              1.2475
+return_mean:              50.7592	return_std:                6.6237	target_mean:               1.2499	td_error_abs:              2.5223
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.1057	test_return_std:           7.7871
+
+2026-10-14 10:01:08,047 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1700200 / 5050000
+2026-10-14 10:01:08,049 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 9 hours, 32 minutes, 19 seconds. Time passed: 17 hours, 53 minutes, 48 seconds
+2026-10-14 10:08:24,386 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1700200
+2026-10-14 10:31:06,512 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1750000 | Episode:     8750
+aux_loss:                  2.0191	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7474.3990	loss:                     37.1151	q_loss:                   36.9131	q_taken_mean:              1.2710
+return_mean:              50.3783	return_std:                7.2841	target_mean:               1.2686	td_error_abs:              2.5894
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.7619	test_return_std:           7.8867
+
+2026-10-14 10:31:12,005 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1750200 / 5050000
+2026-10-14 10:31:12,007 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 9 hours, 4 minutes, 14 seconds. Time passed: 18 hours, 23 minutes, 52 seconds
+2026-10-14 10:38:29,442 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1750200
+2026-10-14 11:01:17,956 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1800000 | Episode:     9000
+aux_loss:                  2.0318	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               10297.3660	loss:                     37.9269	q_loss:                   37.7237	q_taken_mean:              1.2841
+return_mean:              51.4315	return_std:                7.3464	target_mean:               1.2847	td_error_abs:              2.6329
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.1367	test_return_std:           7.8901
+
+2026-10-14 11:01:23,475 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1800200 / 5050000
+2026-10-14 11:01:23,478 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 8 hours, 42 minutes, 18 seconds. Time passed: 18 hours, 54 minutes, 4 seconds
+2026-10-14 11:08:40,588 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1800200
+2026-10-14 11:31:20,042 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1850000 | Episode:     9250
+aux_loss:                  2.0151	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               12975.0214	loss:                     35.4832	q_loss:                   35.2817	q_taken_mean:              1.2929
+return_mean:              51.2309	return_std:                7.9831	target_mean:               1.2957	td_error_abs:              2.7501
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         59.0285	test_return_std:           7.7851
+
+2026-10-14 11:31:25,511 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1850200 / 5050000
+2026-10-14 11:31:25,513 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 8 hours, 2 minutes, 2 seconds. Time passed: 19 hours, 24 minutes, 6 seconds
+2026-10-14 11:38:42,589 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1850200
+2026-10-14 12:01:24,123 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1900000 | Episode:     9500
+aux_loss:                  2.0456	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               12377.1687	loss:                     59.3704	q_loss:                   59.1658	q_taken_mean:              1.3079
+return_mean:              49.9399	return_std:                8.0982	target_mean:               1.2861	td_error_abs:              3.2900
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         58.6362	test_return_std:           8.1659
+
+2026-10-14 12:01:29,617 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1900200 / 5050000
+2026-10-14 12:01:29,619 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 7 hours, 34 minutes, 11 seconds. Time passed: 19 hours, 54 minutes, 10 seconds
+2026-10-14 12:08:46,635 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1900200
+2026-10-14 12:31:28,663 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    1950000 | Episode:     9750
+aux_loss:                  2.0274	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               24952.6836	loss:                    105.9683	q_loss:                  105.7655	q_taken_mean:              1.3008
+return_mean:              49.4432	return_std:                7.7437	target_mean:               1.3097	td_error_abs:              4.1807
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         58.5906	test_return_std:           8.0814
+
+2026-10-14 12:31:34,138 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 1950200 / 5050000
+2026-10-14 12:31:34,140 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 7 hours, 4 minutes, 33 seconds. Time passed: 20 hours, 24 minutes, 14 seconds
+2026-10-14 12:38:50,786 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/1950200
+2026-10-14 13:01:31,142 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2000000 | Episode:    10000
+aux_loss:                  2.0392	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               13213.2124	loss:                     96.2902	q_loss:                   96.0862	q_taken_mean:              1.3506
+return_mean:              54.8690	return_std:                7.1646	target_mean:               1.3597	td_error_abs:              3.9564
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.0965	test_return_std:           8.0299
+
+2026-10-14 13:01:36,640 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2000200 / 5050000
+2026-10-14 13:01:36,642 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 6 hours, 32 minutes, 25 seconds. Time passed: 20 hours, 54 minutes, 17 seconds
+2026-10-14 13:08:54,989 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2000200
+2026-10-14 13:31:37,796 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2050000 | Episode:    10250
+aux_loss:                  2.0366	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               12883.8319	loss:                     66.3317	q_loss:                   66.1280	q_taken_mean:              1.3591
+return_mean:              52.9671	return_std:                6.6664	target_mean:               1.3592	td_error_abs:              3.3669
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         60.9203	test_return_std:           7.9012
+
+2026-10-14 13:31:43,286 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2050200 / 5050000
+2026-10-14 13:31:43,289 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 6 hours, 6 minutes, 31 seconds. Time passed: 21 hours, 24 minutes, 23 seconds
+2026-10-14 13:39:00,293 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2050200
+2026-10-14 14:01:44,077 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2100000 | Episode:    10500
+aux_loss:                  2.0324	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               12048.0707	loss:                     59.0144	q_loss:                   58.8111	q_taken_mean:              1.3742
+return_mean:              50.5369	return_std:                6.9030	target_mean:               1.3792	td_error_abs:              3.5464
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         61.2166	test_return_std:           7.7594
+
+2026-10-14 14:01:49,530 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2100200 / 5050000
+2026-10-14 14:01:49,532 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 5 hours, 36 minutes, 1 seconds. Time passed: 21 hours, 54 minutes, 30 seconds
+2026-10-14 14:09:06,589 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2100200
+2026-10-14 14:31:45,034 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2150000 | Episode:    10750
+aux_loss:                  2.0332	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               11066.7292	loss:                     61.7760	q_loss:                   61.5727	q_taken_mean:              1.3899
+return_mean:              48.1424	return_std:                8.0994	target_mean:               1.3840	td_error_abs:              3.6959
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         61.5759	test_return_std:           7.4621
+
+2026-10-14 14:31:50,505 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2150200 / 5050000
+2026-10-14 14:31:50,508 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 5 hours, 49 seconds. Time passed: 22 hours, 24 minutes, 31 seconds
+2026-10-14 14:39:07,501 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2150200
+2026-10-14 15:01:47,986 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2200000 | Episode:    11000
+aux_loss:                  2.0248	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               8587.3132	loss:                     52.3510	q_loss:                   52.1485	q_taken_mean:              1.3265
+return_mean:              52.4298	return_std:                8.9045	target_mean:               1.3257	td_error_abs:              3.4450
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         61.7195	test_return_std:           7.5718
+
+2026-10-14 15:01:53,451 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2200200 / 5050000
+2026-10-14 15:01:53,453 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 4 hours, 32 minutes, 40 seconds. Time passed: 22 hours, 54 minutes, 34 seconds
+2026-10-14 15:09:09,910 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2200200
+2026-10-14 15:31:52,217 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2250000 | Episode:    11250
+aux_loss:                  2.0479	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6696.4783	loss:                     48.7959	q_loss:                   48.5911	q_taken_mean:              1.3611
+return_mean:              57.4536	return_std:                7.1851	target_mean:               1.3607	td_error_abs:              3.2326
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         61.2411	test_return_std:           7.7553
+
+2026-10-14 15:31:57,827 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2250200 / 5050000
+2026-10-14 15:31:57,830 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 4 hours, 3 minutes, 57 seconds. Time passed: 23 hours, 24 minutes, 38 seconds
+2026-10-14 15:39:13,632 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2250200
+2026-10-14 16:01:56,340 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2300000 | Episode:    11500
+aux_loss:                  2.0211	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7650.4917	loss:                     54.9245	q_loss:                   54.7224	q_taken_mean:              1.3649
+return_mean:              58.6759	return_std:                6.5533	target_mean:               1.3725	td_error_abs:              3.4662
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         62.1091	test_return_std:           7.7964
+
+2026-10-14 16:02:01,822 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2300200 / 5050000
+2026-10-14 16:02:01,825 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 3 hours, 33 minutes, 32 seconds. Time passed: 23 hours, 54 minutes, 42 seconds
+2026-10-14 16:09:18,166 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2300200
+2026-10-14 16:32:08,443 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2350000 | Episode:    11750
+aux_loss:                  2.0270	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               4736.6515	loss:                     50.4827	q_loss:                   50.2800	q_taken_mean:              1.3658
+return_mean:              58.4785	return_std:                7.2221	target_mean:               1.3678	td_error_abs:              3.2378
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.1911	test_return_std:           7.7718
+
+2026-10-14 16:32:14,129 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2350200 / 5050000
+2026-10-14 16:32:14,132 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 3 hours, 10 minutes, 57 seconds. Time passed: 1 days, 24 minutes, 54 seconds
+2026-10-14 16:39:33,020 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2350200
+2026-10-14 17:02:15,256 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2400000 | Episode:    12000
+aux_loss:                  2.0294	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5410.3963	loss:                     55.4154	q_loss:                   55.2125	q_taken_mean:              1.3985
+return_mean:              57.5672	return_std:                6.8846	target_mean:               1.3949	td_error_abs:              3.3596
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         64.7163	test_return_std:           7.8804
+
+2026-10-14 17:02:20,723 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2400200 / 5050000
+2026-10-14 17:02:20,725 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 2 hours, 35 minutes, 42 seconds. Time passed: 1 days, 55 minutes, 1 seconds
+2026-10-14 17:09:37,618 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2400200
+2026-10-14 17:32:17,763 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2450000 | Episode:    12250
+aux_loss:                  2.0124	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5186.5061	loss:                     53.3244	q_loss:                   53.1231	q_taken_mean:              1.4008
+return_mean:              56.2822	return_std:                6.7245	target_mean:               1.4033	td_error_abs:              3.2181
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         65.6106	test_return_std:           7.8684
+
+2026-10-14 17:32:23,216 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2450200 / 5050000
+2026-10-14 17:32:23,219 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 2 hours, 2 minutes, 2 seconds. Time passed: 1 days, 1 hours, 25 minutes, 3 seconds
+2026-10-14 17:39:40,912 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2450200
+2026-10-14 18:02:23,065 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2500000 | Episode:    12500
+aux_loss:                  2.0446	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7286.8418	loss:                     56.5772	q_loss:                   56.3728	q_taken_mean:              1.3893
+return_mean:              54.6347	return_std:                7.0814	target_mean:               1.3988	td_error_abs:              3.4181
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         65.7153	test_return_std:           7.5937
+
+2026-10-14 18:02:28,558 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2500200 / 5050000
+2026-10-14 18:02:28,561 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 1 hours, 34 minutes, 25 seconds. Time passed: 1 days, 1 hours, 55 minutes, 9 seconds
+2026-10-14 18:09:47,070 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2500200
+2026-10-14 18:32:41,385 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2550000 | Episode:    12750
+aux_loss:                  2.0234	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               4769.6115	loss:                     52.9395	q_loss:                   52.7371	q_taken_mean:              1.3896
+return_mean:              54.9103	return_std:                6.7885	target_mean:               1.3948	td_error_abs:              3.2814
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         64.9815	test_return_std:           7.7726
+
+2026-10-14 18:32:46,814 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2550200 / 5050000
+2026-10-14 18:32:46,816 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 1 hours, 15 minutes, 5 seconds. Time passed: 1 days, 2 hours, 25 minutes, 27 seconds
+2026-10-14 18:40:03,494 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2550200
+2026-10-14 19:03:11,991 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2600000 | Episode:    13000
+aux_loss:                  2.0199	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6396.3579	loss:                     56.9980	q_loss:                   56.7960	q_taken_mean:              1.4010
+return_mean:              54.9551	return_std:                6.7789	target_mean:               1.3991	td_error_abs:              3.3724
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         64.3410	test_return_std:           7.9115
+
+2026-10-14 19:03:17,460 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2600200 / 5050000
+2026-10-14 19:03:17,462 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 54 minutes, 54 seconds. Time passed: 1 days, 2 hours, 55 minutes, 58 seconds
+2026-10-14 19:10:34,404 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2600200
+2026-10-14 19:33:26,955 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2650000 | Episode:    13250
+aux_loss:                  2.0382	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5361.9182	loss:                     51.5487	q_loss:                   51.3449	q_taken_mean:              1.3955
+return_mean:              54.8910	return_std:                7.2217	target_mean:               1.3984	td_error_abs:              3.2223
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.5256	test_return_std:           7.8542
+
+2026-10-14 19:33:32,460 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2650200 / 5050000
+2026-10-14 19:33:32,463 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 11 minutes, 52 seconds. Time passed: 1 days, 3 hours, 26 minutes, 13 seconds
+2026-10-14 19:40:59,028 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2650200
+2026-10-14 20:04:13,609 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2700000 | Episode:    13500
+aux_loss:                  2.0293	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               8098.5024	loss:                     57.8222	q_loss:                   57.6193	q_taken_mean:              1.4059
+return_mean:              55.4122	return_std:                7.0997	target_mean:               1.4164	td_error_abs:              3.5092
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         62.9589	test_return_std:           7.6578
+
+2026-10-14 20:04:19,420 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2700200 / 5050000
+2026-10-14 20:04:19,422 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 6 minutes, 39 seconds. Time passed: 1 days, 3 hours, 57 minutes, 0 seconds
+2026-10-14 20:11:59,531 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2700200
+2026-10-14 20:35:49,425 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2750000 | Episode:    13750
+aux_loss:                  2.0273	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6107.7803	loss:                     54.3561	q_loss:                   54.1534	q_taken_mean:              1.4252
+return_mean:              54.9290	return_std:                6.7518	target_mean:               1.4298	td_error_abs:              3.3929
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         62.6239	test_return_std:           7.8502
+
+2026-10-14 20:35:54,906 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2750200 / 5050000
+2026-10-14 20:35:54,909 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 13 minutes, 4 seconds. Time passed: 1 days, 4 hours, 28 minutes, 35 seconds
+2026-10-14 20:43:18,199 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2750200
+2026-10-14 21:09:04,075 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2800000 | Episode:    14000
+aux_loss:                  2.0266	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6376.8392	loss:                     56.1331	q_loss:                   55.9304	q_taken_mean:              1.4278
+return_mean:              55.0318	return_std:                7.2096	target_mean:               1.4253	td_error_abs:              3.4225
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         62.4919	test_return_std:           7.7054
+
+2026-10-14 21:09:09,589 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2800200 / 5050000
+2026-10-14 21:09:09,592 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 days, 55 minutes, 52 seconds. Time passed: 1 days, 5 hours, 1 minutes, 50 seconds
+2026-10-14 21:16:28,844 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2800200
+2026-10-14 21:39:24,204 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2850000 | Episode:    14250
+aux_loss:                  2.0369	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5821.5668	loss:                     54.3408	q_loss:                   54.1372	q_taken_mean:              1.4316
+return_mean:              55.6074	return_std:                6.7685	target_mean:               1.4324	td_error_abs:              3.3650
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         62.9323	test_return_std:           7.7819
+
+2026-10-14 21:39:29,985 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2850200 / 5050000
+2026-10-14 21:39:29,987 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 22 hours, 14 minutes, 50 seconds. Time passed: 1 days, 5 hours, 32 minutes, 10 seconds
+2026-10-14 21:46:47,205 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2850200
+2026-10-14 22:09:29,805 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2900000 | Episode:    14500
+aux_loss:                  2.0205	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               8714.6515	loss:                     56.5203	q_loss:                   56.3182	q_taken_mean:              1.4344
+return_mean:              55.4832	return_std:                7.3996	target_mean:               1.4407	td_error_abs:              3.5519
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.3898	test_return_std:           7.8552
+
+2026-10-14 22:09:35,263 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2900200 / 5050000
+2026-10-14 22:09:35,265 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 21 hours, 33 minutes, 39 seconds. Time passed: 1 days, 6 hours, 2 minutes, 15 seconds
+2026-10-14 22:16:51,456 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2900200
+2026-10-14 22:39:34,044 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    2950000 | Episode:    14750
+aux_loss:                  2.0358	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5875.9547	loss:                     52.7786	q_loss:                   52.5751	q_taken_mean:              1.4214
+return_mean:              53.9881	return_std:                7.0588	target_mean:               1.4267	td_error_abs:              3.3958
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.5501	test_return_std:           7.8765
+
+2026-10-14 22:39:39,500 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 2950200 / 5050000
+2026-10-14 22:39:39,502 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 21 hours, 2 minutes, 50 seconds. Time passed: 1 days, 6 hours, 32 minutes, 20 seconds
+2026-10-14 22:46:56,286 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/2950200
+2026-10-14 23:09:38,298 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3000000 | Episode:    15000
+aux_loss:                  2.0351	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7137.2476	loss:                     55.5223	q_loss:                   55.3187	q_taken_mean:              1.4542
+return_mean:              54.9290	return_std:                7.2878	target_mean:               1.4525	td_error_abs:              3.4595
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.8470	test_return_std:           7.8948
+
+2026-10-14 23:09:43,770 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3000200 / 5050000
+2026-10-14 23:09:43,773 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 20 hours, 32 minutes, 47 seconds. Time passed: 1 days, 7 hours, 2 minutes, 24 seconds
+2026-10-14 23:17:02,454 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3000200
+2026-10-14 23:41:08,270 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3050000 | Episode:    15250
+aux_loss:                  2.0273	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6308.8790	loss:                     53.5532	q_loss:                   53.3505	q_taken_mean:              1.4591
+return_mean:              55.7757	return_std:                7.2485	target_mean:               1.4588	td_error_abs:              3.4016
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.9542	test_return_std:           7.7401
+
+2026-10-14 23:41:15,190 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3050200 / 5050000
+2026-10-14 23:41:15,193 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 21 hours, 49 seconds. Time passed: 1 days, 7 hours, 33 minutes, 55 seconds
+2026-10-14 23:50:21,972 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3050200
+2026-10-15 00:17:53,536 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3100000 | Episode:    15500
+aux_loss:                  2.0231	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               8956.1363	loss:                     56.3420	q_loss:                   56.1397	q_taken_mean:              1.4678
+return_mean:              56.3473	return_std:                6.6825	target_mean:               1.4746	td_error_abs:              3.5622
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.6547	test_return_std:           7.7110
+
+2026-10-15 00:18:00,024 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3100200 / 5050000
+2026-10-15 00:18:00,028 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 23 hours, 52 minutes, 59 seconds. Time passed: 1 days, 8 hours, 10 minutes, 40 seconds
+2026-10-15 00:26:57,856 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3100200
+2026-10-15 00:54:30,354 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3150000 | Episode:    15750
+aux_loss:                  2.0338	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6288.4552	loss:                     53.1784	q_loss:                   52.9751	q_taken_mean:              1.4821
+return_mean:              56.4534	return_std:                7.0740	target_mean:               1.4875	td_error_abs:              3.4599
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         63.7485	test_return_std:           7.7866
+
+2026-10-15 00:54:36,741 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3150200 / 5050000
+2026-10-15 00:54:36,744 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 23 hours, 11 minutes, 6 seconds. Time passed: 1 days, 8 hours, 47 minutes, 17 seconds
+2026-10-15 01:03:51,104 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3150200
+2026-10-15 01:31:28,604 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3200000 | Episode:    16000
+aux_loss:                  2.0328	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7880.2710	loss:                     56.3417	q_loss:                   56.1384	q_taken_mean:              1.5111
+return_mean:              56.8994	return_std:                6.9447	target_mean:               1.5079	td_error_abs:              3.5515
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         64.2209	test_return_std:           7.9637
+
+2026-10-15 01:31:35,118 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3200200 / 5050000
+2026-10-15 01:31:35,120 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 22 hours, 47 minutes, 51 seconds. Time passed: 1 days, 9 hours, 24 minutes, 15 seconds
+2026-10-15 01:40:41,206 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3200200
+2026-10-15 02:07:37,378 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3250000 | Episode:    16250
+aux_loss:                  2.0248	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7113.9954	loss:                     52.2450	q_loss:                   52.0426	q_taken_mean:              1.4900
+return_mean:              57.5124	return_std:                7.2416	target_mean:               1.4914	td_error_abs:              3.3716
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         64.8573	test_return_std:           7.7856
+
+2026-10-15 02:07:42,738 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3250200 / 5050000
+2026-10-15 02:07:42,740 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 21 hours, 40 minutes, 25 seconds. Time passed: 1 days, 10 hours, 23 seconds
+2026-10-15 02:14:56,544 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3250200
+2026-10-15 02:37:11,850 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3300000 | Episode:    16500
+aux_loss:                  2.0323	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               9117.5850	loss:                     54.6541	q_loss:                   54.4508	q_taken_mean:              1.4846
+return_mean:              58.5094	return_std:                7.0899	target_mean:               1.4923	td_error_abs:              3.5288
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         65.3886	test_return_std:           7.9217
+
+2026-10-15 02:37:17,223 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3300200 / 5050000
+2026-10-15 02:37:17,225 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 17 hours, 14 minutes, 59 seconds. Time passed: 1 days, 10 hours, 29 minutes, 57 seconds
+2026-10-15 02:44:32,621 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3300200
+2026-10-15 03:06:48,931 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3350000 | Episode:    16750
+aux_loss:                  2.0413	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6419.5745	loss:                     49.7444	q_loss:                   49.5403	q_taken_mean:              1.5098
+return_mean:              58.0589	return_std:                7.1512	target_mean:               1.5123	td_error_abs:              3.3721
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         66.2039	test_return_std:           7.9630
+
+2026-10-15 03:06:54,313 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3350200 / 5050000
+2026-10-15 03:06:54,315 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 16 hours, 46 minutes, 53 seconds. Time passed: 1 days, 10 hours, 59 minutes, 34 seconds
+2026-10-15 03:14:08,502 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3350200
+2026-10-15 03:36:24,598 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3400000 | Episode:    17000
+aux_loss:                  2.0458	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7306.0293	loss:                     53.3891	q_loss:                   53.1845	q_taken_mean:              1.4968
+return_mean:              58.5902	return_std:                7.0839	target_mean:               1.4940	td_error_abs:              3.4373
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         66.9549	test_return_std:           8.0071
+
+2026-10-15 03:36:29,984 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3400200 / 5050000
+2026-10-15 03:36:29,987 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 16 hours, 16 minutes, 30 seconds. Time passed: 1 days, 11 hours, 29 minutes, 10 seconds
+2026-10-15 03:43:45,039 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3400200
+2026-10-15 04:05:59,769 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3450000 | Episode:    17250
+aux_loss:                  2.0347	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6694.4115	loss:                     50.3419	q_loss:                   50.1384	q_taken_mean:              1.5068
+return_mean:              58.1930	return_std:                6.6624	target_mean:               1.5077	td_error_abs:              3.3099
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         67.5374	test_return_std:           8.0008
+
+2026-10-15 04:06:05,141 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3450200 / 5050000
+2026-10-15 04:06:05,144 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 15 hours, 46 minutes, 37 seconds. Time passed: 1 days, 11 hours, 58 minutes, 45 seconds
+2026-10-15 04:13:19,793 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3450200
+2026-10-15 04:35:38,699 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3500000 | Episode:    17500
+aux_loss:                  2.0312	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               9334.2636	loss:                     54.0622	q_loss:                   53.8590	q_taken_mean:              1.5170
+return_mean:              58.9119	return_std:                7.0085	target_mean:               1.5228	td_error_abs:              3.5031
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         67.6405	test_return_std:           8.1623
+
+2026-10-15 04:35:44,060 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3500200 / 5050000
+2026-10-15 04:35:44,061 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 15 hours, 18 minutes, 59 seconds. Time passed: 1 days, 12 hours, 28 minutes, 24 seconds
+2026-10-15 04:42:59,152 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3500200
+2026-10-15 05:05:15,474 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3550000 | Episode:    17750
+aux_loss:                  2.0295	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               7512.3956	loss:                     51.4608	q_loss:                   51.2579	q_taken_mean:              1.5215
+return_mean:              59.2426	return_std:                6.7278	target_mean:               1.5224	td_error_abs:              3.4005
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.0411	test_return_std:           8.1535
+
+2026-10-15 05:05:20,981 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3550200 / 5050000
+2026-10-15 05:05:20,983 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 14 hours, 48 minutes, 20 seconds. Time passed: 1 days, 12 hours, 58 minutes, 1 seconds
+2026-10-15 05:12:35,878 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3550200
+2026-10-15 05:34:51,214 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3600000 | Episode:    18000
+aux_loss:                  2.0301	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               9207.7744	loss:                     54.9071	q_loss:                   54.7041	q_taken_mean:              1.5454
+return_mean:              59.5406	return_std:                7.1731	target_mean:               1.5400	td_error_abs:              3.5032
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.0758	test_return_std:           8.0171
+
+2026-10-15 05:34:56,590 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3600200 / 5050000
+2026-10-15 05:34:56,595 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 14 hours, 18 minutes, 5 seconds. Time passed: 1 days, 13 hours, 27 minutes, 37 seconds
+2026-10-15 05:42:11,393 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3600200
+2026-10-15 06:04:27,600 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3650000 | Episode:    18250
+aux_loss:                  2.0448	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               11315.8227	loss:                     53.8047	q_loss:                   53.6002	q_taken_mean:              1.5479
+return_mean:              60.1839	return_std:                7.1337	target_mean:               1.5446	td_error_abs:              3.3895
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         67.9636	test_return_std:           7.8656
+
+2026-10-15 06:04:32,965 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3650200 / 5050000
+2026-10-15 06:04:32,968 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 13 hours, 48 minutes, 51 seconds. Time passed: 1 days, 13 hours, 57 minutes, 13 seconds
+2026-10-15 06:11:47,338 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3650200
+2026-10-15 06:34:04,147 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3700000 | Episode:    18500
+aux_loss:                  2.0312	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               14518.7497	loss:                     58.7500	q_loss:                   58.5469	q_taken_mean:              1.5637
+return_mean:              59.2442	return_std:                6.6759	target_mean:               1.5689	td_error_abs:              3.5143
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.2255	test_return_std:           7.6827
+
+2026-10-15 06:34:09,510 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3700200 / 5050000
+2026-10-15 06:34:09,513 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 13 hours, 19 minutes, 19 seconds. Time passed: 1 days, 14 hours, 26 minutes, 50 seconds
+2026-10-15 06:41:23,672 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3700200
+2026-10-15 07:03:56,582 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3750000 | Episode:    18750
+aux_loss:                  2.0211	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               10104.3440	loss:                     52.8484	q_loss:                   52.6463	q_taken_mean:              1.5627
+return_mean:              59.3172	return_std:                6.8526	target_mean:               1.5635	td_error_abs:              3.3241
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.7007	test_return_std:           7.6828
+
+2026-10-15 07:04:01,972 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3750200 / 5050000
+2026-10-15 07:04:01,975 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 12 hours, 56 minutes, 36 seconds. Time passed: 1 days, 14 hours, 56 minutes, 42 seconds
+2026-10-15 07:11:16,702 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3750200
+2026-10-15 07:33:33,408 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3800000 | Episode:    19000
+aux_loss:                  2.0321	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               14462.7779	loss:                     61.4022	q_loss:                   61.1990	q_taken_mean:              1.5930
+return_mean:              59.8003	return_std:                7.3520	target_mean:               1.5878	td_error_abs:              3.4546
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.7840	test_return_std:           7.7327
+
+2026-10-15 07:33:38,807 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3800200 / 5050000
+2026-10-15 07:33:38,809 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 12 hours, 20 minutes, 13 seconds. Time passed: 1 days, 15 hours, 26 minutes, 19 seconds
+2026-10-15 07:40:54,142 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3800200
+2026-10-15 08:03:07,675 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3850000 | Episode:    19250
+aux_loss:                  2.0356	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               13820.4837	loss:                     56.6733	q_loss:                   56.4698	q_taken_mean:              1.5838
+return_mean:              60.6362	return_std:                6.6312	target_mean:               1.5776	td_error_abs:              3.3867
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.1669	test_return_std:           8.1367
+
+2026-10-15 08:03:13,011 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3850200 / 5050000
+2026-10-15 08:03:13,013 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 11 hours, 49 minutes, 33 seconds. Time passed: 1 days, 15 hours, 55 minutes, 53 seconds
+2026-10-15 08:10:28,331 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3850200
+2026-10-15 08:32:44,982 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3900000 | Episode:    19500
+aux_loss:                  2.0410	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               19137.3560	loss:                     63.5702	q_loss:                   63.3661	q_taken_mean:              1.6052
+return_mean:              59.7021	return_std:                7.2088	target_mean:               1.6091	td_error_abs:              3.4930
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.3714	test_return_std:           8.2424
+
+2026-10-15 08:32:50,365 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3900200 / 5050000
+2026-10-15 08:32:50,367 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 11 hours, 21 minutes, 12 seconds. Time passed: 1 days, 16 hours, 25 minutes, 31 seconds
+2026-10-15 08:40:05,590 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3900200
+2026-10-15 09:02:19,944 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    3950000 | Episode:    19750
+aux_loss:                  2.0389	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               13981.5207	loss:                     56.4745	q_loss:                   56.2706	q_taken_mean:              1.6000
+return_mean:              58.6148	return_std:                6.8960	target_mean:               1.6048	td_error_abs:              3.3153
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.4423	test_return_std:           8.3800
+
+2026-10-15 09:02:25,304 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 3950200 / 5050000
+2026-10-15 09:02:25,306 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 10 hours, 50 minutes, 41 seconds. Time passed: 1 days, 16 hours, 55 minutes, 5 seconds
+2026-10-15 09:09:39,197 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/3950200
+2026-10-15 09:31:55,036 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4000000 | Episode:    20000
+aux_loss:                  2.0253	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               21891.3644	loss:                     68.1195	q_loss:                   67.9169	q_taken_mean:              1.6193
+return_mean:              59.4517	return_std:                7.1610	target_mean:               1.6147	td_error_abs:              3.5323
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.3766	test_return_std:           8.1515
+
+2026-10-15 09:32:00,404 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4000200 / 5050000
+2026-10-15 09:32:00,405 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 10 hours, 21 minutes, 9 seconds. Time passed: 1 days, 17 hours, 24 minutes, 41 seconds
+2026-10-15 09:39:13,932 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4000200
+2026-10-15 10:01:31,536 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4050000 | Episode:    20250
+aux_loss:                  2.0345	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               18504.3249	loss:                     63.3354	q_loss:                   63.1320	q_taken_mean:              1.6352
+return_mean:              59.3857	return_std:                6.8419	target_mean:               1.6351	td_error_abs:              3.4607
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.4362	test_return_std:           7.9937
+
+2026-10-15 10:01:36,884 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4050200 / 5050000
+2026-10-15 10:01:36,886 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 9 hours, 52 minutes, 2 seconds. Time passed: 1 days, 17 hours, 54 minutes, 17 seconds
+2026-10-15 10:08:50,766 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4050200
+2026-10-15 10:31:08,571 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4100000 | Episode:    20500
+aux_loss:                  2.0187	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               26545.5195	loss:                     71.2567	q_loss:                   71.0548	q_taken_mean:              1.6118
+return_mean:              59.6611	return_std:                6.9193	target_mean:               1.6216	td_error_abs:              3.5936
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.1618	test_return_std:           7.6939
+
+2026-10-15 10:31:13,997 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4100200 / 5050000
+2026-10-15 10:31:14,000 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 9 hours, 22 minutes, 38 seconds. Time passed: 1 days, 18 hours, 23 minutes, 54 seconds
+2026-10-15 10:38:28,268 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4100200
+2026-10-15 11:00:44,744 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4150000 | Episode:    20750
+aux_loss:                  2.0168	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               19569.9833	loss:                     63.1329	q_loss:                   62.9313	q_taken_mean:              1.6264
+return_mean:              59.9290	return_std:                6.8358	target_mean:               1.6300	td_error_abs:              3.4694
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.1700	test_return_std:           7.6432
+
+2026-10-15 11:00:50,122 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4150200 / 5050000
+2026-10-15 11:00:50,125 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 8 hours, 52 minutes, 43 seconds. Time passed: 1 days, 18 hours, 53 minutes, 30 seconds
+2026-10-15 11:08:05,082 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4150200
+2026-10-15 11:30:27,852 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4200000 | Episode:    21000
+aux_loss:                  2.0271	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               28397.7149	loss:                     74.4881	q_loss:                   74.2854	q_taken_mean:              1.6407
+return_mean:              58.8260	return_std:                7.2544	target_mean:               1.6318	td_error_abs:              3.6340
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.8906	test_return_std:           7.8284
+
+2026-10-15 11:30:33,225 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4200200 / 5050000
+2026-10-15 11:30:33,228 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 8 hours, 25 minutes, 5 seconds. Time passed: 1 days, 19 hours, 23 minutes, 13 seconds
+2026-10-15 11:39:02,389 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4200200
+2026-10-15 12:06:26,298 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4250000 | Episode:    21250
+aux_loss:                  2.0270	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               21999.1441	loss:                     65.8836	q_loss:                   65.6808	q_taken_mean:              1.6604
+return_mean:              60.0768	return_std:                7.3589	target_mean:               1.6556	td_error_abs:              3.5302
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         68.8274	test_return_std:           8.0586
+
+2026-10-15 12:06:33,105 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4250200 / 5050000
+2026-10-15 12:06:33,107 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 9 hours, 35 minutes, 49 seconds. Time passed: 1 days, 19 hours, 59 minutes, 13 seconds
+2026-10-15 12:15:43,988 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4250200
+2026-10-15 12:43:04,297 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4300000 | Episode:    21500
+aux_loss:                  2.0136	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               30380.1473	loss:                     74.6155	q_loss:                   74.4141	q_taken_mean:              1.6728
+return_mean:              60.3458	return_std:                6.8283	target_mean:               1.6756	td_error_abs:              3.7285
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.0462	test_return_std:           8.2853
+
+2026-10-15 12:43:10,833 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4300200 / 5050000
+2026-10-15 12:43:10,835 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 9 hours, 9 minutes, 17 seconds. Time passed: 1 days, 20 hours, 35 minutes, 51 seconds
+2026-10-15 12:52:24,428 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4300200
+2026-10-15 13:19:58,056 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4350000 | Episode:    21750
+aux_loss:                  2.0528	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               13488.8019	loss:                     56.1106	q_loss:                   55.9054	q_taken_mean:              1.6614
+return_mean:              59.3556	return_std:                8.2734	target_mean:               1.6558	td_error_abs:              3.7857
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         69.9997	test_return_std:           8.2967
+
+2026-10-15 13:20:04,483 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4350200 / 5050000
+2026-10-15 13:20:04,485 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 8 hours, 36 minutes, 22 seconds. Time passed: 1 days, 21 hours, 12 minutes, 45 seconds
+2026-10-15 13:29:11,778 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4350200
+2026-10-15 13:56:40,981 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4400000 | Episode:    22000
+aux_loss:                  2.0453	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               19056.7082	loss:                     74.2367	q_loss:                   74.0322	q_taken_mean:              1.6459
+return_mean:              60.0924	return_std:                6.4878	target_mean:               1.6513	td_error_abs:              3.7746
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         70.4169	test_return_std:           8.2961
+
+2026-10-15 13:56:47,794 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4400200 / 5050000
+2026-10-15 13:56:47,797 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 7 hours, 57 minutes, 14 seconds. Time passed: 1 days, 21 hours, 49 minutes, 28 seconds
+2026-10-15 14:05:47,000 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4400200
+2026-10-15 14:33:02,958 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4450000 | Episode:    22250
+aux_loss:                  2.0318	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               18837.7197	loss:                     63.0883	q_loss:                   62.8851	q_taken_mean:              1.6365
+return_mean:              59.1687	return_std:                6.8870	target_mean:               1.6459	td_error_abs:              3.7442
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         70.5181	test_return_std:           8.1701
+
+2026-10-15 14:33:09,323 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4450200 / 5050000
+2026-10-15 14:33:09,326 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 7 hours, 16 minutes, 9 seconds. Time passed: 1 days, 22 hours, 25 minutes, 49 seconds
+2026-10-15 14:42:15,068 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4450200
+2026-10-15 15:09:44,974 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4500000 | Episode:    22500
+aux_loss:                  2.0546	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               10744.4421	loss:                     48.7617	q_loss:                   48.5563	q_taken_mean:              1.6098
+return_mean:              62.5783	return_std:                7.1868	target_mean:               1.6130	td_error_abs:              3.4144
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         71.5063	test_return_std:           8.0596
+
+2026-10-15 15:09:51,528 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4500200 / 5050000
+2026-10-15 15:09:51,530 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 6 hours, 43 minutes, 35 seconds. Time passed: 1 days, 23 hours, 2 minutes, 32 seconds
+2026-10-15 15:18:59,655 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4500200
+2026-10-15 15:46:18,354 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4550000 | Episode:    22750
+aux_loss:                  2.0377	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               8117.6185	loss:                     44.0963	q_loss:                   43.8925	q_taken_mean:              1.6027
+return_mean:              62.3902	return_std:                7.8698	target_mean:               1.6074	td_error_abs:              3.2005
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         72.5639	test_return_std:           7.8850
+
+2026-10-15 15:46:25,156 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4550200 / 5050000
+2026-10-15 15:46:25,159 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 6 hours, 5 minutes, 27 seconds. Time passed: 1 days, 23 hours, 39 minutes, 5 seconds
+2026-10-15 15:55:24,639 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4550200
+2026-10-15 16:22:58,883 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4600000 | Episode:    23000
+aux_loss:                  2.0351	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               6586.3029	loss:                     41.9635	q_loss:                   41.7600	q_taken_mean:              1.6020
+return_mean:              62.5307	return_std:                7.6694	target_mean:               1.6046	td_error_abs:              3.1089
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         72.2606	test_return_std:           7.7216
+
+2026-10-15 16:23:05,559 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4600200 / 5050000
+2026-10-15 16:23:05,560 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 5 hours, 29 minutes, 54 seconds. Time passed: 2 days, 15 minutes, 46 seconds
+2026-10-15 16:32:09,008 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4600200
+2026-10-15 16:59:51,874 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4650000 | Episode:    23250
+aux_loss:                  2.0204	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5694.7295	loss:                     42.2313	q_loss:                   42.0293	q_taken_mean:              1.6311
+return_mean:              62.1503	return_std:                6.6937	target_mean:               1.6261	td_error_abs:              3.1326
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         72.1824	test_return_std:           7.9580
+
+2026-10-15 16:59:58,767 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4650200 / 5050000
+2026-10-15 16:59:58,770 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 4 hours, 54 minutes, 56 seconds. Time passed: 2 days, 52 minutes, 39 seconds
+2026-10-15 17:08:56,754 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4650200
+2026-10-15 17:36:31,470 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4700000 | Episode:    23500
+aux_loss:                  2.0329	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5067.9864	loss:                     42.0829	q_loss:                   41.8796	q_taken_mean:              1.6213
+return_mean:              61.6422	return_std:                6.3453	target_mean:               1.6203	td_error_abs:              3.1092
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         72.5684	test_return_std:           7.8266
+
+2026-10-15 17:36:38,046 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4700200 / 5050000
+2026-10-15 17:36:38,049 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 4 hours, 16 minutes, 26 seconds. Time passed: 2 days, 1 hours, 29 minutes, 18 seconds
+2026-10-15 17:45:45,389 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4700200
+2026-10-15 18:12:33,551 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4750000 | Episode:    23750
+aux_loss:                  2.0301	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5190.7750	loss:                     40.5380	q_loss:                   40.3350	q_taken_mean:              1.6086
+return_mean:              62.8407	return_std:                7.2564	target_mean:               1.6064	td_error_abs:              3.0660
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         71.9924	test_return_std:           8.0361
+
+2026-10-15 18:12:39,696 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4750200 / 5050000
+2026-10-15 18:12:39,699 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 3 hours, 36 minutes, 1 seconds. Time passed: 2 days, 2 hours, 5 minutes, 20 seconds
+2026-10-15 18:20:34,168 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4750200
+2026-10-15 18:44:06,975 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4800000 | Episode:    24000
+aux_loss:                  2.0226	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5980.9295	loss:                     41.3821	q_loss:                   41.1799	q_taken_mean:              1.6152
+return_mean:              62.0391	return_std:                6.9321	target_mean:               1.6158	td_error_abs:              3.0902
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         71.0466	test_return_std:           7.9447
+
+2026-10-15 18:44:12,382 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4800200 / 5050000
+2026-10-15 18:44:12,384 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 2 hours, 37 minutes, 35 seconds. Time passed: 2 days, 2 hours, 36 minutes, 53 seconds
+2026-10-15 18:51:27,616 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4800200
+2026-10-15 19:13:44,645 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4850000 | Episode:    24250
+aux_loss:                  2.0223	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5898.6254	loss:                     41.6140	q_loss:                   41.4118	q_taken_mean:              1.6181
+return_mean:              63.5127	return_std:                6.7365	target_mean:               1.6151	td_error_abs:              3.1333
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         70.9041	test_return_std:           8.1686
+
+2026-10-15 19:13:50,041 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4850200 / 5050000
+2026-10-15 19:13:50,043 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 hours, 58 minutes, 23 seconds. Time passed: 2 days, 3 hours, 6 minutes, 30 seconds
+2026-10-15 19:21:05,668 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4850200
+2026-10-15 19:43:20,609 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4900000 | Episode:    24500
+aux_loss:                  2.0269	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5702.9629	loss:                     40.8165	q_loss:                   40.6138	q_taken_mean:              1.6082
+return_mean:              62.8197	return_std:                6.7580	target_mean:               1.6078	td_error_abs:              3.1080
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         71.2699	test_return_std:           7.8717
+
+2026-10-15 19:43:26,003 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4900200 / 5050000
+2026-10-15 19:43:26,006 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 1 hours, 28 minutes, 40 seconds. Time passed: 2 days, 3 hours, 36 minutes, 6 seconds
+2026-10-15 19:50:41,208 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4900200
+2026-10-15 20:12:58,233 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    4950000 | Episode:    24750
+aux_loss:                  2.0176	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5867.6047	loss:                     41.0661	q_loss:                   40.8643	q_taken_mean:              1.6140
+return_mean:              63.2675	return_std:                6.7545	target_mean:               1.6126	td_error_abs:              3.1280
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         71.6179	test_return_std:           7.8916
+
+2026-10-15 20:13:03,605 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 4950200 / 5050000
+2026-10-15 20:13:03,607 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 59 minutes, 8 seconds. Time passed: 2 days, 4 hours, 5 minutes, 44 seconds
+2026-10-15 20:20:18,180 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/4950200
+2026-10-15 20:42:42,144 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    5000000 | Episode:    25000
+aux_loss:                  2.0379	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5332.9832	loss:                     41.0163	q_loss:                   40.8125	q_taken_mean:              1.6102
+return_mean:              63.7952	return_std:                6.9450	target_mean:               1.6116	td_error_abs:              3.1201
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         71.8814	test_return_std:           7.5885
+
+2026-10-15 20:42:47,521 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 5000200 / 5050000
+2026-10-15 20:42:47,523 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: 29 minutes, 36 seconds. Time passed: 2 days, 4 hours, 35 minutes, 28 seconds
+2026-10-15 20:50:02,187 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/5000200
+2026-10-15 21:12:17,874 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Recent Stats | t_env:    5050000 | Episode:    25250
+aux_loss:                  2.0311	ep_length_mean:          200.0000	episode_length_mean:     199.0000	epsilon:                   0.0500
+grad_norm:               5733.2261	loss:                     40.6438	q_loss:                   40.4407	q_taken_mean:              1.5994
+return_mean:              64.5384	return_std:                6.7527	target_mean:               1.5985	td_error_abs:              3.0960
+test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000	test_return_mean:         72.8886	test_return_std:           7.6920
+
+2026-10-15 21:12:23,284 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - t_env: 5050200 / 5050000
+2026-10-15 21:12:23,287 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Estimated time left: -. Time passed: 2 days, 5 hours, 5 minutes, 3 seconds
+2026-10-15 21:19:37,784 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Saving models to work_dirs/ExpoComm_AdvPursuit60/iql_ExpoComm_one_peer_n7/ExpoComm_AdvPursuit60_s0/20261013_160626/models/5050200
+2026-10-15 21:19:37,805 - ExpoComm_AdvPursuit60 - iql_ExpoComm_one_peer_n7 - ExpoComm_AdvPursuit60_s0 - INFO - Finished Training
+Exiting Main
+Stopping all threads
+Thread wandb-AsyncioManager-main is alive! Is daemon: True
+Thread joined
+Thread ChkStopThr is alive! Is daemon: True
+Thread joined
+Thread IntMsgThr is alive! Is daemon: True
+Thread joined
+Exiting script

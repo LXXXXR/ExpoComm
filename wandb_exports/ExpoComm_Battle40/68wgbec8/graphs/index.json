@@ -1,0 +1,132 @@
+{
+  "aux_loss": {
+    "png": "aux_loss.png",
+    "svg": "aux_loss.svg",
+    "points": 502
+  },
+  "blue_team_alives_mean": {
+    "png": "blue_team_alives_mean.png",
+    "svg": "blue_team_alives_mean.svg",
+    "points": 502
+  },
+  "blue_team_win_mean": {
+    "png": "blue_team_win_mean.png",
+    "svg": "blue_team_win_mean.svg",
+    "points": 502
+  },
+  "ep_length_mean": {
+    "png": "ep_length_mean.png",
+    "svg": "ep_length_mean.svg",
+    "points": 502
+  },
+  "episode": {
+    "png": "episode.png",
+    "svg": "episode.svg",
+    "points": 100
+  },
+  "episode_length_mean": {
+    "png": "episode_length_mean.png",
+    "svg": "episode_length_mean.svg",
+    "points": 502
+  },
+  "epsilon": {
+    "png": "epsilon.png",
+    "svg": "epsilon.svg",
+    "points": 502
+  },
+  "grad_norm": {
+    "png": "grad_norm.png",
+    "svg": "grad_norm.svg",
+    "points": 502
+  },
+  "loss": {
+    "png": "loss.png",
+    "svg": "loss.svg",
+    "points": 502
+  },
+  "q_loss": {
+    "png": "q_loss.png",
+    "svg": "q_loss.svg",
+    "points": 502
+  },
+  "q_taken_mean": {
+    "png": "q_taken_mean.png",
+    "svg": "q_taken_mean.svg",
+    "points": 502
+  },
+  "red_team_alives_mean": {
+    "png": "red_team_alives_mean.png",
+    "svg": "red_team_alives_mean.svg",
+    "points": 502
+  },
+  "red_team_win_mean": {
+    "png": "red_team_win_mean.png",
+    "svg": "red_team_win_mean.svg",
+    "points": 502
+  },
+  "return_mean": {
+    "png": "return_mean.png",
+    "svg": "return_mean.svg",
+    "points": 502
+  },
+  "return_std": {
+    "png": "return_std.png",
+    "svg": "return_std.svg",
+    "points": 502
+  },
+  "target_mean": {
+    "png": "target_mean.png",
+    "svg": "target_mean.svg",
+    "points": 502
+  },
+  "td_error_abs": {
+    "png": "td_error_abs.png",
+    "svg": "td_error_abs.svg",
+    "points": 502
+  },
+  "test_blue_team_alives_mean": {
+    "png": "test_blue_team_alives_mean.png",
+    "svg": "test_blue_team_alives_mean.svg",
+    "points": 101
+  },
+  "test_blue_team_win_mean": {
+    "png": "test_blue_team_win_mean.png",
+    "svg": "test_blue_team_win_mean.svg",
+    "points": 101
+  },
+  "test_ep_length_mean": {
+    "png": "test_ep_length_mean.png",
+    "svg": "test_ep_length_mean.svg",
+    "points": 101
+  },
+  "test_episode_length_mean": {
+    "png": "test_episode_length_mean.png",
+    "svg": "test_episode_length_mean.svg",
+    "points": 101
+  },
+  "test_red_team_alives_mean": {
+    "png": "test_red_team_alives_mean.png",
+    "svg": "test_red_team_alives_mean.svg",
+    "points": 101
+  },
+  "test_red_team_win_mean": {
+    "png": "test_red_team_win_mean.png",
+    "svg": "test_red_team_win_mean.svg",
+    "points": 101
+  },
+  "test_return_mean": {
+    "png": "test_return_mean.png",
+    "svg": "test_return_mean.svg",
+    "points": 101
+  },
+  "test_return_std": {
+    "png": "test_return_std.png",
+    "svg": "test_return_std.svg",
+    "points": 101
+  },
+  "timestep": {
+    "png": "timestep.png",
+    "svg": "timestep.svg",
+    "points": 8940
+  }
+}

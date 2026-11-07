@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: gym
+Version: 0.23.1
+Summary: Gym: A universal API for reinforcement learning environments
+Home-page: https://www.gymlibrary.ml/
+Author: Gym Community
+Author-email: jkterry@umd.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+License-File: LICENSE.md
+Requires-Dist: numpy >=1.18.0
+Requires-Dist: cloudpickle >=1.2.0
+Requires-Dist: gym-notices >=0.0.4
+Requires-Dist: importlib-metadata >=4.10.0 ; python_version < "3.10"
+Provides-Extra: accept-rom-license
+Requires-Dist: autorom[accept-rom-license] ~=0.4.2 ; extra == 'accept-rom-license'
+Provides-Extra: all
+Requires-Dist: mujoco-py <2.0,>=1.50 ; extra == 'all'
+Requires-Dist: pygame ==2.1.0 ; extra == 'all'
+Requires-Dist: scipy >=1.4.1 ; extra == 'all'
+Requires-Dist: ale-py ~=0.7.4 ; extra == 'all'
+Requires-Dist: lz4 >=3.1.0 ; extra == 'all'
+Requires-Dist: opencv-python >=3.0 ; extra == 'all'
+Requires-Dist: box2d-py ==2.3.5 ; extra == 'all'
+Provides-Extra: atari
+Requires-Dist: ale-py ~=0.7.4 ; extra == 'atari'
+Provides-Extra: box2d
+Requires-Dist: box2d-py ==2.3.5 ; extra == 'box2d'
+Requires-Dist: pygame ==2.1.0 ; extra == 'box2d'
+Provides-Extra: classic_control
+Requires-Dist: pygame ==2.1.0 ; extra == 'classic_control'
+Provides-Extra: mujoco
+Requires-Dist: mujoco-py <2.0,>=1.50 ; extra == 'mujoco'
+Provides-Extra: nomujoco
+Requires-Dist: pygame ==2.1.0 ; extra == 'nomujoco'
+Requires-Dist: scipy >=1.4.1 ; extra == 'nomujoco'
+Requires-Dist: lz4 >=3.1.0 ; extra == 'nomujoco'
+Requires-Dist: opencv-python >=3.0 ; extra == 'nomujoco'
+Requires-Dist: box2d-py ==2.3.5 ; extra == 'nomujoco'
+Provides-Extra: other
+Requires-Dist: lz4 >=3.1.0 ; extra == 'other'
+Requires-Dist: opencv-python >=3.0 ; extra == 'other'
+Provides-Extra: toy_text
+Requires-Dist: pygame ==2.1.0 ; extra == 'toy_text'
+Requires-Dist: scipy >=1.4.1 ; extra == 'toy_text'
+
