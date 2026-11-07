@@ -1,0 +1,82 @@
+{
+  "cases": [
+    {
+      "agents": 25,
+      "matched_initial_map": true,
+      "tag_reward": 1,
+      "tag_attempt_penalty": -0.2,
+      "initial": {
+        "episode_return_mean_over_agents": -39.85600059390068,
+        "tag_attempts": 4987,
+        "agent_decisions": 5000,
+        "tag_action_fraction": 0.9974,
+        "reward_derived_successful_tag_events": 1,
+        "reward_derived_tag_success_fraction": 0.00020052135552436334,
+        "reward_equation_residual_from_float_precision": -1.4847516922600335e-05
+      },
+      "final": {
+        "episode_return_mean_over_agents": 66.2640009874105,
+        "tag_attempts": 2157,
+        "agent_decisions": 5000,
+        "tag_action_fraction": 0.4314,
+        "reward_derived_successful_tag_events": 2088,
+        "reward_derived_tag_success_fraction": 0.9680111265646731,
+        "reward_equation_residual_from_float_precision": 2.4685262360435445e-05
+      },
+      "interpretation": "Rewarded-tag counts are inferred from total reward and action counts using mean-agent-return=(rewarded_tags-0.2*tag_attempts)/N; these are tag events, not unique prey captured. These statistics describe the first fixed evaluation episode only."
+    },
+    {
+      "agents": 45,
+      "matched_initial_map": true,
+      "tag_reward": 1,
+      "tag_attempt_penalty": -0.2,
+      "initial": {
+        "episode_return_mean_over_agents": -39.06666724880532,
+        "tag_attempts": 8795,
+        "agent_decisions": 9000,
+        "tag_action_fraction": 0.9772222222222222,
+        "reward_derived_successful_tag_events": 1,
+        "reward_derived_tag_success_fraction": 0.00011370096645821489,
+        "reward_equation_residual_from_float_precision": -2.61962393324211e-05
+      },
+      "final": {
+        "episode_return_mean_over_agents": 60.542223124371645,
+        "tag_attempts": 3548,
+        "agent_decisions": 9000,
+        "tag_action_fraction": 0.3942222222222222,
+        "reward_derived_successful_tag_events": 3434,
+        "reward_derived_tag_success_fraction": 0.967869222096956,
+        "reward_equation_residual_from_float_precision": 4.0596723920316435e-05
+      },
+      "interpretation": "Rewarded-tag counts are inferred from total reward and action counts using mean-agent-return=(rewarded_tags-0.2*tag_attempts)/N; these are tag events, not unique prey captured. These statistics describe the first fixed evaluation episode only."
+    },
+    {
+      "agents": 61,
+      "matched_initial_map": true,
+      "tag_reward": 1,
+      "tag_attempt_penalty": -0.2,
+      "initial": {
+        "episode_return_mean_over_agents": -39.803279281639654,
+        "tag_attempts": 12145,
+        "agent_decisions": 12200,
+        "tag_action_fraction": 0.9954918032786885,
+        "reward_derived_successful_tag_events": 1,
+        "reward_derived_tag_success_fraction": 8.233841086867023e-05,
+        "reward_equation_residual_from_float_precision": -3.618001892391476e-05
+      },
+      "final": {
+        "episode_return_mean_over_agents": 63.18360749888617,
+        "tag_attempts": 5034,
+        "agent_decisions": 12200,
+        "tag_action_fraction": 0.41262295081967215,
+        "reward_derived_successful_tag_events": 4861,
+        "reward_derived_tag_success_fraction": 0.9656336909018673,
+        "reward_equation_residual_from_float_precision": 5.743205656472128e-05
+      },
+      "interpretation": "Rewarded-tag counts are inferred from total reward and action counts using mean-agent-return=(rewarded_tags-0.2*tag_attempts)/N; these are tag events, not unique prey captured. These statistics describe the first fixed evaluation episode only."
+    }
+  ],
+  "optimizer_updates": 0,
+  "wandb_writes": 0,
+  "new_training_or_policy_evaluation_runs": 0
+}
