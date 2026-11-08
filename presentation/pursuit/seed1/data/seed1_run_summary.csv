@@ -1,0 +1,4 @@
+agents,map_size,training_seed,job_id,checkpoint_step,evaluation_episodes,test_return_mean,test_return_std,gif_single_episode_return,wandb_url
+25,45,1,1034268,5000200,100,69.08280102941393,11.913720530130135,66.2640009874105,https://wandb.ai/lxt3rm-nus/ExpoComm_AdvPursuit45/runs/cs4246-static25-original-b2000-s1-1034268
+45,60,1,1042995,5000200,100,61.27768980199761,7.183965475274124,60.542223124371645,https://wandb.ai/lxt3rm-nus/ExpoComm_AdvPursuit60/runs/cs4246-static45-original-b2000-s1-1042995
+61,70,1,1043000,5000200,100,69.16524693228182,6.138991672321774,63.18360749888617,https://wandb.ai/lxt3rm-nus/ExpoComm_AdvPursuit70/runs/cs4246-static61-original-b2000-s1-1043000
