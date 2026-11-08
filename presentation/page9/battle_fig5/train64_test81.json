@@ -1,0 +1,147 @@
+{
+ "train_agents": 64,
+ "test_agents": 81,
+ "games_per_pair": 200,
+ "eval_epsilon": 0.05,
+ "models": {
+  "IDQN": {
+   "dir": "work_dirs/ExpoComm_Battle40/iql_magent/ExpoComm_Battle40_s0/20261103_102925/models/5006417",
+   "t": 5006417
+  },
+  "ER K=log": {
+   "dir": "work_dirs/ExpoComm_Battle40/iql_ER_static_n7/ExpoComm_Battle40_s0/20261103_185701/models/5007808",
+   "t": 5007808
+  },
+  "ER K=1": {
+   "dir": "work_dirs/ExpoComm_Battle40/iql_ER_one_peer_n7/ExpoComm_Battle40_s0/20261104_003201/models/5007776",
+   "t": 5007776
+  },
+  "ExpoComm K=log": {
+   "dir": "work_dirs/ExpoComm_Battle40/iql_ExpoComm_static_n7/ExpoComm_Battle40_s0/20261104_013651/models/5008002",
+   "t": 5008002
+  },
+  "ExpoComm K=1": {
+   "dir": "work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261104_003601/models/5006417",
+   "t": 5006417
+  }
+ },
+ "pairs": [
+  {
+   "a": "IDQN",
+   "b": "ER K=log",
+   "wins_a": 64,
+   "wins_b": 131,
+   "draws": 5,
+   "winner": "ER K=log",
+   "a_wins_as_red": 2,
+   "a_wins_as_blue": 62,
+   "red_side_wins": 37
+  },
+  {
+   "a": "IDQN",
+   "b": "ER K=1",
+   "wins_a": 22,
+   "wins_b": 178,
+   "draws": 0,
+   "winner": "ER K=1",
+   "a_wins_as_red": 15,
+   "a_wins_as_blue": 7,
+   "red_side_wins": 108
+  },
+  {
+   "a": "IDQN",
+   "b": "ExpoComm K=log",
+   "wins_a": 119,
+   "wins_b": 76,
+   "draws": 5,
+   "winner": "IDQN",
+   "a_wins_as_red": 41,
+   "a_wins_as_blue": 78,
+   "red_side_wins": 60
+  },
+  {
+   "a": "IDQN",
+   "b": "ExpoComm K=1",
+   "wins_a": 23,
+   "wins_b": 175,
+   "draws": 2,
+   "winner": "ExpoComm K=1",
+   "a_wins_as_red": 22,
+   "a_wins_as_blue": 1,
+   "red_side_wins": 121
+  },
+  {
+   "a": "ER K=log",
+   "b": "ER K=1",
+   "wins_a": 108,
+   "wins_b": 91,
+   "draws": 1,
+   "winner": "ER K=log",
+   "a_wins_as_red": 99,
+   "a_wins_as_blue": 9,
+   "red_side_wins": 189
+  },
+  {
+   "a": "ER K=log",
+   "b": "ExpoComm K=log",
+   "wins_a": 121,
+   "wins_b": 77,
+   "draws": 2,
+   "winner": "ER K=log",
+   "a_wins_as_red": 99,
+   "a_wins_as_blue": 22,
+   "red_side_wins": 175
+  },
+  {
+   "a": "ER K=log",
+   "b": "ExpoComm K=1",
+   "wins_a": 100,
+   "wins_b": 100,
+   "draws": 0,
+   "winner": null,
+   "a_wins_as_red": 100,
+   "a_wins_as_blue": 0,
+   "red_side_wins": 200
+  },
+  {
+   "a": "ER K=1",
+   "b": "ExpoComm K=log",
+   "wins_a": 93,
+   "wins_b": 107,
+   "draws": 0,
+   "winner": "ExpoComm K=log",
+   "a_wins_as_red": 92,
+   "a_wins_as_blue": 1,
+   "red_side_wins": 191
+  },
+  {
+   "a": "ER K=1",
+   "b": "ExpoComm K=1",
+   "wins_a": 100,
+   "wins_b": 100,
+   "draws": 0,
+   "winner": null,
+   "a_wins_as_red": 100,
+   "a_wins_as_blue": 0,
+   "red_side_wins": 200
+  },
+  {
+   "a": "ExpoComm K=log",
+   "b": "ExpoComm K=1",
+   "wins_a": 100,
+   "wins_b": 100,
+   "draws": 0,
+   "winner": null,
+   "a_wins_as_red": 100,
+   "a_wins_as_blue": 0,
+   "red_side_wins": 200
+  }
+ ],
+ "win_count": {
+  "IDQN": 1,
+  "ER K=log": 3,
+  "ER K=1": 1,
+  "ExpoComm K=log": 1,
+  "ExpoComm K=1": 1
+ }
+}
