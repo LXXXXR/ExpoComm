@@ -4,6 +4,8 @@ from envs import REGISTRY as env_REGISTRY
 from functools import partial
 from components.episode_buffer import EpisodeBatch
 import numpy as np
+import imageio
+import os
 
 
 class EpisodeRunner:
@@ -61,6 +63,11 @@ class EpisodeRunner:
     def run(self, test_mode=False):
         self.reset()
 
+        record_video = test_mode and getattr(self.args, "record_video", False)
+        video_frames = []
+        if record_video:
+            self._append_video_frame(video_frames)
+
         terminated = False
         episode_return = 0
         self.mac.init_hidden(batch_size=self.batch_size)
@@ -86,6 +93,8 @@ class EpisodeRunner:
             reward, terminated, env_info = self.env.step(actions[0])
             if test_mode and self.args.render:
                 self.env.render()
+            if record_video:
+                self._append_video_frame(video_frames)
             if self.global_reward:
                 episode_return += reward
                 post_transition_data = {
@@ -116,6 +125,8 @@ class EpisodeRunner:
         }
         if test_mode and self.args.render:
             print(f"Episode return: {episode_return}")
+        if record_video:
+            self._save_video(video_frames)
 
         self.batch.update(last_data, ts=self.t)
 
@@ -155,6 +166,26 @@ class EpisodeRunner:
             self.log_train_stats_t = self.t_env
 
         return self.batch
+
+    def _append_video_frame(self, video_frames):
+        """Capture one RGB frame without requiring a graphical display."""
+        frame = self.env.render(mode="rgb_array")
+        if frame is not None:
+            video_frames.append(np.asarray(frame))
+
+    def _save_video(self, video_frames):
+        if not video_frames:
+            self.logger.console_logger.warning("No frames were returned; video was not saved.")
+            return
+
+        video_path = self.args.video_path
+        os.makedirs(os.path.dirname(video_path) or ".", exist_ok=True)
+        imageio.mimsave(video_path, video_frames, fps=self.args.video_fps)
+        self.logger.console_logger.info(
+            "Saved evaluation video with %s frames to %s",
+            len(video_frames),
+            video_path,
+        )
 
     def _log(self, returns, stats, prefix):
         self.logger.log_stat(prefix + "return_mean", np.mean(returns), self.t_env)

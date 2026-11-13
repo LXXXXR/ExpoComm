@@ -68,6 +68,38 @@ python src/main.py --config=ExpoComm_one_peer_n6 --env-config=MAgent_AdvPursuit 
 ```
 
 
+## Record a trained Battle policy
+
+The numbered directories inside `models` are training timestep checkpoints,
+not recorded battles. Evaluation loads a checkpoint and plays a new episode.
+`ExpoComm_Battle25_s0` uses a 25-by-25 map with 20 learned red agents and 20 blue
+agents controlled by `src/pretrained/battle.pt`.
+
+For the run saved on 2026-10-12 at 22:02:21, use
+`src/config/exp/ExpoComm_Battle25_eval_5009240.yaml`. Update `checkpoint_path`
+and `video_path` if your cluster paths differ. Run from the repository root in
+the training environment, on an allocated compute node:
+
+```bash
+cd ~/ExpoComm
+SDL_VIDEODRIVER=dummy WANDB_MODE=disabled python src/main.py \
+  --config=iql_ExpoComm_one_peer_n6 \
+  --env-config=MAgent_Battle \
+  --exp-config=ExpoComm_Battle25_eval_5009240
+```
+
+This records one greedy episode to `videos/battle_5009240.gif` next to the
+original `models` directory. It uses CPU inference and a single replay buffer
+slot. `render: False` avoids opening a window; `record_video: True` still captures
+RGB frames. Keep `test_nepisode: 1`, as the recorder writes all episodes to the
+same filename. To compare checkpoints, change both `load_step` and the output
+filename. `load_step: 0` selects the largest checkpoint number.
+
+The GIF shows movement and combat; it does not draw communication connections.
+Ensure the cluster copy contains the recording functions in
+`src/runners/episode_runner.py` and render forwarding in
+`src/envs/battle_wrappers.py` and `src/envs/magent.py`.
+
 ## Citing
 
 If you use this code in your research or find it helpful, please consider citing our paper:

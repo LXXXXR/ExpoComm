@@ -1,0 +1,90 @@
+{
+  "os": "Linux-6.8.0-146-generic-x86_64-with-glibc2.17",
+  "python": "CPython 3.8.20",
+  "startedAt": "2026-10-13T08:11:28.955035Z",
+  "args": [
+    "--config=iql_ExpoComm_one_peer_n7",
+    "--env-config=MAgent_Battle",
+    "--exp-config=ExpoComm_Battle40_s0"
+  ],
+  "program": "src/main.py",
+  "codePath": "src/main.py",
+  "codePathLocal": "src/main.py",
+  "git": {
+    "remote": "https://github.com/AdamHermes/ExpoComm.git",
+    "commit": "2e302c01a945a71090e84456b1a2e8797908eb03"
+  },
+  "email": "adamhermes66@gmail.com",
+  "root": "/home/b/bach66/ExpoComm",
+  "host": "xgpf7",
+  "executable": "/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/bin/python",
+  "cpu_count": 24,
+  "cpu_count_logical": 48,
+  "gpu": "Tesla T4",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "99950723072",
+      "used": "32982523904"
+    }
+  },
+  "memory": {
+    "total": "270053769216"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Tesla T4",
+      "memoryTotal": "16106127360",
+      "cudaCores": 2560,
+      "architecture": "Turing",
+      "uuid": "GPU-c77f3ccf-a170-8d60-c30f-e81b42bbf77a"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "slurm": {
+    "cluster_name": "soc",
+    "conf": "/etc/slurm/slurm.conf",
+    "cpus_on_node": "8",
+    "cpus_per_task": "8",
+    "gpus": "1",
+    "gpus_on_node": "1",
+    "gtids": "0",
+    "job_account": "allusers",
+    "job_cpus_per_node": "8",
+    "job_end_time": "1792138281",
+    "job_exclusive": "NO",
+    "job_gid": "900",
+    "job_gpus": "0",
+    "job_id": "939501",
+    "job_name": "expocomm",
+    "job_nodelist": "xgpf7",
+    "job_num_nodes": "1",
+    "job_oversubscribe": "NO",
+    "job_partition": "gpu-long",
+    "job_qos": "normal",
+    "job_sluid": "sABHM4T51A5900",
+    "job_start_time": "1791879081",
+    "job_uid": "65733",
+    "job_user": "bach66",
+    "jobid": "939501",
+    "localid": "0",
+    "mem_per_node": "65536",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "xgpf7",
+    "oom_kill_step": "0",
+    "prio_process": "0",
+    "procid": "0",
+    "script_context": "prolog_task",
+    "step_id": "-5",
+    "stepid": "-5",
+    "submit_dir": "/home/b/bach66/ExpoComm",
+    "submit_host": "xlogin1",
+    "task_pid": "160713",
+    "tasks_per_node": "1",
+    "topology_addr": "xgpf7",
+    "topology_addr_pattern": "node",
+    "tres_per_task": "cpu=4"
+  },
+  "writerId": "5a2ga0m4b6fbdrkr3rpy0o9nyfirmm53"
+}

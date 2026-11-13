@@ -1,0 +1,23 @@
+# Evaluate and record one greedy episode from the 1,000,200-step checkpoint.
+# The path is the parent directory containing numbered checkpoint folders.
+checkpoint_path: "/home/b/bach66/ExpoComm/work_dirs/ExpoComm_AdvPursuit45/iql_ExpoComm_one_peer_n6/ExpoComm_AdvPursuit45_s0/20261012_170328/models"
+load_step: 5050200
+evaluate: True
+render: False
+save_model: False
+test_nepisode: 1
+
+buffer_size: 100
+use_cuda: False
+# Headless recording; unlike render: True, this does not require an X display.
+record_video: True
+video_fps: 10
+video_path: "/home/b/bach66/ExpoComm/work_dirs/ExpoComm_AdvPursuit45/iql_ExpoComm_one_peer_n6/ExpoComm_AdvPursuit45_s0/20261012_170328/videos/adv_pursuit_5050200.gif"
+
+exp_name: ExpoComm_AdvPursuit45_eval
+run_name: ExpoComm_AdvPursuit45_eval_5050200
+seed: 0
+
+env_args:
+  map_size: 45
+  pretrained_ckpt: "adv_pursuit.pt"

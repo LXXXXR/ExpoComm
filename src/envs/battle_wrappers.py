@@ -189,6 +189,9 @@ class _BattleWrapper(MultiAgentEnv):
     def close(self):
         self.env.close()
 
+    def render(self, mode="human"):
+        return self.env.render(mode)
+
     def get_env_info(self):
         env_info = {
             # "state_shape": math.prod(self.observation_space["state"].shape),  # flatten

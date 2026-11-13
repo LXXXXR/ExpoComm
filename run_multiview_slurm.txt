@@ -1,0 +1,36 @@
+6 lệnh chạy Adaptive Multiview trên GPU cluster
+
+Sau khi đồng bộ repo lên cluster, chạy từ thư mục gốc:
+
+cd ~/ExpoComm
+mkdir -p slurm
+
+Chọn lệnh tương ứng với map muốn chạy. Mỗi lệnh submit một job
+seed 0, yêu cầu 1 GPU và bật W&B online. Conda env ExpoComm_test
+cần cài wandb và có thông tin đăng nhập W&B.
+
+1. Battle25
+sbatch run_reproduce_expocomm.sh iql_expocomm_mv_adaptive MAgent_Battle Multiview_Battle25_s0 --wandb-mode=online
+
+2. Battle35
+sbatch run_reproduce_expocomm.sh iql_expocomm_mv_adaptive MAgent_Battle ExpoComm_Battle35_s0 --wandb-mode=online
+
+3. Battle40
+sbatch run_reproduce_expocomm.sh iql_expocomm_mv_adaptive MAgent_Battle Multiview_Battle40_s0 --wandb-mode=online
+
+4. Adversarial Pursuit45
+sbatch run_reproduce_expocomm.sh iql_expocomm_mv_adaptive MAgent_AdvPursuit ExpoComm_AdvPursuit45_s0 --wandb-mode=online
+
+5. Adversarial Pursuit60
+sbatch run_reproduce_expocomm.sh iql_expocomm_mv_adaptive MAgent_AdvPursuit ExpoComm_AdvPursuit60_s0 --wandb-mode=online
+
+6. Adversarial Pursuit70
+sbatch run_reproduce_expocomm.sh iql_expocomm_mv_adaptive MAgent_AdvPursuit ExpoComm_AdvPursuit70_s0 --wandb-mode=online
+
+Battle35 và ba map Pursuit dùng config thí nghiệm ExpoComm có sẵn.
+Tham số thuật toán iql_expocomm_mv_adaptive bật adaptive multiview
+cho cả sáu lệnh. Battle40 dùng topk_neighbors=7 theo config thí nghiệm,
+các map còn lại dùng mặc định 6 của thuật toán.
+
+Log Slurm nằm ở slurm/expocomm_<JOB_ID>.out.
+W&B dùng project theo exp_name trong config thí nghiệm.

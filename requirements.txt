@@ -1,6 +1,6 @@
 absl-py
 attrs
-gym==0.21.0
+#gym==0.26.2
 idna==2.7
 imageio
 lbforaging
@@ -12,7 +12,7 @@ Pillow
 pluggy==0.7.1
 portpicker==1.2.0
 probscale
-protobuf==3.6.1
+protobuf==3.20.3
 py==1.6.0
 pygame
 pyparsing==2.2.2
@@ -37,3 +37,14 @@ websocket-client==0.53.0
 whichcraft==0.5.2
 wrapt==1.10.11
 git+https://github.com/oxwhirl/smac.git
+
+
+
+
+# wandb
+# einops
+# torch_scatter
+# magent==0.1.14
+# supersuit==3.3.2
+# pettingzoo==1.12.0
+# numpy==1.23.5

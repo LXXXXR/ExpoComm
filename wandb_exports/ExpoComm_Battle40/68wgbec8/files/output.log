@@ -1,0 +1,1202 @@
+2026-10-13 16:11:30,669 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Current directory: /home/b/bach66/ExpoComm.
+2026-10-13 16:11:30,670 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Experiment Parameters:
+2026-10-13 16:11:30,671 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO -
+
+{   'action_selector': 'epsilon_greedy',
+    'add_value_last_step': True,
+    'agent': 'ExpoComm_one_peer',
+    'agent_output_type': 'q',
+    'aux_coef': 0.1,
+    'batch_size': 32,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'double_q': True,
+    'env': 'MAgent_Battle',
+    'env_args': {   'global_reward': False,
+                    'map_name': 'battle_view7',
+                    'map_size': 40,
+                    'max_cycles': 200,
+                    'minimap_mode': True,
+                    'pretrained_ckpt': 'battle.pt',
+                    'seed': 0},
+    'epsilon_anneal_time': 500000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'evaluation_epsilon': 0.0,
+    'exp_name': 'ExpoComm_Battle40',
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hidden_dim': 64,
+    'hypergroup': None,
+    'label': 'default_label',
+    'learner': 'aux_q_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0005,
+    'mac': 'ExpoComm_mac',
+    'mixer': None,
+    'name': 'iql_ExpoComm_one_peer_n7',
+    'obs_agent_id': False,
+    'obs_individual_obs': False,
+    'obs_last_action': False,
+    'one_peer': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'pos_flag': False,
+    'render': False,
+    'repeat_id': 1,
+    'run_name': 'ExpoComm_Battle40_s0',
+    'runner': 'episode',
+    'runner_log_interval': 10000,
+    'save_model': True,
+    'save_model_interval': 50000,
+    'save_replay': False,
+    'seed': 0,
+    'standardise_returns': False,
+    'standardise_rewards': True,
+    't_max': 5050000,
+    'target_update_interval_or_tau': 200,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 100,
+    'topk_neighbors': 7,
+    'use_cuda': True,
+    'use_rnn': True,
+    'use_tensorboard': False,
+    'work_dir': 'work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128'}
+
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:157: UserWarning: The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.
+  warnings.warn("The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:165: UserWarning: The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.
+  warnings.warn("The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/wrappers/base.py:51: UserWarning: The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.
+  warnings.warn("The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/wrappers/base.py:59: UserWarning: The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.
+  warnings.warn("The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:61: UserWarning: The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.
+  warnings.warn("The `observation_spaces` dictionary is deprecated. Use the `observation_space` function instead.")
+/mnt/scratch/b/bach66/conda/envs/ExpoComm_test/lib/python3.8/site-packages/pettingzoo/utils/conversions.py:69: UserWarning: The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.
+  warnings.warn("The `action_spaces` dictionary is deprecated. Use the `action_space` function instead.")
+/home/b/bach66/ExpoComm/src/pretrained/magent.py:34: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  save_dict = torch.load(model_path, map_location=self.device)
+2026-10-13 16:12:03,219 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Beginning training for 5050000 timesteps
+/home/b/bach66/ExpoComm/src/envs/battle_wrappers.py:241: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  actions = torch.tensor(actions, dtype=torch.long)
+2026-10-13 16:12:06,190 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 200 / 5050000
+2026-10-13 16:12:06,190 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 4 minutes, 58 seconds. Time passed: 2 seconds
+2026-10-13 16:13:39,745 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/200
+2026-10-13 16:27:38,050 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:      50000 | Episode:      250
+aux_loss:                  2.0221	blue_team_alives_mean:    63.9920	blue_team_win_mean:        1.0000	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.9240	grad_norm:                 0.4660	loss:                      0.8498
+q_loss:                    0.6476	q_taken_mean:              0.0005	red_team_alives_mean:     53.8080	red_team_win_mean:         0.0000
+return_mean:              -7.6898	return_std:                0.2478	target_mean:               0.0026	td_error_abs:              0.6225
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   1.0000	test_ep_length_mean:      94.0000	test_episode_length_mean: 93.0000
+test_red_team_alives_mean:  2.0000	test_red_team_win_mean:    0.0000	test_return_mean:         -0.3191	test_return_std:           0.0000
+
+2026-10-13 16:27:41,584 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 50200 / 5050000
+2026-10-13 16:27:41,587 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 1 hours, 58 minutes, 55 seconds. Time passed: 15 minutes, 38 seconds
+2026-10-13 16:31:40,903 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/50200
+2026-10-13 16:46:06,268 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     100000 | Episode:      500
+aux_loss:                  1.7703	blue_team_alives_mean:    63.9960	blue_team_win_mean:        1.0000	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.8290	grad_norm:                 0.6431	loss:                      0.6288
+q_loss:                    0.4517	q_taken_mean:              0.0105	red_team_alives_mean:     48.9640	red_team_win_mean:         0.0000
+return_mean:              -6.5800	return_std:                0.3826	target_mean:               0.0123	td_error_abs:              0.4707
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   0.5000	test_ep_length_mean:     147.0000	test_episode_length_mean:146.0000
+test_red_team_alives_mean: 33.0000	test_red_team_win_mean:    0.0000	test_return_mean:         -0.6595	test_return_std:           0.0000
+
+2026-10-13 16:46:09,695 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 100200 / 5050000
+2026-10-13 16:46:09,698 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 6 hours, 28 minutes, 18 seconds. Time passed: 34 minutes, 6 seconds
+2026-10-13 16:49:30,881 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/100200
+2026-10-13 17:03:45,292 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     150000 | Episode:      750
+aux_loss:                  1.8173	blue_team_alives_mean:    64.0000	blue_team_win_mean:        1.0000	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.7340	grad_norm:                 0.7071	loss:                      0.6196
+q_loss:                    0.4378	q_taken_mean:              0.0213	red_team_alives_mean:     38.9680	red_team_win_mean:         0.0000
+return_mean:              -5.1534	return_std:                0.5662	target_mean:               0.0229	td_error_abs:              0.4463
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   0.6667	test_ep_length_mean:     164.6667	test_episode_length_mean:163.6667
+test_red_team_alives_mean: 27.3333	test_red_team_win_mean:    0.0000	test_return_mean:         -0.6084	test_return_std:           0.0000
+
+2026-10-13 17:03:48,757 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 150200 / 5050000
+2026-10-13 17:03:48,759 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 4 hours, 49 minutes, 43 seconds. Time passed: 51 minutes, 45 seconds
+2026-10-13 17:07:21,143 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/150200
+2026-10-13 17:21:35,637 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     200000 | Episode:     1000
+aux_loss:                  1.7745	blue_team_alives_mean:    64.0000	blue_team_win_mean:        1.0000	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.6390	grad_norm:                 0.9294	loss:                      0.6061
+q_loss:                    0.4286	q_taken_mean:              0.0312	red_team_alives_mean:     38.9080	red_team_win_mean:         0.0000
+return_mean:              -4.6378	return_std:                0.6099	target_mean:               0.0328	td_error_abs:              0.4337
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   0.7500	test_ep_length_mean:     173.5000	test_episode_length_mean:172.5000
+test_red_team_alives_mean: 26.7500	test_red_team_win_mean:    0.0000	test_return_mean:         -0.6432	test_return_std:           0.0000
+
+2026-10-13 17:21:39,051 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 200200 / 5050000
+2026-10-13 17:21:39,053 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 4 hours, 50 minutes, 14 seconds. Time passed: 1 hours, 9 minutes, 35 seconds
+2026-10-13 17:25:17,713 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/200200
+2026-10-13 17:39:31,501 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     250197 | Episode:     1252
+aux_loss:                  1.7425	blue_team_alives_mean:    63.9921	blue_team_win_mean:        0.9880	ep_length_mean:          199.3725
+episode_length_mean:     198.3725	epsilon:                   0.5439	grad_norm:                 1.5607	loss:                      0.6559
+q_loss:                    0.4817	q_taken_mean:              0.0407	red_team_alives_mean:     38.6033	red_team_win_mean:         0.0000
+return_mean:              -4.1003	return_std:                0.6529	target_mean:               0.0426	td_error_abs:              0.4716
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   0.8000	test_ep_length_mean:     178.8000	test_episode_length_mean:177.8000
+test_red_team_alives_mean: 26.8880	test_red_team_win_mean:    0.0000	test_return_mean:         -0.7000	test_return_std:           0.0364
+
+2026-10-13 17:39:34,885 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 250397 / 5050000
+2026-10-13 17:39:34,888 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 4 hours, 34 minutes, 26 seconds. Time passed: 1 hours, 27 minutes, 31 seconds
+2026-10-13 17:43:17,867 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/250397
+2026-10-13 17:57:23,562 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     300197 | Episode:     1502
+aux_loss:                  1.7838	blue_team_alives_mean:    64.0000	blue_team_win_mean:        0.9960	ep_length_mean:          199.8314
+episode_length_mean:     198.8314	epsilon:                   0.4486	grad_norm:                 1.2624	loss:                      0.6342
+q_loss:                    0.4558	q_taken_mean:              0.0509	red_team_alives_mean:     36.8857	red_team_win_mean:         0.0000
+return_mean:              -3.5351	return_std:                0.6567	target_mean:               0.0506	td_error_abs:              0.3843
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   0.8000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 34.4800	test_red_team_win_mean:    0.0000	test_return_mean:         -0.8182	test_return_std:           0.0531
+
+2026-10-13 17:57:27,108 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 300397 / 5050000
+2026-10-13 17:57:27,110 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 4 hours, 17 minutes, 32 seconds. Time passed: 1 hours, 45 minutes, 23 seconds
+2026-10-13 18:01:21,358 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/300397
+2026-10-13 18:15:33,361 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     350340 | Episode:     1753
+aux_loss:                  1.7752	blue_team_alives_mean:    63.9762	blue_team_win_mean:        0.9840	ep_length_mean:          199.7765
+episode_length_mean:     198.7765	epsilon:                   0.3534	grad_norm:                 1.7715	loss:                      0.6539
+q_loss:                    0.4764	q_taken_mean:              0.0590	red_team_alives_mean:     35.4734	red_team_win_mean:         0.0000
+return_mean:              -3.0582	return_std:                0.5793	target_mean:               0.0584	td_error_abs:              0.3761
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 32.5480	test_red_team_win_mean:    0.0000	test_return_mean:         -0.8159	test_return_std:           0.0600
+
+2026-10-13 18:15:36,981 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 350540 / 5050000
+2026-10-13 18:15:36,985 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 4 hours, 22 minutes, 24 seconds. Time passed: 2 hours, 3 minutes, 33 seconds
+2026-10-13 18:19:18,948 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/350540
+2026-10-13 18:33:34,160 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     400499 | Episode:     2004
+aux_loss:                  1.7974	blue_team_alives_mean:    63.9721	blue_team_win_mean:        1.0000	ep_length_mean:          199.8392
+episode_length_mean:     198.8392	epsilon:                   0.2581	grad_norm:                 1.8564	loss:                      0.6739
+q_loss:                    0.4941	q_taken_mean:              0.0677	red_team_alives_mean:     37.4187	red_team_win_mean:         0.0000
+return_mean:              -2.7147	return_std:                0.3776	target_mean:               0.0678	td_error_abs:              0.3872
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 36.7100	test_red_team_win_mean:    0.0000	test_return_mean:         -1.1072	test_return_std:           0.0979
+
+2026-10-13 18:33:37,657 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 400699 / 5050000
+2026-10-13 18:33:37,659 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 3 hours, 49 minutes, 29 seconds. Time passed: 2 hours, 21 minutes, 34 seconds
+2026-10-13 18:37:26,535 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/400699
+2026-10-13 18:51:43,891 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     450580 | Episode:     2256
+aux_loss:                  1.7360	blue_team_alives_mean:    63.9881	blue_team_win_mean:        1.0000	ep_length_mean:          198.7692
+episode_length_mean:     197.7692	epsilon:                   0.1625	grad_norm:                 4.5540	loss:                      0.6983
+q_loss:                    0.5247	q_taken_mean:              0.0773	red_team_alives_mean:     39.1151	red_team_win_mean:         0.0000
+return_mean:              -2.3657	return_std:                0.3483	target_mean:               0.0772	td_error_abs:              0.4255
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 41.3920	test_red_team_win_mean:    0.0000	test_return_mean:         -1.1388	test_return_std:           0.1056
+
+2026-10-13 18:51:47,432 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 450780 / 5050000
+2026-10-13 18:51:47,435 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 3 hours, 48 minutes, 0 seconds. Time passed: 2 hours, 39 minutes, 44 seconds
+2026-10-13 18:55:47,181 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/450780
+2026-10-13 19:09:56,568 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     500580 | Episode:     2506
+aux_loss:                  1.7460	blue_team_alives_mean:    63.9720	blue_team_win_mean:        1.0000	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.0675	grad_norm:                 6.9258	loss:                      0.6824
+q_loss:                    0.5078	q_taken_mean:              0.0829	red_team_alives_mean:     37.0000	red_team_win_mean:         0.0000
+return_mean:              -1.8477	return_std:                0.4048	target_mean:               0.0838	td_error_abs:              0.4178
+test_blue_team_alives_mean: 64.0000	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 48.5040	test_red_team_win_mean:    0.0000	test_return_mean:         -1.1513	test_return_std:           0.0695
+
+2026-10-13 19:09:59,894 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 500780 / 5050000
+2026-10-13 19:09:59,898 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 3 hours, 36 minutes, 37 seconds. Time passed: 2 hours, 57 minutes, 56 seconds
+2026-10-13 19:13:33,496 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/500780
+2026-10-13 19:27:47,201 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     550778 | Episode:     2758
+aux_loss:                  1.7479	blue_team_alives_mean:    63.9760	blue_team_win_mean:        0.9840	ep_length_mean:          199.2231
+episode_length_mean:     198.2231	epsilon:                   0.0500	grad_norm:                 3.6056	loss:                      0.6648
+q_loss:                    0.4900	q_taken_mean:              0.0914	red_team_alives_mean:     38.6409	red_team_win_mean:         0.0000
+return_mean:              -1.5292	return_std:                0.3861	target_mean:               0.0916	td_error_abs:              0.3788
+test_blue_team_alives_mean: 63.8980	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 47.2960	test_red_team_win_mean:    0.0000	test_return_mean:         -1.3822	test_return_std:           0.1133
+
+2026-10-13 19:27:50,623 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 550978 / 5050000
+2026-10-13 19:27:50,626 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 2 hours, 39 minutes, 24 seconds. Time passed: 3 hours, 15 minutes, 47 seconds
+2026-10-13 19:31:29,970 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/550978
+2026-10-13 19:45:47,701 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     600778 | Episode:     3008
+aux_loss:                  1.7178	blue_team_alives_mean:    63.9520	blue_team_win_mean:        0.9880	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.0500	grad_norm:                 6.2968	loss:                      0.6333
+q_loss:                    0.4615	q_taken_mean:              0.0992	red_team_alives_mean:     41.3000	red_team_win_mean:         0.0000
+return_mean:              -1.5754	return_std:                0.3614	target_mean:               0.0991	td_error_abs:              0.3619
+test_blue_team_alives_mean: 63.8920	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 43.1980	test_red_team_win_mean:    0.0000	test_return_mean:         -1.5813	test_return_std:           0.1502
+
+2026-10-13 19:45:51,245 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 600978 / 5050000
+2026-10-13 19:45:51,247 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 2 hours, 42 minutes, 34 seconds. Time passed: 3 hours, 33 minutes, 48 seconds
+2026-10-13 19:49:43,273 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/600978
+2026-10-13 20:04:04,236 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     650912 | Episode:     3259
+aux_loss:                  1.7251	blue_team_alives_mean:    63.9841	blue_team_win_mean:        0.9122	ep_length_mean:          199.7412
+episode_length_mean:     198.7412	epsilon:                   0.0500	grad_norm:                18.3062	loss:                      0.7189
+q_loss:                    0.5463	q_taken_mean:              0.1041	red_team_alives_mean:     44.7987	red_team_win_mean:         0.0000
+return_mean:              -1.5163	return_std:                0.3286	target_mean:               0.1042	td_error_abs:              0.4098
+test_blue_team_alives_mean: 63.8920	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 44.5900	test_red_team_win_mean:    0.0000	test_return_mean:         -1.4011	test_return_std:           0.1306
+
+2026-10-13 20:04:07,898 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 651112 / 5050000
+2026-10-13 20:04:07,900 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 2 hours, 43 minutes, 43 seconds. Time passed: 3 hours, 52 minutes, 4 seconds
+2026-10-13 20:07:58,987 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/651112
+2026-10-13 20:22:17,146 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     701007 | Episode:     3510
+aux_loss:                  1.6901	blue_team_alives_mean:    63.9800	blue_team_win_mean:        0.8960	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.0500	grad_norm:                19.1463	loss:                      0.7136
+q_loss:                    0.5446	q_taken_mean:              0.1134	red_team_alives_mean:     41.2000	red_team_win_mean:         0.0000
+return_mean:              -1.3913	return_std:                0.2679	target_mean:               0.1133	td_error_abs:              0.3712
+test_blue_team_alives_mean: 63.8920	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 43.3660	test_red_team_win_mean:    0.0000	test_return_mean:         -1.5053	test_return_std:           0.1242
+
+2026-10-13 20:22:20,553 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 701207 / 5050000
+2026-10-13 20:22:20,555 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 2 hours, 20 minutes, 54 seconds. Time passed: 4 hours, 10 minutes, 17 seconds
+2026-10-13 20:25:48,445 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/701207
+2026-10-13 20:40:06,754 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     751112 | Episode:     3761
+aux_loss:                  1.6998	blue_team_alives_mean:    63.9921	blue_team_win_mean:        0.8770	ep_length_mean:          199.2157
+episode_length_mean:     198.2157	epsilon:                   0.0500	grad_norm:                11.6216	loss:                      0.6736
+q_loss:                    0.5036	q_taken_mean:              0.1182	red_team_alives_mean:     43.3263	red_team_win_mean:         0.0000
+return_mean:              -1.3998	return_std:                0.3324	target_mean:               0.1186	td_error_abs:              0.3546
+test_blue_team_alives_mean: 63.8920	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 35.7040	test_red_team_win_mean:    0.0000	test_return_mean:         -1.5981	test_return_std:           0.1620
+
+2026-10-13 20:40:10,048 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 751312 / 5050000
+2026-10-13 20:40:10,050 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 1 hours, 29 minutes, 15 seconds. Time passed: 4 hours, 28 minutes, 6 seconds
+2026-10-13 20:43:41,308 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/751312
+2026-10-13 20:57:57,041 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     801223 | Episode:     4013
+aux_loss:                  1.7042	blue_team_alives_mean:    63.9686	blue_team_win_mean:        0.9015	ep_length_mean:          198.8885
+episode_length_mean:     197.8885	epsilon:                   0.0500	grad_norm:                20.2513	loss:                      0.6863
+q_loss:                    0.5159	q_taken_mean:              0.1228	red_team_alives_mean:     42.3892	red_team_win_mean:         0.0000
+return_mean:              -1.2819	return_std:                0.2376	target_mean:               0.1232	td_error_abs:              0.3639
+test_blue_team_alives_mean: 63.9840	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 35.0880	test_red_team_win_mean:    0.0000	test_return_mean:         -1.5383	test_return_std:           0.1678
+
+2026-10-13 20:58:00,436 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 801423 / 5050000
+2026-10-13 20:58:00,438 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 1 hours, 12 minutes, 30 seconds. Time passed: 4 hours, 45 minutes, 57 seconds
+2026-10-13 21:01:44,406 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/801423
+2026-10-13 21:15:39,769 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     851223 | Episode:     4263
+aux_loss:                  1.6422	blue_team_alives_mean:    63.9400	blue_team_win_mean:        0.9600	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.0500	grad_norm:                18.1482	loss:                      0.6629
+q_loss:                    0.4987	q_taken_mean:              0.1272	red_team_alives_mean:     33.7120	red_team_win_mean:         0.0000
+return_mean:              -1.2511	return_std:                0.2723	target_mean:               0.1276	td_error_abs:              0.3788
+test_blue_team_alives_mean: 63.9820	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 36.8060	test_red_team_win_mean:    0.0000	test_return_mean:         -1.3525	test_return_std:           0.1421
+
+2026-10-13 21:15:43,067 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 851423 / 5050000
+2026-10-13 21:15:43,069 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 47 minutes, 10 seconds. Time passed: 5 hours, 3 minutes, 39 seconds
+2026-10-13 21:19:21,324 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/851423
+2026-10-13 21:33:23,579 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     901223 | Episode:     4513
+aux_loss:                  1.6139	blue_team_alives_mean:    63.9560	blue_team_win_mean:        0.9520	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.0500	grad_norm:                19.3584	loss:                      0.6465
+q_loss:                    0.4851	q_taken_mean:              0.1367	red_team_alives_mean:     38.3920	red_team_win_mean:         0.0000
+return_mean:              -1.2794	return_std:                0.2427	target_mean:               0.1358	td_error_abs:              0.3380
+test_blue_team_alives_mean: 63.9820	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 35.6120	test_red_team_win_mean:    0.0000	test_return_mean:         -1.4202	test_return_std:           0.1495
+
+2026-10-13 21:33:26,888 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 901423 / 5050000
+2026-10-13 21:33:26,890 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 31 minutes, 6 seconds. Time passed: 5 hours, 21 minutes, 23 seconds
+2026-10-13 21:37:05,782 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/901423
+2026-10-13 21:51:07,336 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:     951326 | Episode:     4764
+aux_loss:                  1.6291	blue_team_alives_mean:    63.9488	blue_team_win_mean:        0.9725	ep_length_mean:          199.6196
+episode_length_mean:     198.6196	epsilon:                   0.0500	grad_norm:                14.8924	loss:                      0.6462
+q_loss:                    0.4833	q_taken_mean:              0.1428	red_team_alives_mean:     36.3522	red_team_win_mean:         0.0000
+return_mean:              -1.2024	return_std:                0.2305	target_mean:               0.1428	td_error_abs:              0.3315
+test_blue_team_alives_mean: 63.9760	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 34.2880	test_red_team_win_mean:    0.0000	test_return_mean:         -1.3352	test_return_std:           0.1704
+
+2026-10-13 21:51:10,774 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 951526 / 5050000
+2026-10-13 21:51:10,777 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 days, 10 minutes, 26 seconds. Time passed: 5 hours, 39 minutes, 7 seconds
+2026-10-13 21:54:56,792 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/951526
+2026-10-13 22:08:52,663 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1001510 | Episode:     5020
+aux_loss:                  1.6162	blue_team_alives_mean:    63.9033	blue_team_win_mean:        0.9927	ep_length_mean:          196.2766
+episode_length_mean:     195.2766	epsilon:                   0.0500	grad_norm:                31.2911	loss:                      0.7358
+q_loss:                    0.5742	q_taken_mean:              0.1473	red_team_alives_mean:     30.7926	red_team_win_mean:         0.0000
+return_mean:              -1.1610	return_std:                0.2476	target_mean:               0.1469	td_error_abs:              0.3726
+test_blue_team_alives_mean: 63.9760	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 36.5520	test_red_team_win_mean:    0.0000	test_return_mean:         -1.2375	test_return_std:           0.1374
+
+2026-10-13 22:08:55,867 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1001710 / 5050000
+2026-10-13 22:08:55,869 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 23 hours, 51 minutes, 59 seconds. Time passed: 5 hours, 56 minutes, 52 seconds
+2026-10-13 22:12:17,062 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1001710
+2026-10-13 22:26:15,492 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1051645 | Episode:     5271
+aux_loss:                  1.6051	blue_team_alives_mean:    63.7370	blue_team_win_mean:        0.9960	ep_length_mean:          199.7451
+episode_length_mean:     198.7451	epsilon:                   0.0500	grad_norm:                22.2025	loss:                      0.7327
+q_loss:                    0.5722	q_taken_mean:              0.1530	red_team_alives_mean:     31.8650	red_team_win_mean:         0.0000
+return_mean:              -1.2279	return_std:                0.2840	target_mean:               0.1539	td_error_abs:              0.3726
+test_blue_team_alives_mean: 63.9760	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 33.3180	test_red_team_win_mean:    0.0000	test_return_mean:         -1.0334	test_return_std:           0.1022
+
+2026-10-13 22:26:18,946 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1051845 / 5050000
+2026-10-13 22:26:18,948 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 23 hours, 6 minutes, 23 seconds. Time passed: 6 hours, 14 minutes, 15 seconds
+2026-10-13 22:30:12,635 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1051845
+2026-10-13 22:44:09,437 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1101746 | Episode:     5524
+aux_loss:                  1.5841	blue_team_alives_mean:    63.7696	blue_team_win_mean:        0.9960	ep_length_mean:          199.6275
+episode_length_mean:     198.6275	epsilon:                   0.0500	grad_norm:                32.6253	loss:                      0.6858
+q_loss:                    0.5274	q_taken_mean:              0.1636	red_team_alives_mean:     33.6804	red_team_win_mean:         0.0000
+return_mean:              -1.1551	return_std:                0.2486	target_mean:               0.1635	td_error_abs:              0.3421
+test_blue_team_alives_mean: 63.9840	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 36.1560	test_red_team_win_mean:    0.0000	test_return_mean:         -1.0087	test_return_std:           0.0855
+
+2026-10-13 22:44:12,952 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1101946 / 5050000
+2026-10-13 22:44:12,954 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 23 hours, 30 minutes, 33 seconds. Time passed: 6 hours, 32 minutes, 9 seconds
+2026-10-13 22:48:06,577 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1101946
+2026-10-13 23:01:59,505 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1151829 | Episode:     5782
+aux_loss:                  1.5458	blue_team_alives_mean:    63.5539	blue_team_win_mean:        0.9924	ep_length_mean:          195.3938
+episode_length_mean:     194.3938	epsilon:                   0.0500	grad_norm:                29.1539	loss:                      0.6392
+q_loss:                    0.4846	q_taken_mean:              0.1691	red_team_alives_mean:     29.6516	red_team_win_mean:         0.0039
+return_mean:              -1.1070	return_std:                0.4054	target_mean:               0.1681	td_error_abs:              0.3031
+test_blue_team_alives_mean: 63.9840	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 39.6420	test_red_team_win_mean:    0.0000	test_return_mean:         -0.9165	test_return_std:           0.0625
+
+2026-10-13 23:02:02,833 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1152029 / 5050000
+2026-10-13 23:02:02,835 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 23 hours, 7 minutes, 48 seconds. Time passed: 6 hours, 49 minutes, 59 seconds
+2026-10-13 23:05:44,381 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1152029
+2026-10-13 23:19:41,736 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1201884 | Episode:     6044
+aux_loss:                  1.4473	blue_team_alives_mean:    63.4330	blue_team_win_mean:        0.9887	ep_length_mean:          189.4152
+episode_length_mean:     188.4152	epsilon:                   0.0500	grad_norm:                47.1890	loss:                      0.8717
+q_loss:                    0.7270	q_taken_mean:              0.1730	red_team_alives_mean:     27.1161	red_team_win_mean:         0.0000
+return_mean:              -1.0187	return_std:                0.3406	target_mean:               0.1727	td_error_abs:              0.3876
+test_blue_team_alives_mean: 63.9720	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 39.3240	test_red_team_win_mean:    0.0000	test_return_mean:         -0.8885	test_return_std:           0.0475
+
+2026-10-13 23:19:45,075 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1202084 / 5050000
+2026-10-13 23:19:45,078 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 22 hours, 40 minutes, 58 seconds. Time passed: 7 hours, 7 minutes, 41 seconds
+2026-10-13 23:23:27,830 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1202084
+2026-10-13 23:37:14,097 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1251966 | Episode:     6305
+aux_loss:                  1.4849	blue_team_alives_mean:    63.0859	blue_team_win_mean:        0.9885	ep_length_mean:          193.3654
+episode_length_mean:     192.3654	epsilon:                   0.0500	grad_norm:                23.5194	loss:                      0.9036
+q_loss:                    0.7551	q_taken_mean:              0.1752	red_team_alives_mean:     23.7421	red_team_win_mean:         0.0000
+return_mean:              -1.0222	return_std:                0.3889	target_mean:               0.1749	td_error_abs:              0.3175
+test_blue_team_alives_mean: 63.9720	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 41.3480	test_red_team_win_mean:    0.0000	test_return_mean:         -0.8675	test_return_std:           0.0491
+
+2026-10-13 23:37:17,373 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1252166 / 5050000
+2026-10-13 23:37:17,376 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 22 hours, 9 minutes, 58 seconds. Time passed: 7 hours, 25 minutes, 14 seconds
+2026-10-13 23:40:49,113 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1252166
+2026-10-13 23:54:15,602 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1302101 | Episode:     6561
+aux_loss:                  1.4700	blue_team_alives_mean:    62.6612	blue_team_win_mean:        0.9883	ep_length_mean:          194.2897
+episode_length_mean:     193.2897	epsilon:                   0.0500	grad_norm:                44.2680	loss:                      0.7304
+q_loss:                    0.5834	q_taken_mean:              0.1860	red_team_alives_mean:     17.7331	red_team_win_mean:         0.0117
+return_mean:              -1.0023	return_std:                0.4611	target_mean:               0.1844	td_error_abs:              0.3229
+test_blue_team_alives_mean: 63.4220	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     199.6080	test_episode_length_mean:198.6080
+test_red_team_alives_mean: 43.2740	test_red_team_win_mean:    0.0000	test_return_mean:         -1.0056	test_return_std:           0.0840
+
+2026-10-13 23:54:18,727 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1302301 / 5050000
+2026-10-13 23:54:18,730 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 21 hours, 12 minutes, 28 seconds. Time passed: 7 hours, 42 minutes, 15 seconds
+2026-10-13 23:57:33,948 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1302301
+2026-10-14 00:11:01,674 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1352238 | Episode:     6822
+aux_loss:                  1.4215	blue_team_alives_mean:    63.2114	blue_team_win_mean:        0.9961	ep_length_mean:          192.5989
+episode_length_mean:     191.5989	epsilon:                   0.0500	grad_norm:                50.3904	loss:                      0.9243
+q_loss:                    0.7821	q_taken_mean:              0.1914	red_team_alives_mean:     16.6243	red_team_win_mean:         0.0039
+return_mean:              -0.9357	return_std:                0.3517	target_mean:               0.1908	td_error_abs:              0.3642
+test_blue_team_alives_mean: 63.2940	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     199.4260	test_episode_length_mean:198.4260
+test_red_team_alives_mean: 32.9540	test_red_team_win_mean:    0.0000	test_return_mean:         -0.9795	test_return_std:           0.1220
+
+2026-10-14 00:11:04,901 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1352438 / 5050000
+2026-10-14 00:11:04,904 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 20 hours, 36 minutes, 44 seconds. Time passed: 7 hours, 59 minutes, 1 seconds
+2026-10-14 00:14:23,500 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1352438
+2026-10-14 00:27:56,305 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1402383 | Episode:     7085
+aux_loss:                  1.4005	blue_team_alives_mean:    62.6932	blue_team_win_mean:        0.9962	ep_length_mean:          190.8192
+episode_length_mean:     189.8192	epsilon:                   0.0500	grad_norm:                40.6736	loss:                      0.9982
+q_loss:                    0.8581	q_taken_mean:              0.1936	red_team_alives_mean:     15.9895	red_team_win_mean:         0.0000
+return_mean:              -0.9453	return_std:                0.3435	target_mean:               0.1939	td_error_abs:              0.3530
+test_blue_team_alives_mean: 63.1620	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     199.3940	test_episode_length_mean:198.3940
+test_red_team_alives_mean: 24.4240	test_red_team_win_mean:    0.0000	test_return_mean:         -0.9494	test_return_std:           0.1515
+
+2026-10-14 00:27:58,767 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1402516 / 5050000
+2026-10-14 00:27:58,770 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 20 hours, 30 minutes, 45 seconds. Time passed: 8 hours, 15 minutes, 55 seconds
+2026-10-14 00:30:17,696 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1402516
+2026-10-14 00:43:51,728 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1452401 | Episode:     7350
+aux_loss:                  1.3844	blue_team_alives_mean:    61.5537	blue_team_win_mean:        0.9660	ep_length_mean:          188.4104
+episode_length_mean:     187.4104	epsilon:                   0.0500	grad_norm:                29.7361	loss:                      0.9799
+q_loss:                    0.8414	q_taken_mean:              0.1990	red_team_alives_mean:     17.7488	red_team_win_mean:         0.0303
+return_mean:              -1.0842	return_std:                0.4640	target_mean:               0.1987	td_error_abs:              0.3169
+test_blue_team_alives_mean: 63.1080	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     188.1880	test_episode_length_mean:187.1880
+test_red_team_alives_mean: 18.0700	test_red_team_win_mean:    0.0000	test_return_mean:         -0.8746	test_return_std:           0.1705
+
+2026-10-14 00:43:54,918 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1452601 / 5050000
+2026-10-14 00:43:54,921 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 19 hours, 4 minutes, 36 seconds. Time passed: 8 hours, 31 minutes, 51 seconds
+2026-10-14 00:47:15,547 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1452601
+2026-10-14 01:00:44,957 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1502409 | Episode:     7623
+aux_loss:                  1.4841	blue_team_alives_mean:    62.4137	blue_team_win_mean:        0.9850	ep_length_mean:          186.4422
+episode_length_mean:     185.4422	epsilon:                   0.0500	grad_norm:                18.5512	loss:                      1.6740
+q_loss:                    1.5256	q_taken_mean:              0.2013	red_team_alives_mean:     11.2879	red_team_win_mean:         0.0074
+return_mean:              -0.8351	return_std:                0.3363	target_mean:               0.2014	td_error_abs:              0.3044
+test_blue_team_alives_mean: 62.7240	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     188.1880	test_episode_length_mean:187.1880
+test_red_team_alives_mean: 12.1760	test_red_team_win_mean:    0.0000	test_return_mean:         -0.8793	test_return_std:           0.2169
+
+2026-10-14 01:00:48,203 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1502609 / 5050000
+2026-10-14 01:00:48,206 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 19 hours, 57 minutes, 58 seconds. Time passed: 8 hours, 48 minutes, 44 seconds
+2026-10-14 01:04:05,416 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1502609
+2026-10-14 01:17:42,985 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1552601 | Episode:     7895
+aux_loss:                  1.3789	blue_team_alives_mean:    61.5003	blue_team_win_mean:        0.9818	ep_length_mean:          182.0548
+episode_length_mean:     181.0548	epsilon:                   0.0500	grad_norm:                49.8116	loss:                      1.5561
+q_loss:                    1.4182	q_taken_mean:              0.2027	red_team_alives_mean:     14.8422	red_team_win_mean:         0.0146
+return_mean:              -0.8848	return_std:                0.4171	target_mean:               0.2038	td_error_abs:              0.4039
+test_blue_team_alives_mean: 63.1220	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     188.4260	test_episode_length_mean:187.4260
+test_red_team_alives_mean:  9.9260	test_red_team_win_mean:    0.0000	test_return_mean:         -0.7712	test_return_std:           0.2230
+
+2026-10-14 01:17:46,163 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1552801 / 5050000
+2026-10-14 01:17:46,165 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 19 hours, 42 minutes, 7 seconds. Time passed: 9 hours, 5 minutes, 42 seconds
+2026-10-14 01:21:01,242 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1552801
+2026-10-14 01:34:39,023 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1602661 | Episode:     8168
+aux_loss:                  1.3338	blue_team_alives_mean:    60.9461	blue_team_win_mean:        0.9705	ep_length_mean:          186.2693
+episode_length_mean:     185.2693	epsilon:                   0.0500	grad_norm:                28.2948	loss:                      1.7118
+q_loss:                    1.5784	q_taken_mean:              0.2042	red_team_alives_mean:     15.5473	red_team_win_mean:         0.0259
+return_mean:              -0.9206	return_std:                0.3974	target_mean:               0.2050	td_error_abs:              0.3417
+test_blue_team_alives_mean: 62.5620	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     188.5840	test_episode_length_mean:187.5840
+test_red_team_alives_mean: 11.4220	test_red_team_win_mean:    0.0000	test_return_mean:         -0.7639	test_return_std:           0.2602
+
+2026-10-14 01:34:42,172 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1602861 / 5050000
+2026-10-14 01:34:42,174 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 19 hours, 26 minutes, 2 seconds. Time passed: 9 hours, 22 minutes, 38 seconds
+2026-10-14 01:38:09,469 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1602861
+2026-10-14 01:52:00,492 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1652667 | Episode:     8460
+aux_loss:                  1.2766	blue_team_alives_mean:    61.2905	blue_team_win_mean:        1.0000	ep_length_mean:          174.6200
+episode_length_mean:     173.6200	epsilon:                   0.0500	grad_norm:                35.8315	loss:                      1.6532
+q_loss:                    1.5255	q_taken_mean:              0.2099	red_team_alives_mean:     10.6264	red_team_win_mean:         0.0000
+return_mean:              -0.7760	return_std:                0.4084	target_mean:               0.2107	td_error_abs:              0.3597
+test_blue_team_alives_mean: 61.1720	test_blue_team_win_mean:   0.9460	test_ep_length_mean:     188.6160	test_episode_length_mean:187.6160
+test_red_team_alives_mean: 13.7440	test_red_team_win_mean:    0.0500	test_return_mean:         -0.7845	test_return_std:           0.3027
+
+2026-10-14 01:52:03,558 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1652867 / 5050000
+2026-10-14 01:52:03,560 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 19 hours, 39 minutes, 6 seconds. Time passed: 9 hours, 40 minutes, 0 seconds
+2026-10-14 01:55:20,045 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1652867
+2026-10-14 02:08:57,716 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1702782 | Episode:     8741
+aux_loss:                  1.2961	blue_team_alives_mean:    61.6388	blue_team_win_mean:        0.9936	ep_length_mean:          177.3053
+episode_length_mean:     176.3053	epsilon:                   0.0500	grad_norm:                17.1611	loss:                      2.1017
+q_loss:                    1.9721	q_taken_mean:              0.2143	red_team_alives_mean:     10.5499	red_team_win_mean:         0.0030
+return_mean:              -0.7812	return_std:                0.3677	target_mean:               0.2140	td_error_abs:              0.3319
+test_blue_team_alives_mean: 59.5760	test_blue_team_win_mean:   0.9240	test_ep_length_mean:     198.5540	test_episode_length_mean:197.5540
+test_red_team_alives_mean: 17.7380	test_red_team_win_mean:    0.0700	test_return_mean:         -0.8687	test_return_std:           0.3826
+
+2026-10-14 02:09:00,891 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1702982 / 5050000
+2026-10-14 02:09:00,893 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 18 hours, 52 minutes, 24 seconds. Time passed: 9 hours, 56 minutes, 57 seconds
+2026-10-14 02:12:17,659 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1702982
+2026-10-14 02:26:04,829 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1752894 | Episode:     9025
+aux_loss:                  1.2718	blue_team_alives_mean:    60.9021	blue_team_win_mean:        0.9753	ep_length_mean:          175.1727
+episode_length_mean:     174.1727	epsilon:                   0.0500	grad_norm:                27.8875	loss:                      2.0249
+q_loss:                    1.8978	q_taken_mean:              0.2193	red_team_alives_mean:     13.4286	red_team_win_mean:         0.0210
+return_mean:              -0.7898	return_std:                0.3840	target_mean:               0.2170	td_error_abs:              0.3815
+test_blue_team_alives_mean: 59.5080	test_blue_team_win_mean:   0.9200	test_ep_length_mean:     198.5540	test_episode_length_mean:197.5540
+test_red_team_alives_mean: 17.1840	test_red_team_win_mean:    0.0740	test_return_mean:         -0.8406	test_return_std:           0.3746
+
+2026-10-14 02:26:08,038 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1753094 / 5050000
+2026-10-14 02:26:08,040 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 18 hours, 46 minutes, 16 seconds. Time passed: 10 hours, 14 minutes, 4 seconds
+2026-10-14 02:29:28,896 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1753094
+2026-10-14 02:43:21,038 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1803060 | Episode:     9322
+aux_loss:                  1.3230	blue_team_alives_mean:    60.6538	blue_team_win_mean:        0.9562	ep_length_mean:          169.5142
+episode_length_mean:     168.5142	epsilon:                   0.0500	grad_norm:                46.9881	loss:                      2.9334
+q_loss:                    2.8011	q_taken_mean:              0.2169	red_team_alives_mean:      8.3606	red_team_win_mean:         0.0407
+return_mean:              -0.6426	return_std:                0.3019	target_mean:               0.2178	td_error_abs:              0.4683
+test_blue_team_alives_mean: 59.4160	test_blue_team_win_mean:   0.9200	test_ep_length_mean:     198.7080	test_episode_length_mean:197.7080
+test_red_team_alives_mean: 18.2140	test_red_team_win_mean:    0.0740	test_return_mean:         -0.8511	test_return_std:           0.3382
+
+2026-10-14 02:43:24,050 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1803260 / 5050000
+2026-10-14 02:43:24,052 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 18 hours, 37 minutes, 30 seconds. Time passed: 10 hours, 31 minutes, 20 seconds
+2026-10-14 02:46:28,276 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1803260
+2026-10-14 03:00:02,476 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1853149 | Episode:     9605
+aux_loss:                  1.2744	blue_team_alives_mean:    60.5432	blue_team_win_mean:        0.9752	ep_length_mean:          181.3755
+episode_length_mean:     180.3755	epsilon:                   0.0500	grad_norm:                28.6027	loss:                      2.7653
+q_loss:                    2.6379	q_taken_mean:              0.2287	red_team_alives_mean:      9.5422	red_team_win_mean:         0.0248
+return_mean:              -0.7152	return_std:                0.3243	target_mean:               0.2269	td_error_abs:              0.4111
+test_blue_team_alives_mean: 59.9020	test_blue_team_win_mean:   0.9200	test_ep_length_mean:     197.0960	test_episode_length_mean:196.0960
+test_red_team_alives_mean: 16.5340	test_red_team_win_mean:    0.0740	test_return_mean:         -0.8395	test_return_std:           0.2869
+
+2026-10-14 03:00:05,659 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1853349 / 5050000
+2026-10-14 03:00:05,661 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 17 hours, 45 minutes, 22 seconds. Time passed: 10 hours, 48 minutes, 2 seconds
+2026-10-14 03:03:19,282 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1853349
+2026-10-14 03:16:44,230 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1903250 | Episode:     9876
+aux_loss:                  1.2745	blue_team_alives_mean:    60.0321	blue_team_win_mean:        0.9712	ep_length_mean:          180.9013
+episode_length_mean:     179.9013	epsilon:                   0.0500	grad_norm:                31.9562	loss:                      2.0634
+q_loss:                    1.9359	q_taken_mean:              0.2253	red_team_alives_mean:     10.9010	red_team_win_mean:         0.0288
+return_mean:              -0.8195	return_std:                0.3984	target_mean:               0.2263	td_error_abs:              0.4195
+test_blue_team_alives_mean: 60.9040	test_blue_team_win_mean:   0.9720	test_ep_length_mean:     197.0960	test_episode_length_mean:196.0960
+test_red_team_alives_mean: 14.3860	test_red_team_win_mean:    0.0240	test_return_mean:         -0.8129	test_return_std:           0.2708
+
+2026-10-14 03:16:47,388 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1903450 / 5050000
+2026-10-14 03:16:47,391 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 17 hours, 28 minutes, 32 seconds. Time passed: 11 hours, 4 minutes, 44 seconds
+2026-10-14 03:19:34,452 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1903450
+2026-10-14 03:33:01,742 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    1953322 | Episode:    10148
+aux_loss:                  1.2313	blue_team_alives_mean:    59.4993	blue_team_win_mean:        0.9671	ep_length_mean:          184.4537
+episode_length_mean:     183.4537	epsilon:                   0.0500	grad_norm:                18.4404	loss:                      4.1022
+q_loss:                    3.9791	q_taken_mean:              0.2241	red_team_alives_mean:     13.1353	red_team_win_mean:         0.0291
+return_mean:              -0.8407	return_std:                0.4486	target_mean:               0.2226	td_error_abs:              0.4423
+test_blue_team_alives_mean: 61.1900	test_blue_team_win_mean:   0.9940	test_ep_length_mean:     192.3180	test_episode_length_mean:191.3180
+test_red_team_alives_mean: 12.3920	test_red_team_win_mean:    0.0040	test_return_mean:         -0.7778	test_return_std:           0.2536
+
+2026-10-14 03:33:04,808 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 1953522 / 5050000
+2026-10-14 03:33:04,811 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 16 hours, 47 minutes, 24 seconds. Time passed: 11 hours, 21 minutes, 1 seconds
+2026-10-14 03:36:10,354 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/1953522
+2026-10-14 03:49:29,188 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2003385 | Episode:    10414
+aux_loss:                  1.2008	blue_team_alives_mean:    59.8386	blue_team_win_mean:        0.9546	ep_length_mean:          188.7611
+episode_length_mean:     187.7611	epsilon:                   0.0500	grad_norm:                18.2838	loss:                      3.1494
+q_loss:                    3.0293	q_taken_mean:              0.2275	red_team_alives_mean:     12.4929	red_team_win_mean:         0.0417
+return_mean:              -0.9128	return_std:                0.5054	target_mean:               0.2286	td_error_abs:              0.4431
+test_blue_team_alives_mean: 60.0460	test_blue_team_win_mean:   0.9900	test_ep_length_mean:     190.4300	test_episode_length_mean:189.4300
+test_red_team_alives_mean: 12.2140	test_red_team_win_mean:    0.0080	test_return_mean:         -0.7930	test_return_std:           0.2708
+
+2026-10-14 03:49:32,203 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2003585 / 5050000
+2026-10-14 03:49:32,206 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 16 hours, 41 minutes, 24 seconds. Time passed: 11 hours, 37 minutes, 28 seconds
+2026-10-14 03:52:45,897 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2003585
+2026-10-14 04:06:05,522 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2053506 | Episode:    10680
+aux_loss:                  1.2001	blue_team_alives_mean:    58.6198	blue_team_win_mean:        0.9245	ep_length_mean:          187.8156
+episode_length_mean:     186.8156	epsilon:                   0.0500	grad_norm:                23.8367	loss:                      3.4919
+q_loss:                    3.3719	q_taken_mean:              0.2326	red_team_alives_mean:     14.5371	red_team_win_mean:         0.0720
+return_mean:              -0.8964	return_std:                0.4995	target_mean:               0.2333	td_error_abs:              0.5151
+test_blue_team_alives_mean: 59.5040	test_blue_team_win_mean:   0.9800	test_ep_length_mean:     190.4300	test_episode_length_mean:189.4300
+test_red_team_alives_mean: 11.2080	test_red_team_win_mean:    0.0180	test_return_mean:         -0.8165	test_return_std:           0.3238
+
+2026-10-14 04:06:07,583 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2053595 / 5050000
+2026-10-14 04:06:07,585 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 16 hours, 33 minutes, 59 seconds. Time passed: 11 hours, 54 minutes, 4 seconds
+2026-10-14 04:08:38,268 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2053595
+2026-10-14 04:21:54,912 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2103678 / 5050000
+2026-10-14 04:21:54,914 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 15 hours, 28 minutes, 50 seconds. Time passed: 12 hours, 9 minutes, 51 seconds
+2026-10-14 04:25:05,686 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2103678
+2026-10-14 04:25:05,714 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2103678 | Episode:    10943
+aux_loss:                  1.2139	blue_team_alives_mean:    58.9910	blue_team_win_mean:        0.9168	ep_length_mean:          190.9977
+episode_length_mean:     189.9977	epsilon:                   0.0500	grad_norm:                28.3000	loss:                      4.1011
+q_loss:                    3.9797	q_taken_mean:              0.2373	red_team_alives_mean:     14.3876	red_team_win_mean:         0.0679
+return_mean:              -0.8809	return_std:                0.4547	target_mean:               0.2377	td_error_abs:              0.5626
+test_blue_team_alives_mean: 58.8520	test_blue_team_win_mean:   0.9820	test_ep_length_mean:     183.1080	test_episode_length_mean:182.1080
+test_red_team_alives_mean: 10.8700	test_red_team_win_mean:    0.0180	test_return_mean:         -0.7659	test_return_std:           0.3550
+
+2026-10-14 04:38:21,873 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2153856 / 5050000
+2026-10-14 04:38:21,875 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 15 hours, 49 minutes, 24 seconds. Time passed: 12 hours, 26 minutes, 18 seconds
+2026-10-14 04:41:37,362 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2153856
+2026-10-14 04:41:37,386 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2153856 | Episode:    11203
+aux_loss:                  1.2850	blue_team_alives_mean:    59.7021	blue_team_win_mean:        0.9501	ep_length_mean:          193.4042
+episode_length_mean:     192.4042	epsilon:                   0.0500	grad_norm:                22.5863	loss:                      4.5196
+q_loss:                    4.3911	q_taken_mean:              0.2383	red_team_alives_mean:     14.3819	red_team_win_mean:         0.0499
+return_mean:              -0.8664	return_std:                0.4302	target_mean:               0.2386	td_error_abs:              0.5555
+test_blue_team_alives_mean: 59.3600	test_blue_team_win_mean:   0.9820	test_ep_length_mean:     189.0680	test_episode_length_mean:188.0680
+test_red_team_alives_mean: 11.0420	test_red_team_win_mean:    0.0180	test_return_mean:         -0.7409	test_return_std:           0.3138
+
+2026-10-14 04:54:49,575 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2203952 / 5050000
+2026-10-14 04:54:49,578 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 15 hours, 35 minutes, 13 seconds. Time passed: 12 hours, 42 minutes, 46 seconds
+2026-10-14 04:57:48,578 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2203952
+2026-10-14 04:57:48,609 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2203952 | Episode:    11457
+aux_loss:                  1.1072	blue_team_alives_mean:    60.4045	blue_team_win_mean:        0.9570	ep_length_mean:          197.1379
+episode_length_mean:     196.1379	epsilon:                   0.0500	grad_norm:                21.1361	loss:                      3.9028
+q_loss:                    3.7921	q_taken_mean:              0.2391	red_team_alives_mean:     15.6539	red_team_win_mean:         0.0430
+return_mean:              -0.9295	return_std:                0.4575	target_mean:               0.2383	td_error_abs:              0.5203
+test_blue_team_alives_mean: 60.6840	test_blue_team_win_mean:   0.9900	test_ep_length_mean:     188.1660	test_episode_length_mean:187.1660
+test_red_team_alives_mean:  9.8240	test_red_team_win_mean:    0.0100	test_return_mean:         -0.6661	test_return_std:           0.2768
+
+2026-10-14 05:11:04,612 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2254007 / 5050000
+2026-10-14 05:11:04,615 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 15 hours, 7 minutes, 44 seconds. Time passed: 12 hours, 59 minutes, 1 seconds
+2026-10-14 05:14:20,160 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2254007
+2026-10-14 05:14:20,182 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2254007 | Episode:    11714
+aux_loss:                  1.0611	blue_team_alives_mean:    59.7855	blue_team_win_mean:        0.9538	ep_length_mean:          194.5697
+episode_length_mean:     193.5697	epsilon:                   0.0500	grad_norm:                26.6621	loss:                      4.9515
+q_loss:                    4.8454	q_taken_mean:              0.2415	red_team_alives_mean:     14.8367	red_team_win_mean:         0.0424
+return_mean:              -0.8619	return_std:                0.4107	target_mean:               0.2409	td_error_abs:              0.6104
+test_blue_team_alives_mean: 61.0940	test_blue_team_win_mean:   1.0000	test_ep_length_mean:     188.0200	test_episode_length_mean:187.0200
+test_red_team_alives_mean:  9.3420	test_red_team_win_mean:    0.0000	test_return_mean:         -0.6162	test_return_std:           0.2313
+
+2026-10-14 05:27:36,366 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2304036 / 5050000
+2026-10-14 05:27:36,369 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 15 hours, 7 minutes, 14 seconds. Time passed: 13 hours, 15 minutes, 33 seconds
+2026-10-14 05:30:49,812 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2304036
+2026-10-14 05:30:49,842 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2304036 | Episode:    11974
+aux_loss:                  1.0445	blue_team_alives_mean:    58.0578	blue_team_win_mean:        0.9122	ep_length_mean:          192.6219
+episode_length_mean:     191.6219	epsilon:                   0.0500	grad_norm:                37.0449	loss:                      5.1231
+q_loss:                    5.0186	q_taken_mean:              0.2415	red_team_alives_mean:     14.5420	red_team_win_mean:         0.0802
+return_mean:              -0.7947	return_std:                0.4827	target_mean:               0.2415	td_error_abs:              0.6563
+test_blue_team_alives_mean: 60.6960	test_blue_team_win_mean:   0.9980	test_ep_length_mean:     196.4800	test_episode_length_mean:195.4800
+test_red_team_alives_mean: 10.1320	test_red_team_win_mean:    0.0000	test_return_mean:         -0.6231	test_return_std:           0.2165
+
+2026-10-14 05:44:17,367 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2354097 / 5050000
+2026-10-14 05:44:17,370 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 14 hours, 58 minutes, 26 seconds. Time passed: 13 hours, 32 minutes, 14 seconds
+2026-10-14 05:47:32,253 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2354097
+2026-10-14 05:47:32,284 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2354097 | Episode:    12239
+aux_loss:                  1.0083	blue_team_alives_mean:    56.4412	blue_team_win_mean:        0.8983	ep_length_mean:          189.6365
+episode_length_mean:     188.6365	epsilon:                   0.0500	grad_norm:                27.9732	loss:                      5.4796
+q_loss:                    5.3787	q_taken_mean:              0.2466	red_team_alives_mean:     15.7001	red_team_win_mean:         0.1017
+return_mean:              -0.7595	return_std:                0.4814	target_mean:               0.2465	td_error_abs:              0.6146
+test_blue_team_alives_mean: 55.5720	test_blue_team_win_mean:   0.8500	test_ep_length_mean:     194.3520	test_episode_length_mean:193.3520
+test_red_team_alives_mean: 16.9500	test_red_team_win_mean:    0.1440	test_return_mean:         -0.4224	test_return_std:           0.3813
+
+2026-10-14 06:00:58,848 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2404142 / 5050000
+2026-10-14 06:00:58,852 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 14 hours, 42 minutes, 27 seconds. Time passed: 13 hours, 48 minutes, 55 seconds
+2026-10-14 06:04:10,696 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2404142
+2026-10-14 06:04:10,720 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2404142 | Episode:    12507
+aux_loss:                  1.0670	blue_team_alives_mean:    54.1892	blue_team_win_mean:        0.8677	ep_length_mean:          184.4499
+episode_length_mean:     183.4499	epsilon:                   0.0500	grad_norm:                33.4406	loss:                      5.2297
+q_loss:                    5.1230	q_taken_mean:              0.2473	red_team_alives_mean:     17.0357	red_team_win_mean:         0.1212
+return_mean:              -0.5842	return_std:                0.5816	target_mean:               0.2489	td_error_abs:              0.6330
+test_blue_team_alives_mean: 55.6060	test_blue_team_win_mean:   0.8440	test_ep_length_mean:     194.3920	test_episode_length_mean:193.3920
+test_red_team_alives_mean: 16.0920	test_red_team_win_mean:    0.1480	test_return_mean:         -0.4265	test_return_std:           0.3996
+
+2026-10-14 06:17:42,015 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2454285 / 5050000
+2026-10-14 06:17:42,018 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 14 hours, 25 minutes, 30 seconds. Time passed: 14 hours, 5 minutes, 38 seconds
+2026-10-14 06:20:58,284 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2454285
+2026-10-14 06:20:58,307 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2454285 | Episode:    12776
+aux_loss:                  1.0531	blue_team_alives_mean:    50.1987	blue_team_win_mean:        0.7542	ep_length_mean:          188.9055
+episode_length_mean:     187.9055	epsilon:                   0.0500	grad_norm:                24.6216	loss:                      5.1897
+q_loss:                    5.0844	q_taken_mean:              0.2506	red_team_alives_mean:     21.5100	red_team_win_mean:         0.2345
+return_mean:              -0.4834	return_std:                0.7305	target_mean:               0.2503	td_error_abs:              0.6246
+test_blue_team_alives_mean: 49.1680	test_blue_team_win_mean:   0.6800	test_ep_length_mean:     196.8580	test_episode_length_mean:195.8580
+test_red_team_alives_mean: 22.7160	test_red_team_win_mean:    0.3100	test_return_mean:         -0.2322	test_return_std:           0.5517
+
+2026-10-14 06:34:27,416 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2504426 / 5050000
+2026-10-14 06:34:27,419 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 14 hours, 10 minutes, 42 seconds. Time passed: 14 hours, 22 minutes, 24 seconds
+2026-10-14 06:37:43,914 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2504426
+2026-10-14 06:37:43,947 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2504426 | Episode:    13041
+aux_loss:                  1.0059	blue_team_alives_mean:    45.4107	blue_team_win_mean:        0.6296	ep_length_mean:          186.6375
+episode_length_mean:     185.6375	epsilon:                   0.0500	grad_norm:                39.9646	loss:                      6.7826
+q_loss:                    6.6820	q_taken_mean:              0.2502	red_team_alives_mean:     27.3568	red_team_win_mean:         0.3594
+return_mean:              -0.3642	return_std:                0.8114	target_mean:               0.2517	td_error_abs:              0.7295
+test_blue_team_alives_mean: 39.9840	test_blue_team_win_mean:   0.4800	test_ep_length_mean:     197.0040	test_episode_length_mean:196.0040
+test_red_team_alives_mean: 31.9420	test_red_team_win_mean:    0.5100	test_return_mean:          0.2925	test_return_std:           0.5825
+
+2026-10-14 06:51:04,748 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2554445 / 5050000
+2026-10-14 06:51:04,752 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 13 hours, 49 minutes, 19 seconds. Time passed: 14 hours, 39 minutes, 1 seconds
+2026-10-14 06:54:23,674 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2554445
+2026-10-14 06:54:23,698 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2554445 | Episode:    13301
+aux_loss:                  1.0303	blue_team_alives_mean:    41.8051	blue_team_win_mean:        0.5535	ep_length_mean:          193.5131
+episode_length_mean:     192.5131	epsilon:                   0.0500	grad_norm:                40.4609	loss:                      6.9008
+q_loss:                    6.7978	q_taken_mean:              0.2510	red_team_alives_mean:     30.4091	red_team_win_mean:         0.4389
+return_mean:              -0.1792	return_std:                0.9045	target_mean:               0.2514	td_error_abs:              0.7281
+test_blue_team_alives_mean: 36.1220	test_blue_team_win_mean:   0.3680	test_ep_length_mean:     197.3180	test_episode_length_mean:196.3180
+test_red_team_alives_mean: 36.8260	test_red_team_win_mean:    0.6200	test_return_mean:          0.3925	test_return_std:           0.6839
+
+2026-10-14 07:07:42,056 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2604475 / 5050000
+2026-10-14 07:07:42,059 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 13 hours, 32 minutes, 29 seconds. Time passed: 14 hours, 55 minutes, 38 seconds
+2026-10-14 07:10:58,508 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2604475
+2026-10-14 07:10:58,529 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2604475 | Episode:    13558
+aux_loss:                  1.0956	blue_team_alives_mean:    36.1906	blue_team_win_mean:        0.3996	ep_length_mean:          193.8499
+episode_length_mean:     192.8499	epsilon:                   0.0500	grad_norm:                16.8148	loss:                      7.3189
+q_loss:                    7.2094	q_taken_mean:              0.2474	red_team_alives_mean:     36.5411	red_team_win_mean:         0.5886
+return_mean:               0.0086	return_std:                0.9339	target_mean:               0.2480	td_error_abs:              0.7057
+test_blue_team_alives_mean: 35.3620	test_blue_team_win_mean:   0.3640	test_ep_length_mean:     199.4160	test_episode_length_mean:198.4160
+test_red_team_alives_mean: 37.0080	test_red_team_win_mean:    0.6280	test_return_mean:          0.4063	test_return_std:           0.6393
+
+2026-10-14 07:24:11,652 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2654507 / 5050000
+2026-10-14 07:24:11,655 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 13 hours, 9 minutes, 41 seconds. Time passed: 15 hours, 12 minutes, 8 seconds
+2026-10-14 07:27:26,812 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2654507
+2026-10-14 07:27:26,837 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2654507 | Episode:    13813
+aux_loss:                  1.1237	blue_team_alives_mean:    31.4358	blue_team_win_mean:        0.2840	ep_length_mean:          195.6887
+episode_length_mean:     194.6887	epsilon:                   0.0500	grad_norm:                35.4772	loss:                      8.1827
+q_loss:                    8.0703	q_taken_mean:              0.2375	red_team_alives_mean:     41.9705	red_team_win_mean:         0.7121
+return_mean:               0.2087	return_std:                0.9909	target_mean:               0.2370	td_error_abs:              0.8232
+test_blue_team_alives_mean: 27.4440	test_blue_team_win_mean:   0.1700	test_ep_length_mean:     199.4620	test_episode_length_mean:198.4620
+test_red_team_alives_mean: 46.0240	test_red_team_win_mean:    0.8240	test_return_mean:          0.6965	test_return_std:           0.6846
+
+2026-10-14 07:40:35,675 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2704623 / 5050000
+2026-10-14 07:40:35,678 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 12 hours, 47 minutes, 31 seconds. Time passed: 15 hours, 28 minutes, 32 seconds
+2026-10-14 07:43:51,135 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2704623
+2026-10-14 07:43:51,161 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2704623 | Episode:    14064
+aux_loss:                  1.1692	blue_team_alives_mean:    24.7038	blue_team_win_mean:        0.1389	ep_length_mean:          199.6706
+episode_length_mean:     198.6706	epsilon:                   0.0500	grad_norm:                30.0631	loss:                      8.7925
+q_loss:                    8.6756	q_taken_mean:              0.2333	red_team_alives_mean:     48.6701	red_team_win_mean:         0.8571
+return_mean:               0.5860	return_std:                0.9537	target_mean:               0.2348	td_error_abs:              0.8365
+test_blue_team_alives_mean: 25.0120	test_blue_team_win_mean:   0.1340	test_ep_length_mean:     199.7860	test_episode_length_mean:198.7860
+test_red_team_alives_mean: 48.9360	test_red_team_win_mean:    0.8620	test_return_mean:          0.9461	test_return_std:           0.6167
+
+2026-10-14 07:56:56,108 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2754744 / 5050000
+2026-10-14 07:56:56,111 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 12 hours, 28 minutes, 18 seconds. Time passed: 15 hours, 44 minutes, 52 seconds
+2026-10-14 08:00:15,518 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2754744
+2026-10-14 08:00:15,549 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2754744 | Episode:    14315
+aux_loss:                  1.1418	blue_team_alives_mean:    21.2191	blue_team_win_mean:        0.0678	ep_length_mean:          199.6902
+episode_length_mean:     198.6902	epsilon:                   0.0500	grad_norm:                40.6173	loss:                      9.0962
+q_loss:                    8.9820	q_taken_mean:              0.2275	red_team_alives_mean:     51.1266	red_team_win_mean:         0.9202
+return_mean:               0.9209	return_std:                0.9408	target_mean:               0.2285	td_error_abs:              0.9158
+test_blue_team_alives_mean: 27.3140	test_blue_team_win_mean:   0.1520	test_ep_length_mean:     199.7860	test_episode_length_mean:198.7860
+test_red_team_alives_mean: 46.7700	test_red_team_win_mean:    0.8400	test_return_mean:          0.7231	test_return_std:           0.6502
+
+2026-10-14 08:13:16,130 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2804744 / 5050000
+2026-10-14 08:13:16,133 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 12 hours, 13 minutes, 27 seconds. Time passed: 16 hours, 1 minutes, 12 seconds
+2026-10-14 08:16:28,869 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2804744
+2026-10-14 08:16:28,901 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2804744 | Episode:    14565
+aux_loss:                  1.0644	blue_team_alives_mean:    18.0680	blue_team_win_mean:        0.0360	ep_length_mean:          200.0000
+episode_length_mean:     199.0000	epsilon:                   0.0500	grad_norm:                20.9906	loss:                      9.4526
+q_loss:                    9.3462	q_taken_mean:              0.2283	red_team_alives_mean:     53.7360	red_team_win_mean:         0.9640
+return_mean:               1.3028	return_std:                0.8923	target_mean:               0.2281	td_error_abs:              0.8736
+test_blue_team_alives_mean: 22.4440	test_blue_team_win_mean:   0.0660	test_ep_length_mean:     199.9700	test_episode_length_mean:198.9700
+test_red_team_alives_mean: 50.6760	test_red_team_win_mean:    0.9300	test_return_mean:          1.2317	test_return_std:           0.5814
+
+2026-10-14 08:29:30,787 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2854809 / 5050000
+2026-10-14 08:29:30,790 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 11 hours, 52 minutes, 15 seconds. Time passed: 16 hours, 17 minutes, 27 seconds
+2026-10-14 08:32:54,983 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2854809
+2026-10-14 08:32:55,013 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2854809 | Episode:    14816
+aux_loss:                  1.1050	blue_team_alives_mean:    17.8602	blue_team_win_mean:        0.0399	ep_length_mean:          199.7176
+episode_length_mean:     198.7176	epsilon:                   0.0500	grad_norm:                27.8265	loss:                      9.8957
+q_loss:                    9.7852	q_taken_mean:              0.2223	red_team_alives_mean:     53.5929	red_team_win_mean:         0.9601
+return_mean:               1.5231	return_std:                0.9543	target_mean:               0.2217	td_error_abs:              0.9622
+test_blue_team_alives_mean: 22.2720	test_blue_team_win_mean:   0.0820	test_ep_length_mean:     200.0000	test_episode_length_mean:199.0000
+test_red_team_alives_mean: 50.7480	test_red_team_win_mean:    0.9040	test_return_mean:          1.2284	test_return_std:           0.6135
+
+2026-10-14 08:45:55,463 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2904858 / 5050000
+2026-10-14 08:45:55,468 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 11 hours, 43 minutes, 24 seconds. Time passed: 16 hours, 33 minutes, 52 seconds
+2026-10-14 08:49:02,817 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2904858
+2026-10-14 08:49:02,839 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2904858 | Episode:    15067
+aux_loss:                  1.1219	blue_team_alives_mean:    17.9420	blue_team_win_mean:        0.0435	ep_length_mean:          199.5373
+episode_length_mean:     198.5373	epsilon:                   0.0500	grad_norm:                40.2425	loss:                     10.1059
+q_loss:                    9.9937	q_taken_mean:              0.2234	red_team_alives_mean:     52.3467	red_team_win_mean:         0.9565
+return_mean:               1.5773	return_std:                0.8741	target_mean:               0.2232	td_error_abs:              1.0241
+test_blue_team_alives_mean: 19.5540	test_blue_team_win_mean:   0.0820	test_ep_length_mean:     199.4480	test_episode_length_mean:198.4480
+test_red_team_alives_mean: 51.8920	test_red_team_win_mean:    0.9040	test_return_mean:          1.6905	test_return_std:           0.5791
+
+2026-10-14 09:02:00,612 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 2955042 / 5050000
+2026-10-14 09:02:00,616 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 11 hours, 11 minutes, 30 seconds. Time passed: 16 hours, 49 minutes, 57 seconds
+2026-10-14 09:05:15,419 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/2955042
+2026-10-14 09:05:15,449 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    2955042 | Episode:    15318
+aux_loss:                  1.0967	blue_team_alives_mean:    14.4790	blue_team_win_mean:        0.0357	ep_length_mean:          199.5608
+episode_length_mean:     198.5608	epsilon:                   0.0500	grad_norm:                37.3494	loss:                      9.9828
+q_loss:                    9.8731	q_taken_mean:              0.2250	red_team_alives_mean:     54.5365	red_team_win_mean:         0.9643
+return_mean:               1.9486	return_std:                0.9137	target_mean:               0.2243	td_error_abs:              1.0144
+test_blue_team_alives_mean: 19.2780	test_blue_team_win_mean:   0.0820	test_ep_length_mean:     199.4480	test_episode_length_mean:198.4480
+test_red_team_alives_mean: 52.1960	test_red_team_win_mean:    0.9040	test_return_mean:          1.7288	test_return_std:           0.5872
+
+2026-10-14 09:18:09,642 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3005195 / 5050000
+2026-10-14 09:18:09,644 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 10 hours, 58 minutes, 28 seconds. Time passed: 17 hours, 6 minutes, 6 seconds
+2026-10-14 09:21:21,570 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3005195
+2026-10-14 09:21:21,590 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3005195 | Episode:    15569
+aux_loss:                  1.1303	blue_team_alives_mean:    12.6230	blue_team_win_mean:        0.0199	ep_length_mean:          199.8157
+episode_length_mean:     198.8157	epsilon:                   0.0500	grad_norm:                48.3188	loss:                      9.7923
+q_loss:                    9.6793	q_taken_mean:              0.2215	red_team_alives_mean:     55.8027	red_team_win_mean:         0.9801
+return_mean:               2.2623	return_std:                0.8938	target_mean:               0.2204	td_error_abs:              1.0654
+test_blue_team_alives_mean: 16.8780	test_blue_team_win_mean:   0.0640	test_ep_length_mean:     199.4480	test_episode_length_mean:198.4480
+test_red_team_alives_mean: 54.1740	test_red_team_win_mean:    0.9260	test_return_mean:          2.0314	test_return_std:           0.6052
+
+2026-10-14 09:34:18,537 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3055372 / 5050000
+2026-10-14 09:34:18,540 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 10 hours, 41 minutes, 55 seconds. Time passed: 17 hours, 22 minutes, 15 seconds
+2026-10-14 09:37:23,790 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3055372
+2026-10-14 09:37:23,811 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3055372 | Episode:    15825
+aux_loss:                  1.1818	blue_team_alives_mean:    10.3627	blue_team_win_mean:        0.0116	ep_length_mean:          196.3422
+episode_length_mean:     195.3422	epsilon:                   0.0500	grad_norm:                24.4864	loss:                     10.8510
+q_loss:                   10.7329	q_taken_mean:              0.2158	red_team_alives_mean:     55.4502	red_team_win_mean:         0.9884
+return_mean:               2.5980	return_std:                1.0858	target_mean:               0.2158	td_error_abs:              1.1090
+test_blue_team_alives_mean: 15.9280	test_blue_team_win_mean:   0.0640	test_ep_length_mean:     198.9860	test_episode_length_mean:197.9860
+test_red_team_alives_mean: 54.3980	test_red_team_win_mean:    0.9260	test_return_mean:          2.1557	test_return_std:           0.6481
+
+2026-10-14 09:50:31,086 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3105380 / 5050000
+2026-10-14 09:50:31,091 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 10 hours, 30 minutes, 18 seconds. Time passed: 17 hours, 38 minutes, 27 seconds
+2026-10-14 09:53:37,031 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3105380
+2026-10-14 09:53:37,051 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3105380 | Episode:    16092
+aux_loss:                  1.2175	blue_team_alives_mean:     7.9402	blue_team_win_mean:        0.0000	ep_length_mean:          189.0833
+episode_length_mean:     188.0833	epsilon:                   0.0500	grad_norm:                23.9686	loss:                     10.6168
+q_loss:                   10.4951	q_taken_mean:              0.2175	red_team_alives_mean:     56.3794	red_team_win_mean:         1.0000
+return_mean:               2.8410	return_std:                1.2347	target_mean:               0.2163	td_error_abs:              1.0921
+test_blue_team_alives_mean: 11.2920	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     198.3740	test_episode_length_mean:197.3740
+test_red_team_alives_mean: 56.6860	test_red_team_win_mean:    1.0000	test_return_mean:          2.6457	test_return_std:           0.8405
+
+2026-10-14 10:07:04,000 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3155385 / 5050000
+2026-10-14 10:07:04,003 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 10 hours, 26 minutes, 59 seconds. Time passed: 17 hours, 55 minutes, 0 seconds
+2026-10-14 10:10:01,203 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3155385
+2026-10-14 10:10:01,224 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3155385 | Episode:    16373
+aux_loss:                  1.2058	blue_team_alives_mean:     5.5016	blue_team_win_mean:        0.0070	ep_length_mean:          178.5076
+episode_length_mean:     177.5076	epsilon:                   0.0500	grad_norm:                40.2576	loss:                     10.2394
+q_loss:                   10.1188	q_taken_mean:              0.2160	red_team_alives_mean:     56.5894	red_team_win_mean:         0.9893
+return_mean:               3.1683	return_std:                1.3940	target_mean:               0.2176	td_error_abs:              1.1143
+test_blue_team_alives_mean: 10.8020	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     196.9840	test_episode_length_mean:195.9840
+test_red_team_alives_mean: 55.8900	test_red_team_win_mean:    1.0000	test_return_mean:          2.7171	test_return_std:           0.9993
+
+2026-10-14 10:23:47,665 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3205389 / 5050000
+2026-10-14 10:23:47,668 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 10 hours, 17 minutes, 4 seconds. Time passed: 18 hours, 11 minutes, 44 seconds
+2026-10-14 10:26:43,167 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3205389
+2026-10-14 10:26:43,195 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3205389 | Episode:    16671
+aux_loss:                  1.2655	blue_team_alives_mean:     3.3287	blue_team_win_mean:        0.0033	ep_length_mean:          170.7275
+episode_length_mean:     169.7275	epsilon:                   0.0500	grad_norm:                54.2378	loss:                     10.2300
+q_loss:                   10.1034	q_taken_mean:              0.2220	red_team_alives_mean:     57.2251	red_team_win_mean:         0.9967
+return_mean:               3.5299	return_std:                1.0609	target_mean:               0.2206	td_error_abs:              1.1808
+test_blue_team_alives_mean:  8.0660	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     194.5900	test_episode_length_mean:193.5900
+test_red_team_alives_mean: 56.1020	test_red_team_win_mean:    1.0000	test_return_mean:          3.1036	test_return_std:           1.0371
+
+2026-10-14 10:40:46,050 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3255469 / 5050000
+2026-10-14 10:40:46,052 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 10 hours, 8 minutes, 12 seconds. Time passed: 18 hours, 28 minutes, 42 seconds
+2026-10-14 10:43:00,415 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3255469
+2026-10-14 10:43:00,437 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3255469 | Episode:    16981
+aux_loss:                  1.3545	blue_team_alives_mean:     4.1922	blue_team_win_mean:        0.0065	ep_length_mean:          160.5741
+episode_length_mean:     159.5741	epsilon:                   0.0500	grad_norm:                46.8756	loss:                     10.6802
+q_loss:                   10.5448	q_taken_mean:              0.2228	red_team_alives_mean:     57.3135	red_team_win_mean:         0.9902
+return_mean:               3.4634	return_std:                1.3817	target_mean:               0.2219	td_error_abs:              1.2337
+test_blue_team_alives_mean:  5.2460	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     182.7440	test_episode_length_mean:181.7440
+test_red_team_alives_mean: 56.6780	test_red_team_win_mean:    1.0000	test_return_mean:          3.5231	test_return_std:           1.0269
+
+2026-10-14 10:57:46,532 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3305480 / 5050000
+2026-10-14 10:57:46,535 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 9 hours, 53 minutes, 17 seconds. Time passed: 18 hours, 45 minutes, 43 seconds
+2026-10-14 11:00:10,749 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3305480
+2026-10-14 11:00:10,772 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3305480 | Episode:    17327
+aux_loss:                  1.4401	blue_team_alives_mean:     2.6408	blue_team_win_mean:        0.0059	ep_length_mean:          146.9831
+episode_length_mean:     145.9831	epsilon:                   0.0500	grad_norm:                48.6009	loss:                     10.9818
+q_loss:                   10.8378	q_taken_mean:              0.2213	red_team_alives_mean:     58.8614	red_team_win_mean:         0.9941
+return_mean:               3.7375	return_std:                1.1552	target_mean:               0.2226	td_error_abs:              1.2309
+test_blue_team_alives_mean:  3.8020	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     173.9600	test_episode_length_mean:172.9600
+test_red_team_alives_mean: 57.0900	test_red_team_win_mean:    1.0000	test_return_mean:          3.7567	test_return_std:           1.0023
+
+2026-10-14 11:15:12,323 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3355490 / 5050000
+2026-10-14 11:15:12,326 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 9 hours, 50 minutes, 34 seconds. Time passed: 19 hours, 3 minutes, 9 seconds
+2026-10-14 11:17:35,585 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3355490
+2026-10-14 11:17:35,618 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3355490 | Episode:    17686
+aux_loss:                  1.4358	blue_team_alives_mean:     1.7434	blue_team_win_mean:        0.0000	ep_length_mean:          139.7715
+episode_length_mean:     138.7715	epsilon:                   0.0500	grad_norm:                38.8386	loss:                      9.4418
+q_loss:                    9.2983	q_taken_mean:              0.2310	red_team_alives_mean:     60.1812	red_team_win_mean:         1.0000
+return_mean:               3.9382	return_std:                0.8753	target_mean:               0.2306	td_error_abs:              1.1679
+test_blue_team_alives_mean:  2.4400	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     165.1920	test_episode_length_mean:164.1920
+test_red_team_alives_mean: 58.3880	test_red_team_win_mean:    1.0000	test_return_mean:          3.9973	test_return_std:           0.7717
+
+2026-10-14 11:32:27,722 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3405689 / 5050000
+2026-10-14 11:32:27,725 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 9 hours, 25 minutes, 15 seconds. Time passed: 19 hours, 20 minutes, 24 seconds
+2026-10-14 11:34:46,137 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3405689
+2026-10-14 11:34:46,159 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3405689 | Episode:    18034
+aux_loss:                  1.5270	blue_team_alives_mean:     1.8340	blue_team_win_mean:        0.0000	ep_length_mean:          142.5918
+episode_length_mean:     141.5918	epsilon:                   0.0500	grad_norm:                59.7141	loss:                      9.7950
+q_loss:                    9.6423	q_taken_mean:              0.2318	red_team_alives_mean:     60.3239	red_team_win_mean:         1.0000
+return_mean:               3.8892	return_std:                0.9469	target_mean:               0.2317	td_error_abs:              1.2265
+test_blue_team_alives_mean:  2.0700	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     156.7520	test_episode_length_mean:155.7520
+test_red_team_alives_mean: 58.6380	test_red_team_win_mean:    1.0000	test_return_mean:          4.0737	test_return_std:           0.7511
+
+2026-10-14 11:49:12,443 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3455848 / 5050000
+2026-10-14 11:49:12,445 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 8 hours, 52 minutes, 11 seconds. Time passed: 19 hours, 37 minutes, 9 seconds
+2026-10-14 11:51:31,810 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3455848
+2026-10-14 11:51:31,833 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3455848 | Episode:    18364
+aux_loss:                  1.6816	blue_team_alives_mean:     2.6598	blue_team_win_mean:        0.0000	ep_length_mean:          153.6352
+episode_length_mean:     152.6352	epsilon:                   0.0500	grad_norm:                57.7213	loss:                      9.7911
+q_loss:                    9.6229	q_taken_mean:              0.2288	red_team_alives_mean:     59.3310	red_team_win_mean:         1.0000
+return_mean:               3.5911	return_std:                1.1384	target_mean:               0.2282	td_error_abs:              1.2630
+test_blue_team_alives_mean:  2.8800	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     147.4760	test_episode_length_mean:146.4760
+test_red_team_alives_mean: 58.8000	test_red_team_win_mean:    1.0000	test_return_mean:          3.9811	test_return_std:           0.9954
+
+2026-10-14 12:05:33,775 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3505925 / 5050000
+2026-10-14 12:05:33,778 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 8 hours, 24 minutes, 18 seconds. Time passed: 19 hours, 53 minutes, 30 seconds
+2026-10-14 12:08:08,458 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3505925
+2026-10-14 12:08:08,479 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3505925 | Episode:    18675
+aux_loss:                  1.6825	blue_team_alives_mean:     3.2801	blue_team_win_mean:        0.0096	ep_length_mean:          159.7036
+episode_length_mean:     158.7036	epsilon:                   0.0500	grad_norm:                56.8617	loss:                      9.9757
+q_loss:                    9.8074	q_taken_mean:              0.2333	red_team_alives_mean:     59.4687	red_team_win_mean:         0.9904
+return_mean:               3.4372	return_std:                1.3446	target_mean:               0.2339	td_error_abs:              1.2887
+test_blue_team_alives_mean:  3.6080	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     152.3960	test_episode_length_mean:151.3960
+test_red_team_alives_mean: 58.0200	test_red_team_win_mean:    1.0000	test_return_mean:          3.7909	test_return_std:           1.2172
+
+2026-10-14 12:22:27,768 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3556074 / 5050000
+2026-10-14 12:22:27,770 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 8 hours, 23 minutes, 26 seconds. Time passed: 20 hours, 10 minutes, 24 seconds
+2026-10-14 12:24:50,848 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3556074
+2026-10-14 12:24:50,873 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3556074 | Episode:    19000
+aux_loss:                  1.7430	blue_team_alives_mean:     2.6436	blue_team_win_mean:        0.0000	ep_length_mean:          154.4715
+episode_length_mean:     153.4715	epsilon:                   0.0500	grad_norm:                61.5159	loss:                     10.1495
+q_loss:                    9.9752	q_taken_mean:              0.2301	red_team_alives_mean:     59.7509	red_team_win_mean:         1.0000
+return_mean:               3.6056	return_std:                1.2539	target_mean:               0.2310	td_error_abs:              1.2798
+test_blue_team_alives_mean:  3.5920	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     151.9840	test_episode_length_mean:150.9840
+test_red_team_alives_mean: 58.3060	test_red_team_win_mean:    1.0000	test_return_mean:          3.7503	test_return_std:           1.3344
+
+2026-10-14 12:39:20,613 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3606251 / 5050000
+2026-10-14 12:39:20,616 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 8 hours, 5 minutes, 42 seconds. Time passed: 20 hours, 27 minutes, 17 seconds
+2026-10-14 12:41:28,554 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3606251
+2026-10-14 12:41:28,576 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3606251 | Episode:    19333
+aux_loss:                  1.7297	blue_team_alives_mean:     2.9596	blue_team_win_mean:        0.0030	ep_length_mean:          152.1990
+episode_length_mean:     151.1990	epsilon:                   0.0500	grad_norm:                81.4443	loss:                     10.1889
+q_loss:                   10.0160	q_taken_mean:              0.2424	red_team_alives_mean:     59.5124	red_team_win_mean:         0.9970
+return_mean:               3.5156	return_std:                1.4632	target_mean:               0.2407	td_error_abs:              1.3699
+test_blue_team_alives_mean:  3.5320	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     148.6320	test_episode_length_mean:147.6320
+test_red_team_alives_mean: 58.1620	test_red_team_win_mean:    1.0000	test_return_mean:          3.8331	test_return_std:           1.2590
+
+2026-10-14 12:56:19,247 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3656317 / 5050000
+2026-10-14 12:56:19,249 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 7 hours, 52 minutes, 35 seconds. Time passed: 20 hours, 44 minutes, 16 seconds
+2026-10-14 12:58:03,740 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3656317
+2026-10-14 12:58:03,759 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3656317 | Episode:    19684
+aux_loss:                  1.8092	blue_team_alives_mean:     2.5561	blue_team_win_mean:        0.0032	ep_length_mean:          143.2812
+episode_length_mean:     142.2812	epsilon:                   0.0500	grad_norm:                75.6865	loss:                     10.3861
+q_loss:                   10.2051	q_taken_mean:              0.2494	red_team_alives_mean:     59.8468	red_team_win_mean:         0.9968
+return_mean:               3.6806	return_std:                1.3130	target_mean:               0.2468	td_error_abs:              1.3896
+test_blue_team_alives_mean:  3.2920	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     140.5240	test_episode_length_mean:139.5240
+test_red_team_alives_mean: 59.0300	test_red_team_win_mean:    1.0000	test_return_mean:          3.9679	test_return_std:           1.1749
+
+2026-10-14 13:13:05,553 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3706494 / 5050000
+2026-10-14 13:13:05,556 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 7 hours, 29 minutes, 4 seconds. Time passed: 21 hours, 1 minutes, 2 seconds
+2026-10-14 13:15:37,992 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3706494
+2026-10-14 13:15:38,023 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3706494 | Episode:    20043
+aux_loss:                  1.8876	blue_team_alives_mean:     2.1541	blue_team_win_mean:        0.0000	ep_length_mean:          140.1075
+episode_length_mean:     139.1075	epsilon:                   0.0500	grad_norm:                59.3031	loss:                     10.5674
+q_loss:                   10.3786	q_taken_mean:              0.2579	red_team_alives_mean:     60.0054	red_team_win_mean:         1.0000
+return_mean:               3.7938	return_std:                1.1886	target_mean:               0.2585	td_error_abs:              1.3986
+test_blue_team_alives_mean:  2.0780	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     144.9920	test_episode_length_mean:143.9920
+test_red_team_alives_mean: 59.0300	test_red_team_win_mean:    1.0000	test_return_mean:          4.1273	test_return_std:           0.8471
+
+2026-10-14 13:31:03,270 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3756547 / 5050000
+2026-10-14 13:31:03,272 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 7 hours, 44 minutes, 9 seconds. Time passed: 21 hours, 19 minutes, 0 seconds
+2026-10-14 13:32:33,851 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3756547
+2026-10-14 13:32:33,871 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3756547 | Episode:    20422
+aux_loss:                  1.8931	blue_team_alives_mean:     1.9476	blue_team_win_mean:        0.0028	ep_length_mean:          131.9683
+episode_length_mean:     130.9683	epsilon:                   0.0500	grad_norm:                68.0462	loss:                     10.0639
+q_loss:                    9.8746	q_taken_mean:              0.2611	red_team_alives_mean:     59.9774	red_team_win_mean:         0.9972
+return_mean:               3.8861	return_std:                1.1224	target_mean:               0.2597	td_error_abs:              1.3983
+test_blue_team_alives_mean:  1.2560	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     130.2340	test_episode_length_mean:129.2340
+test_red_team_alives_mean: 60.3760	test_red_team_win_mean:    1.0000	test_return_mean:          4.4005	test_return_std:           0.5668
+
+2026-10-14 13:48:54,776 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3806623 / 5050000
+2026-10-14 13:48:54,778 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 7 hours, 23 minutes, 25 seconds. Time passed: 21 hours, 36 minutes, 51 seconds
+2026-10-14 13:50:06,814 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3806623
+2026-10-14 13:50:06,841 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3806623 | Episode:    20842
+aux_loss:                  1.9215	blue_team_alives_mean:     1.7558	blue_team_win_mean:        0.0000	ep_length_mean:          120.2156
+episode_length_mean:     119.2156	epsilon:                   0.0500	grad_norm:                75.2321	loss:                     10.0011
+q_loss:                    9.8090	q_taken_mean:              0.2700	red_team_alives_mean:     60.0847	red_team_win_mean:         1.0000
+return_mean:               4.0004	return_std:                1.0954	target_mean:               0.2676	td_error_abs:              1.4358
+test_blue_team_alives_mean:  1.1040	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     113.8920	test_episode_length_mean:112.8920
+test_red_team_alives_mean: 61.0060	test_red_team_win_mean:    1.0000	test_return_mean:          4.5948	test_return_std:           0.3372
+
+2026-10-14 14:06:50,820 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3856633 / 5050000
+2026-10-14 14:06:50,822 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 7 hours, 7 minutes, 57 seconds. Time passed: 21 hours, 54 minutes, 47 seconds
+2026-10-14 14:08:41,133 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3856633
+2026-10-14 14:08:41,157 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3856633 | Episode:    21276
+aux_loss:                  2.0469	blue_team_alives_mean:     2.1342	blue_team_win_mean:        0.0000	ep_length_mean:          115.4166
+episode_length_mean:     114.4166	epsilon:                   0.0500	grad_norm:                63.9072	loss:                      9.8268
+q_loss:                    9.6221	q_taken_mean:              0.2785	red_team_alives_mean:     60.3754	red_team_win_mean:         1.0000
+return_mean:               3.9137	return_std:                1.2033	target_mean:               0.2784	td_error_abs:              1.3861
+test_blue_team_alives_mean:  1.1680	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     109.6540	test_episode_length_mean:108.6540
+test_red_team_alives_mean: 61.2080	test_red_team_win_mean:    1.0000	test_return_mean:          4.5485	test_return_std:           0.4329
+
+2026-10-14 14:25:21,561 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3906698 / 5050000
+2026-10-14 14:25:21,564 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 7 hours, 2 minutes, 45 seconds. Time passed: 22 hours, 13 minutes, 18 seconds
+2026-10-14 14:26:44,720 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3906698
+2026-10-14 14:26:44,743 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3906698 | Episode:    21707
+aux_loss:                  1.9698	blue_team_alives_mean:     3.0238	blue_team_win_mean:        0.0090	ep_length_mean:          116.6755
+episode_length_mean:     115.6755	epsilon:                   0.0500	grad_norm:                66.0386	loss:                      9.3277
+q_loss:                    9.1307	q_taken_mean:              0.2777	red_team_alives_mean:     59.7099	red_team_win_mean:         0.9910
+return_mean:               3.7067	return_std:                1.5216	target_mean:               0.2768	td_error_abs:              1.3623
+test_blue_team_alives_mean:  1.1440	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     104.3740	test_episode_length_mean:103.3740
+test_red_team_alives_mean: 61.3500	test_red_team_win_mean:    1.0000	test_return_mean:          4.5487	test_return_std:           0.3100
+
+2026-10-14 14:43:48,526 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 3956710 / 5050000
+2026-10-14 14:43:48,529 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 6 hours, 43 minutes, 18 seconds. Time passed: 22 hours, 31 minutes, 45 seconds
+2026-10-14 14:45:14,993 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/3956710
+2026-10-14 14:45:15,016 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    3956710 | Episode:    22157
+aux_loss:                  1.9810	blue_team_alives_mean:     2.5360	blue_team_win_mean:        0.0000	ep_length_mean:          111.4674
+episode_length_mean:     110.4674	epsilon:                   0.0500	grad_norm:                82.6495	loss:                      9.2432
+q_loss:                    9.0451	q_taken_mean:              0.2722	red_team_alives_mean:     59.9362	red_team_win_mean:         1.0000
+return_mean:               3.8897	return_std:                1.3017	target_mean:               0.2721	td_error_abs:              1.3495
+test_blue_team_alives_mean:  1.4980	test_blue_team_win_mean:   0.0000	test_ep_length_mean:      88.4440	test_episode_length_mean: 87.4440
+test_red_team_alives_mean: 62.1100	test_red_team_win_mean:    1.0000	test_return_mean:          4.5562	test_return_std:           0.5541
+
+2026-10-14 15:02:37,429 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4006756 / 5050000
+2026-10-14 15:02:37,432 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 6 hours, 32 minutes, 12 seconds. Time passed: 22 hours, 50 minutes, 34 seconds
+2026-10-14 15:04:08,948 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4006756
+2026-10-14 15:04:08,976 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4006756 | Episode:    22619
+aux_loss:                  1.9611	blue_team_alives_mean:     2.2199	blue_team_win_mean:        0.0022	ep_length_mean:          108.6400
+episode_length_mean:     107.6400	epsilon:                   0.0500	grad_norm:                37.5257	loss:                      8.6209
+q_loss:                    8.4248	q_taken_mean:              0.2688	red_team_alives_mean:     60.0862	red_team_win_mean:         0.9978
+return_mean:               3.8939	return_std:                1.3170	target_mean:               0.2688	td_error_abs:              1.3029
+test_blue_team_alives_mean:  1.5700	test_blue_team_win_mean:   0.0000	test_ep_length_mean:      88.7920	test_episode_length_mean: 87.7920
+test_red_team_alives_mean: 61.9480	test_red_team_win_mean:    1.0000	test_return_mean:          4.5379	test_return_std:           0.6441
+
+2026-10-14 15:21:03,156 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4056776 / 5050000
+2026-10-14 15:21:03,160 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 6 hours, 5 minutes, 55 seconds. Time passed: 23 hours, 8 minutes, 59 seconds
+2026-10-14 15:22:16,350 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4056776
+2026-10-14 15:22:16,371 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4056776 | Episode:    23062
+aux_loss:                  2.0191	blue_team_alives_mean:     2.1393	blue_team_win_mean:        0.0044	ep_length_mean:          111.8897
+episode_length_mean:     110.8897	epsilon:                   0.0500	grad_norm:                69.1936	loss:                      8.5693
+q_loss:                    8.3674	q_taken_mean:              0.2769	red_team_alives_mean:     59.8530	red_team_win_mean:         0.9956
+return_mean:               3.8592	return_std:                1.3081	target_mean:               0.2759	td_error_abs:              1.3355
+test_blue_team_alives_mean:  1.5780	test_blue_team_win_mean:   0.0000	test_ep_length_mean:      88.8420	test_episode_length_mean: 87.8420
+test_red_team_alives_mean: 61.7480	test_red_team_win_mean:    1.0000	test_return_mean:          4.4753	test_return_std:           0.6538
+
+2026-10-14 15:37:56,102 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4106790 / 5050000
+2026-10-14 15:37:56,104 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 5 hours, 18 minutes, 23 seconds. Time passed: 23 hours, 25 minutes, 52 seconds
+2026-10-14 15:40:03,401 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4106790
+2026-10-14 15:40:03,424 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4106790 | Episode:    23449
+aux_loss:                  1.9739	blue_team_alives_mean:     2.3784	blue_team_win_mean:        0.0027	ep_length_mean:          129.7227
+episode_length_mean:     128.7227	epsilon:                   0.0500	grad_norm:                74.0101	loss:                      7.8846
+q_loss:                    7.6873	q_taken_mean:              0.2667	red_team_alives_mean:     59.3478	red_team_win_mean:         0.9973
+return_mean:               3.5988	return_std:                1.3559	target_mean:               0.2669	td_error_abs:              1.2663
+test_blue_team_alives_mean:  1.9040	test_blue_team_win_mean:   0.0000	test_ep_length_mean:      92.4940	test_episode_length_mean: 91.4940
+test_red_team_alives_mean: 61.7160	test_red_team_win_mean:    1.0000	test_return_mean:          4.4127	test_return_std:           0.7699
+
+2026-10-14 15:55:27,673 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4156893 / 5050000
+2026-10-14 15:55:27,674 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 5 hours, 12 minutes, 24 seconds. Time passed: 23 hours, 43 minutes, 24 seconds
+2026-10-14 15:58:27,587 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4156893
+2026-10-14 15:58:27,614 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4156893 | Episode:    23823
+aux_loss:                  2.0365	blue_team_alives_mean:     2.5251	blue_team_win_mean:        0.0050	ep_length_mean:          134.8140
+episode_length_mean:     133.8140	epsilon:                   0.0500	grad_norm:                96.2419	loss:                      8.4092
+q_loss:                    8.2055	q_taken_mean:              0.2751	red_team_alives_mean:     58.5368	red_team_win_mean:         0.9950
+return_mean:               3.5191	return_std:                1.3417	target_mean:               0.2757	td_error_abs:              1.3333
+test_blue_team_alives_mean:  2.0680	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     115.0360	test_episode_length_mean:114.0360
+test_red_team_alives_mean: 60.7380	test_red_team_win_mean:    1.0000	test_return_mean:          4.2050	test_return_std:           0.8310
+
+2026-10-14 16:13:20,016 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4207015 / 5050000
+2026-10-14 16:13:20,019 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 5 hours, 35 seconds. Time passed: 1 days, 1 minutes, 16 seconds
+2026-10-14 16:14:55,419 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4207015
+2026-10-14 16:14:55,451 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4207015 | Episode:    24171
+aux_loss:                  1.9514	blue_team_alives_mean:     2.8917	blue_team_win_mean:        0.0143	ep_length_mean:          144.1966
+episode_length_mean:     143.1966	epsilon:                   0.0500	grad_norm:               100.3537	loss:                      8.2298
+q_loss:                    8.0346	q_taken_mean:              0.2896	red_team_alives_mean:     57.9548	red_team_win_mean:         0.9857
+return_mean:               3.4127	return_std:                1.2793	target_mean:               0.2860	td_error_abs:              1.3726
+test_blue_team_alives_mean:  1.7440	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     117.5640	test_episode_length_mean:116.5640
+test_red_team_alives_mean: 60.3140	test_red_team_win_mean:    1.0000	test_return_mean:          4.1749	test_return_std:           0.7116
+
+2026-10-14 16:29:32,969 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4257152 / 5050000
+2026-10-14 16:29:32,974 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 4 hours, 16 minutes, 25 seconds. Time passed: 1 days, 17 minutes, 29 seconds
+2026-10-14 16:32:15,885 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4257152
+2026-10-14 16:32:15,906 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4257152 | Episode:    24504
+aux_loss:                  2.0017	blue_team_alives_mean:     3.4160	blue_team_win_mean:        0.0157	ep_length_mean:          153.6342
+episode_length_mean:     152.6342	epsilon:                   0.0500	grad_norm:               122.7714	loss:                      7.6954
+q_loss:                    7.4953	q_taken_mean:              0.2662	red_team_alives_mean:     58.1002	red_team_win_mean:         0.9843
+return_mean:               3.3281	return_std:                1.3013	target_mean:               0.2686	td_error_abs:              1.2810
+test_blue_team_alives_mean:  1.6540	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     133.3560	test_episode_length_mean:132.3560
+test_red_team_alives_mean: 60.3160	test_red_team_win_mean:    1.0000	test_return_mean:          4.0702	test_return_std:           0.6256
+
+2026-10-14 16:46:52,332 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4307206 / 5050000
+2026-10-14 16:46:52,336 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 4 hours, 17 minutes, 3 seconds. Time passed: 1 days, 34 minutes, 49 seconds
+2026-10-14 16:49:11,062 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4307206
+2026-10-14 16:49:11,084 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4307206 | Episode:    24839
+aux_loss:                  1.9712	blue_team_alives_mean:     2.4280	blue_team_win_mean:        0.0028	ep_length_mean:          145.8099
+episode_length_mean:     144.8099	epsilon:                   0.0500	grad_norm:               102.5858	loss:                      7.5014
+q_loss:                    7.3043	q_taken_mean:              0.2618	red_team_alives_mean:     59.3861	red_team_win_mean:         0.9972
+return_mean:               3.4200	return_std:                1.2781	target_mean:               0.2634	td_error_abs:              1.2764
+test_blue_team_alives_mean:  1.7180	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     149.0120	test_episode_length_mean:148.0120
+test_red_team_alives_mean: 59.3920	test_red_team_win_mean:    1.0000	test_return_mean:          3.9832	test_return_std:           0.7104
+
+2026-10-14 17:04:02,756 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4357275 / 5050000
+2026-10-14 17:04:02,759 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 3 hours, 57 minutes, 36 seconds. Time passed: 1 days, 51 minutes, 59 seconds
+2026-10-14 17:05:29,640 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4357275
+2026-10-14 17:05:29,663 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4357275 | Episode:    25186
+aux_loss:                  1.9487	blue_team_alives_mean:     3.1449	blue_team_win_mean:        0.0058	ep_length_mean:          147.2015
+episode_length_mean:     146.2015	epsilon:                   0.0500	grad_norm:                97.9715	loss:                      7.3585
+q_loss:                    7.1637	q_taken_mean:              0.2712	red_team_alives_mean:     59.0314	red_team_win_mean:         0.9942
+return_mean:               3.4069	return_std:                1.3057	target_mean:               0.2723	td_error_abs:              1.2742
+test_blue_team_alives_mean:  1.3080	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     139.4980	test_episode_length_mean:138.4980
+test_red_team_alives_mean: 59.8020	test_red_team_win_mean:    1.0000	test_return_mean:          4.1528	test_return_std:           0.4354
+
+2026-10-14 17:20:13,476 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4407336 / 5050000
+2026-10-14 17:20:13,478 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 3 hours, 27 minutes, 41 seconds. Time passed: 1 days, 1 hours, 8 minutes, 10 seconds
+2026-10-14 17:21:34,423 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4407336
+2026-10-14 17:21:34,443 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4407336 | Episode:    25528
+aux_loss:                  1.9510	blue_team_alives_mean:     2.5450	blue_team_win_mean:        0.0054	ep_length_mean:          146.1139
+episode_length_mean:     145.1139	epsilon:                   0.0500	grad_norm:               101.5726	loss:                      6.9950
+q_loss:                    6.7999	q_taken_mean:              0.2712	red_team_alives_mean:     58.4162	red_team_win_mean:         0.9946
+return_mean:               3.4540	return_std:                1.1995	target_mean:               0.2699	td_error_abs:              1.2418
+test_blue_team_alives_mean:  1.1520	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     116.6520	test_episode_length_mean:115.6520
+test_red_team_alives_mean: 60.3060	test_red_team_win_mean:    1.0000	test_return_mean:          4.3892	test_return_std:           0.4098
+
+2026-10-14 17:36:49,237 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4457409 / 5050000
+2026-10-14 17:36:49,240 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 3 hours, 16 minutes, 24 seconds. Time passed: 1 days, 1 hours, 24 minutes, 46 seconds
+2026-10-14 17:38:13,646 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4457409
+2026-10-14 17:38:13,669 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4457409 | Episode:    25894
+aux_loss:                  1.9285	blue_team_alives_mean:     2.3110	blue_team_win_mean:        0.0087	ep_length_mean:          141.3478
+episode_length_mean:     140.3478	epsilon:                   0.0500	grad_norm:                73.4977	loss:                      7.1361
+q_loss:                    6.9433	q_taken_mean:              0.2769	red_team_alives_mean:     58.1135	red_team_win_mean:         0.9913
+return_mean:               3.6026	return_std:                1.1066	target_mean:               0.2770	td_error_abs:              1.2527
+test_blue_team_alives_mean:  1.0800	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     113.8840	test_episode_length_mean:112.8840
+test_red_team_alives_mean: 60.6840	test_red_team_win_mean:    1.0000	test_return_mean:          4.4741	test_return_std:           0.3049
+
+2026-10-14 17:53:43,482 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4507432 / 5050000
+2026-10-14 17:53:43,485 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 3 hours, 3 minutes, 20 seconds. Time passed: 1 days, 1 hours, 41 minutes, 40 seconds
+2026-10-14 17:56:14,927 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4507432
+2026-10-14 17:56:14,954 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4507432 | Episode:    26273
+aux_loss:                  1.9169	blue_team_alives_mean:     2.1124	blue_team_win_mean:        0.0029	ep_length_mean:          131.7050
+episode_length_mean:     130.7050	epsilon:                   0.0500	grad_norm:                66.6509	loss:                      6.2721
+q_loss:                    6.0804	q_taken_mean:              0.2490	red_team_alives_mean:     58.4046	red_team_win_mean:         0.9971
+return_mean:               3.7482	return_std:                1.1146	target_mean:               0.2485	td_error_abs:              1.1336
+test_blue_team_alives_mean:  1.5020	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     111.6440	test_episode_length_mean:110.6440
+test_red_team_alives_mean: 59.5900	test_red_team_win_mean:    1.0000	test_return_mean:          4.2651	test_return_std:           0.5240
+
+2026-10-14 18:11:40,431 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4557552 / 5050000
+2026-10-14 18:11:40,434 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 2 hours, 56 minutes, 21 seconds. Time passed: 1 days, 1 hours, 59 minutes, 37 seconds
+2026-10-14 18:13:11,673 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4557552
+2026-10-14 18:13:11,696 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4557552 | Episode:    26650
+aux_loss:                  1.8932	blue_team_alives_mean:     1.5423	blue_team_win_mean:        0.0000	ep_length_mean:          131.1512
+episode_length_mean:     130.1512	epsilon:                   0.0500	grad_norm:                76.9744	loss:                      6.4239
+q_loss:                    6.2346	q_taken_mean:              0.2546	red_team_alives_mean:     58.8670	red_team_win_mean:         1.0000
+return_mean:               3.8461	return_std:                0.9234	target_mean:               0.2551	td_error_abs:              1.1758
+test_blue_team_alives_mean:  1.4320	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     100.3940	test_episode_length_mean: 99.3940
+test_red_team_alives_mean: 60.1240	test_red_team_win_mean:    1.0000	test_return_mean:          4.3696	test_return_std:           0.5216
+
+2026-10-14 18:28:59,481 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4607555 / 5050000
+2026-10-14 18:28:59,483 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 2 hours, 33 minutes, 13 seconds. Time passed: 1 days, 2 hours, 16 minutes, 56 seconds
+2026-10-14 18:30:38,066 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4607555
+2026-10-14 18:30:38,094 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4607555 | Episode:    27048
+aux_loss:                  1.8677	blue_team_alives_mean:     1.5744	blue_team_win_mean:        0.0000	ep_length_mean:          128.4871
+episode_length_mean:     127.4871	epsilon:                   0.0500	grad_norm:                77.4586	loss:                      6.0048
+q_loss:                    5.8181	q_taken_mean:              0.2460	red_team_alives_mean:     58.4584	red_team_win_mean:         1.0000
+return_mean:               3.9343	return_std:                0.9006	target_mean:               0.2467	td_error_abs:              1.1237
+test_blue_team_alives_mean:  1.4960	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     103.3040	test_episode_length_mean:102.3040
+test_red_team_alives_mean: 59.5540	test_red_team_win_mean:    1.0000	test_return_mean:          4.3054	test_return_std:           0.6682
+
+2026-10-14 18:46:44,621 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4657675 / 5050000
+2026-10-14 18:46:44,625 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 2 hours, 18 minutes, 57 seconds. Time passed: 1 days, 2 hours, 34 minutes, 41 seconds
+2026-10-14 18:49:48,709 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4657675
+2026-10-14 18:49:48,732 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4657675 | Episode:    27460
+aux_loss:                  1.9364	blue_team_alives_mean:     1.3824	blue_team_win_mean:        0.0000	ep_length_mean:          122.3947
+episode_length_mean:     121.3947	epsilon:                   0.0500	grad_norm:               117.5475	loss:                      5.8417
+q_loss:                    5.6481	q_taken_mean:              0.2371	red_team_alives_mean:     58.7854	red_team_win_mean:         1.0000
+return_mean:               4.0254	return_std:                0.7973	target_mean:               0.2358	td_error_abs:              1.1086
+test_blue_team_alives_mean:  1.7340	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     126.7220	test_episode_length_mean:125.7220
+test_red_team_alives_mean: 58.8480	test_red_team_win_mean:    1.0000	test_return_mean:          3.6207	test_return_std:           0.7124
+
+2026-10-14 19:05:49,520 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4707738 / 5050000
+2026-10-14 19:05:49,523 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 2 hours, 10 minutes, 27 seconds. Time passed: 1 days, 2 hours, 53 minutes, 46 seconds
+2026-10-14 19:08:06,530 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4707738
+2026-10-14 19:08:06,561 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4707738 | Episode:    27869
+aux_loss:                  1.8651	blue_team_alives_mean:     1.3792	blue_team_win_mean:        0.0000	ep_length_mean:          123.6852
+episode_length_mean:     122.6852	epsilon:                   0.0500	grad_norm:                65.0925	loss:                      4.9918
+q_loss:                    4.8053	q_taken_mean:              0.2188	red_team_alives_mean:     58.7359	red_team_win_mean:         1.0000
+return_mean:               3.9244	return_std:                0.8244	target_mean:               0.2189	td_error_abs:              0.9716
+test_blue_team_alives_mean:  1.7760	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     139.8760	test_episode_length_mean:138.8760
+test_red_team_alives_mean: 57.8440	test_red_team_win_mean:    1.0000	test_return_mean:          3.5304	test_return_std:           0.7066
+
+2026-10-14 19:24:34,560 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4757937 / 5050000
+2026-10-14 19:24:34,563 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 hours, 49 minutes, 5 seconds. Time passed: 1 days, 3 hours, 12 minutes, 31 seconds
+2026-10-14 19:26:28,558 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4757937
+2026-10-14 19:26:28,583 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4757937 | Episode:    28299
+aux_loss:                  1.9611	blue_team_alives_mean:     1.5978	blue_team_win_mean:        0.0023	ep_length_mean:          116.6342
+episode_length_mean:     115.6342	epsilon:                   0.0500	grad_norm:                98.3952	loss:                      5.1724
+q_loss:                    4.9763	q_taken_mean:              0.2065	red_team_alives_mean:     58.4624	red_team_win_mean:         0.9977
+return_mean:               3.9194	return_std:                0.9257	target_mean:               0.2096	td_error_abs:              0.9730
+test_blue_team_alives_mean:  1.4480	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     131.3760	test_episode_length_mean:130.3760
+test_red_team_alives_mean: 58.6480	test_red_team_win_mean:    1.0000	test_return_mean:          3.7784	test_return_std:           0.5442
+
+2026-10-14 19:43:13,713 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4807955 / 5050000
+2026-10-14 19:43:13,716 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 hours, 30 minutes, 15 seconds. Time passed: 1 days, 3 hours, 31 minutes, 10 seconds
+2026-10-14 19:45:23,468 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4807955
+2026-10-14 19:45:23,496 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4807955 | Episode:    28743
+aux_loss:                  1.9916	blue_team_alives_mean:     1.4872	blue_team_win_mean:        0.0000	ep_length_mean:          112.9543
+episode_length_mean:     111.9543	epsilon:                   0.0500	grad_norm:                81.8270	loss:                      4.9625
+q_loss:                    4.7633	q_taken_mean:              0.2041	red_team_alives_mean:     58.4716	red_team_win_mean:         1.0000
+return_mean:               4.0042	return_std:                0.8555	target_mean:               0.2056	td_error_abs:              0.9379
+test_blue_team_alives_mean:  1.4760	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     140.7700	test_episode_length_mean:139.7700
+test_red_team_alives_mean: 58.1060	test_red_team_win_mean:    1.0000	test_return_mean:          3.5937	test_return_std:           0.6180
+
+2026-10-14 20:01:50,704 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4857964 / 5050000
+2026-10-14 20:01:50,707 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 1 hours, 11 minutes, 29 seconds. Time passed: 1 days, 3 hours, 49 minutes, 47 seconds
+2026-10-14 20:03:42,054 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4857964
+2026-10-14 20:03:42,077 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4857964 | Episode:    29172
+aux_loss:                  1.9305	blue_team_alives_mean:     1.5397	blue_team_win_mean:        0.0000	ep_length_mean:          116.9898
+episode_length_mean:     115.9898	epsilon:                   0.0500	grad_norm:                70.8328	loss:                      5.1011
+q_loss:                    4.9081	q_taken_mean:              0.2124	red_team_alives_mean:     58.0189	red_team_win_mean:         1.0000
+return_mean:               3.9469	return_std:                0.9374	target_mean:               0.2124	td_error_abs:              0.9725
+test_blue_team_alives_mean:  1.4180	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     144.6240	test_episode_length_mean:143.6240
+test_red_team_alives_mean: 57.9140	test_red_team_win_mean:    1.0000	test_return_mean:          3.5746	test_return_std:           0.5573
+
+2026-10-14 20:20:39,455 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4908136 / 5050000
+2026-10-14 20:20:39,457 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 53 minutes, 11 seconds. Time passed: 1 days, 4 hours, 8 minutes, 36 seconds
+2026-10-14 20:22:21,143 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4908136
+2026-10-14 20:22:21,163 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4908136 | Episode:    29622
+aux_loss:                  1.9444	blue_team_alives_mean:     1.5123	blue_team_win_mean:        0.0022	ep_length_mean:          113.4204
+episode_length_mean:     112.4204	epsilon:                   0.0500	grad_norm:                56.1424	loss:                      4.7944
+q_loss:                    4.6000	q_taken_mean:              0.1962	red_team_alives_mean:     58.4835	red_team_win_mean:         0.9978
+return_mean:               3.9973	return_std:                0.9245	target_mean:               0.1964	td_error_abs:              0.9244
+test_blue_team_alives_mean:  1.1840	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     126.4360	test_episode_length_mean:125.4360
+test_red_team_alives_mean: 58.5060	test_red_team_win_mean:    1.0000	test_return_mean:          4.2111	test_return_std:           0.5391
+
+2026-10-14 20:40:09,371 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 4958324 / 5050000
+2026-10-14 20:40:09,375 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 35 minutes, 37 seconds. Time passed: 1 days, 4 hours, 28 minutes, 6 seconds
+2026-10-14 20:41:18,524 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/4958324
+2026-10-14 20:41:18,551 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    4958324 | Episode:    30111
+aux_loss:                  1.9476	blue_team_alives_mean:     1.3216	blue_team_win_mean:        0.0000	ep_length_mean:          104.2810
+episode_length_mean:     103.2810	epsilon:                   0.0500	grad_norm:                53.3331	loss:                      4.7333
+q_loss:                    4.5385	q_taken_mean:              0.1929	red_team_alives_mean:     58.6472	red_team_win_mean:         1.0000
+return_mean:               4.1439	return_std:                0.7986	target_mean:               0.1931	td_error_abs:              0.9156
+test_blue_team_alives_mean:  1.1820	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     110.1560	test_episode_length_mean:109.1560
+test_red_team_alives_mean: 59.0820	test_red_team_win_mean:    1.0000	test_return_mean:          4.3468	test_return_std:           0.4959
+
+2026-10-14 20:59:41,287 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - t_env: 5008330 / 5050000
+2026-10-14 20:59:41,291 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Estimated time left: 16 minutes, 16 seconds. Time passed: 1 days, 4 hours, 47 minutes, 38 seconds
+2026-10-14 21:01:01,994 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Saving models to work_dirs/ExpoComm_Battle40/iql_ExpoComm_one_peer_n7/ExpoComm_Battle40_s0/20261013_161128/models/5008330
+2026-10-14 21:01:02,017 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Recent Stats | t_env:    5008330 | Episode:    30628
+aux_loss:                  1.9401	blue_team_alives_mean:     1.5805	blue_team_win_mean:        0.0061	ep_length_mean:           96.9018
+episode_length_mean:      95.9018	epsilon:                   0.0500	grad_norm:                62.2944	loss:                      5.1834
+q_loss:                    4.9893	q_taken_mean:              0.2091	red_team_alives_mean:     58.1434	red_team_win_mean:         0.9939
+return_mean:               4.1973	return_std:                0.8390	target_mean:               0.2097	td_error_abs:              0.9762
+test_blue_team_alives_mean:  1.1080	test_blue_team_win_mean:   0.0000	test_ep_length_mean:     102.6740	test_episode_length_mean:101.6740
+test_red_team_alives_mean: 58.7500	test_red_team_win_mean:    1.0000	test_return_mean:          4.3625	test_return_std:           0.4589
+
+2026-10-14 21:15:20,214 - ExpoComm_Battle40 - iql_ExpoComm_one_peer_n7 - ExpoComm_Battle40_s0 - INFO - Finished Training
+Exiting Main
+Stopping all threads
+Thread wandb-AsyncioManager-main is alive! Is daemon: True
+Thread joined
+Thread ChkStopThr is alive! Is daemon: True
+Thread joined
+Thread IntMsgThr is alive! Is daemon: True
+Thread joined
+Exiting script

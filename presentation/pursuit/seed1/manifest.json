@@ -1,0 +1,426 @@
+{
+  "prepared_date_sgt": "2026-11-07",
+  "training_seed": 1,
+  "environment": "MAgent Adversarial Pursuit",
+  "variant": "released static ExpoComm",
+  "proposed_repository": "AdamHermes/ExpoComm",
+  "proposed_repository_folder": "presentation/pursuit/seed1",
+  "publication_status": "prepared_for_github",
+  "evaluation_points_checked": 303,
+  "episode_std_points_checked": 303,
+  "missing_requested_metric": {
+    "name": "test_red_team_win_mean",
+    "available": false,
+    "reason": "Absent from all three original logs and frozen Pursuit wrappers; Battle defines the underlying red_team_win statistic."
+  },
+  "runs": [
+    {
+      "agents": 25,
+      "map_size": 45,
+      "training_seed": 1,
+      "job_id": "1034268",
+      "checkpoint_step": 5000200,
+      "evaluation_episodes": 100,
+      "test_return_mean": 69.08280102941393,
+      "test_return_std": 11.913720530130135,
+      "gif_single_episode_return": 66.2640009874105,
+      "wandb_url": "https://wandb.ai/lxt3rm-nus/ExpoComm_AdvPursuit45/runs/cs4246-static25-original-b2000-s1-1034268",
+      "evaluation_points": 101,
+      "logged_metric_keys": [
+        "aux_loss",
+        "ep_length_mean",
+        "episode",
+        "episode_length_mean",
+        "epsilon",
+        "grad_norm",
+        "loss",
+        "q_loss",
+        "q_taken_mean",
+        "return_mean",
+        "return_std",
+        "target_mean",
+        "td_error_abs",
+        "test_ep_length_mean",
+        "test_episode_length_mean",
+        "test_return_mean",
+        "test_return_std",
+        "timestep"
+      ],
+      "metrics_path": "results/cs4246_static_seed1_20261029/jobs/1034268/metrics.jsonl",
+      "metrics_sha256": "324341a2d2793cb7e284b6b0d5bc3c3a0d8d9c87a2d761a6a5a48119847d90a9",
+      "config_path": "results/cs4246_static_seed1_20261029/merged_config.json",
+      "config_sha256": "3c749ba5bac59442b218af7dbdc76d550c838f04b55d0b60b8ef5f61c44e514b",
+      "frozen_environment_path": "results/cs4246_static_seed1_20261029/source/src/envs/adv_pursuit_wrappers.py",
+      "frozen_environment_sha256": "f2b83025482ec0c3ef490c484bf55f00a653c2225b6bf85e1b737f11d2aff4a8",
+      "checkpoint_sha256": "263b0a154c7643a09c07e3fcb963fd3b02be5115509fde46796b3929396588af",
+      "gif_training_seed": 1,
+      "gif_reset_seed": 1,
+      "gif_frames": 101,
+      "gif_frame_duration_ms": 100
+    },
+    {
+      "agents": 45,
+      "map_size": 60,
+      "training_seed": 1,
+      "job_id": "1042995",
+      "checkpoint_step": 5000200,
+      "evaluation_episodes": 100,
+      "test_return_mean": 61.27768980199761,
+      "test_return_std": 7.183965475274124,
+      "gif_single_episode_return": 60.542223124371645,
+      "wandb_url": "https://wandb.ai/lxt3rm-nus/ExpoComm_AdvPursuit60/runs/cs4246-static45-original-b2000-s1-1042995",
+      "evaluation_points": 101,
+      "logged_metric_keys": [
+        "aux_loss",
+        "ep_length_mean",
+        "episode",
+        "episode_length_mean",
+        "epsilon",
+        "grad_norm",
+        "loss",
+        "q_loss",
+        "q_taken_mean",
+        "return_mean",
+        "return_std",
+        "target_mean",
+        "td_error_abs",
+        "test_ep_length_mean",
+        "test_episode_length_mean",
+        "test_return_mean",
+        "test_return_std",
+        "timestep"
+      ],
+      "metrics_path": "results/cs4246_static45_seed1_20261030/jobs/1042995/metrics.jsonl",
+      "metrics_sha256": "08752128abf08b56f029dbde99aa0ce55b9bbee0fc2983254636c9fd0afedeb5",
+      "config_path": "results/cs4246_static45_seed1_20261030/merged_config.json",
+      "config_sha256": "e4ff3ff376faf29f8c8ac975efa6f5305172f2e5212bbb0b62a9192d99e3e72d",
+      "frozen_environment_path": "results/cs4246_static45_seed1_20261030/source/src/envs/adv_pursuit_wrappers.py",
+      "frozen_environment_sha256": "f2b83025482ec0c3ef490c484bf55f00a653c2225b6bf85e1b737f11d2aff4a8",
+      "checkpoint_sha256": "38de09500790278ea3e5973fc704cca258a15857900988b141e58f6b3c0bddf1",
+      "gif_training_seed": 1,
+      "gif_reset_seed": 1,
+      "gif_frames": 101,
+      "gif_frame_duration_ms": 100
+    },
+    {
+      "agents": 61,
+      "map_size": 70,
+      "training_seed": 1,
+      "job_id": "1043000",
+      "checkpoint_step": 5000200,
+      "evaluation_episodes": 100,
+      "test_return_mean": 69.16524693228182,
+      "test_return_std": 6.138991672321774,
+      "gif_single_episode_return": 63.18360749888617,
+      "wandb_url": "https://wandb.ai/lxt3rm-nus/ExpoComm_AdvPursuit70/runs/cs4246-static61-original-b2000-s1-1043000",
+      "evaluation_points": 101,
+      "logged_metric_keys": [
+        "aux_loss",
+        "ep_length_mean",
+        "episode",
+        "episode_length_mean",
+        "epsilon",
+        "grad_norm",
+        "loss",
+        "q_loss",
+        "q_taken_mean",
+        "return_mean",
+        "return_std",
+        "target_mean",
+        "td_error_abs",
+        "test_ep_length_mean",
+        "test_episode_length_mean",
+        "test_return_mean",
+        "test_return_std",
+        "timestep"
+      ],
+      "metrics_path": "results/cs4246_static61_seed1_20261030/jobs/1043000/metrics.jsonl",
+      "metrics_sha256": "88c52f609f37301ee0781bad09cb16f7b5763735c75aae128e5fa67e4d6f8d38",
+      "config_path": "results/cs4246_static61_seed1_20261030/merged_config.json",
+      "config_sha256": "319eef7df8753a13af626f16751cdda658b3cd9c4e467e2ecef3b12437d09a3f",
+      "frozen_environment_path": "results/cs4246_static61_seed1_20261030/source/src/envs/adv_pursuit_wrappers.py",
+      "frozen_environment_sha256": "f2b83025482ec0c3ef490c484bf55f00a653c2225b6bf85e1b737f11d2aff4a8",
+      "checkpoint_sha256": "5c3e0f4e8f0fc1b6115d1e8d3e749987521e5d5aaa0896ea3e8d32d35e432b7b",
+      "gif_training_seed": 1,
+      "gif_reset_seed": 1,
+      "gif_frames": 101,
+      "gif_frame_duration_ms": 100
+    }
+  ],
+  "files": {
+    "data/agents_25_seed1_eval.csv": {
+      "bytes": 4473,
+      "sha256": "9bb73c25d9c66df733967c9a3ab460aa9cccddc79d02a56409ea77bc463bb30e",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_25_seed1_eval.csv",
+          "sha256": "9bb73c25d9c66df733967c9a3ab460aa9cccddc79d02a56409ea77bc463bb30e"
+        }
+      ],
+      "description": "101 scheduled evaluations; mean and episode standard deviation, exactly matched to the original log."
+    },
+    "gifs/agents_25_seed1_final.gif": {
+      "bytes": 1773763,
+      "sha256": "33bc0d668b0d9deb7aea2b5e488dda6a616e13e46ae9f94831bef38ec09cac74",
+      "source_files": [
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/agents_25_seed1_final.gif",
+          "sha256": "33bc0d668b0d9deb7aea2b5e488dda6a616e13e46ae9f94831bef38ec09cac74"
+        }
+      ],
+      "description": "Unchanged native animation: first fixed greedy episode, reset seed 1, final training checkpoint."
+    },
+    "storyboards/agents_25_seed1_storyboard.png": {
+      "bytes": 33006,
+      "sha256": "f64d4710cdd6f72dccc24d8605f3e61a8cc24524eb0fe27b3a8e6562604bc4eb",
+      "source_files": [
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/analysis/agents_25_storyboard.png",
+          "sha256": "f64d4710cdd6f72dccc24d8605f3e61a8cc24524eb0fe27b3a8e6562604bc4eb"
+        }
+      ],
+      "description": "Unchanged native storyboard of the same final-policy episode at simulation steps 0, 100, 200."
+    },
+    "data/agents_45_seed1_eval.csv": {
+      "bytes": 4324,
+      "sha256": "f9516e844374d47fd7375681e7d892096c5d0a72c7fb14ae88e8a2ee39e400b7",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_45_seed1_eval.csv",
+          "sha256": "f9516e844374d47fd7375681e7d892096c5d0a72c7fb14ae88e8a2ee39e400b7"
+        }
+      ],
+      "description": "101 scheduled evaluations; mean and episode standard deviation, exactly matched to the original log."
+    },
+    "gifs/agents_45_seed1_final.gif": {
+      "bytes": 1933373,
+      "sha256": "fc530877867acb9dd4484a2aac6be6053ac35f2ccd4bf5a1b688c56013c11866",
+      "source_files": [
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/agents_45_seed1_final.gif",
+          "sha256": "fc530877867acb9dd4484a2aac6be6053ac35f2ccd4bf5a1b688c56013c11866"
+        }
+      ],
+      "description": "Unchanged native animation: first fixed greedy episode, reset seed 1, final training checkpoint."
+    },
+    "storyboards/agents_45_seed1_storyboard.png": {
+      "bytes": 37080,
+      "sha256": "f348174cbaef6dfb6c29a0ab209af4c2634825d701443e9190f787276bc69a0c",
+      "source_files": [
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/analysis/agents_45_storyboard.png",
+          "sha256": "f348174cbaef6dfb6c29a0ab209af4c2634825d701443e9190f787276bc69a0c"
+        }
+      ],
+      "description": "Unchanged native storyboard of the same final-policy episode at simulation steps 0, 100, 200."
+    },
+    "data/agents_61_seed1_eval.csv": {
+      "bytes": 4327,
+      "sha256": "dc1bff537ef8f13a1466cba5d93c9e782f56693287ebd8125f9bec943626425c",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_61_seed1_eval.csv",
+          "sha256": "dc1bff537ef8f13a1466cba5d93c9e782f56693287ebd8125f9bec943626425c"
+        }
+      ],
+      "description": "101 scheduled evaluations; mean and episode standard deviation, exactly matched to the original log."
+    },
+    "gifs/agents_61_seed1_final.gif": {
+      "bytes": 2041884,
+      "sha256": "f88bc5017c0b4fe4a7d233d6b82a145d36fa37c026789b5cfc3c46581abb2fbe",
+      "source_files": [
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/agents_61_seed1_final.gif",
+          "sha256": "f88bc5017c0b4fe4a7d233d6b82a145d36fa37c026789b5cfc3c46581abb2fbe"
+        }
+      ],
+      "description": "Unchanged native animation: first fixed greedy episode, reset seed 1, final training checkpoint."
+    },
+    "storyboards/agents_61_seed1_storyboard.png": {
+      "bytes": 39137,
+      "sha256": "ee4e2e3c1f80ed3638d5470ecd7ec8f443049b22a1183d9b420ef90e48f1cac6",
+      "source_files": [
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/analysis/agents_61_storyboard.png",
+          "sha256": "ee4e2e3c1f80ed3638d5470ecd7ec8f443049b22a1183d9b420ef90e48f1cac6"
+        }
+      ],
+      "description": "Unchanged native storyboard of the same final-policy episode at simulation steps 0, 100, 200."
+    },
+    "figures/test_return_mean_seed1.png": {
+      "bytes": 391717,
+      "sha256": "77c2b10715fbc72686292e0df1167e663828b2cf9ea203cfbb9c9dd18353ffa0",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_25_seed1_eval.csv",
+          "sha256": "9bb73c25d9c66df733967c9a3ab460aa9cccddc79d02a56409ea77bc463bb30e"
+        },
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_45_seed1_eval.csv",
+          "sha256": "f9516e844374d47fd7375681e7d892096c5d0a72c7fb14ae88e8a2ee39e400b7"
+        },
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_61_seed1_eval.csv",
+          "sha256": "dc1bff537ef8f13a1466cba5d93c9e782f56693287ebd8125f9bec943626425c"
+        }
+      ],
+      "description": "New three-panel plot of only the three seed 1 trajectories, with episode SD; no smoothing or reference curves."
+    },
+    "figures/test_return_mean_seed1.pdf": {
+      "bytes": 32274,
+      "sha256": "03464e41c3f4ddb8d4ea88ae6b5ed3493b3320380a2e9267f2fda3e2c711660e",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_25_seed1_eval.csv",
+          "sha256": "9bb73c25d9c66df733967c9a3ab460aa9cccddc79d02a56409ea77bc463bb30e"
+        },
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_45_seed1_eval.csv",
+          "sha256": "f9516e844374d47fd7375681e7d892096c5d0a72c7fb14ae88e8a2ee39e400b7"
+        },
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_61_seed1_eval.csv",
+          "sha256": "dc1bff537ef8f13a1466cba5d93c9e782f56693287ebd8125f9bec943626425c"
+        }
+      ],
+      "description": "New three-panel plot of only the three seed 1 trajectories, with episode SD; no smoothing or reference curves."
+    },
+    "figures/test_return_mean_seed1.svg": {
+      "bytes": 45282,
+      "sha256": "b3f6afa1be35850a9c04764e757da326201d8dc8d16e483c819085a96ffd73f7",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_25_seed1_eval.csv",
+          "sha256": "9bb73c25d9c66df733967c9a3ab460aa9cccddc79d02a56409ea77bc463bb30e"
+        },
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_45_seed1_eval.csv",
+          "sha256": "f9516e844374d47fd7375681e7d892096c5d0a72c7fb14ae88e8a2ee39e400b7"
+        },
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/agents_61_seed1_eval.csv",
+          "sha256": "dc1bff537ef8f13a1466cba5d93c9e782f56693287ebd8125f9bec943626425c"
+        }
+      ],
+      "description": "New three-panel plot of only the three seed 1 trajectories, with episode SD; no smoothing or reference curves."
+    },
+    "figures/behaviour_seed1.png": {
+      "bytes": 169028,
+      "sha256": "2e36df6c9dc278456a8da0ad9ba6f1c7b961ad70fcf87f441e1fc11f820837f4",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/figures/fig2_behaviour.png",
+          "sha256": "2e36df6c9dc278456a8da0ad9ba6f1c7b961ad70fcf87f441e1fc11f820837f4"
+        }
+      ],
+      "description": "Unchanged figure from the final seed 1 report: boundary tagging and matched initial/final seed 1 probes."
+    },
+    "figures/behaviour_seed1.pdf": {
+      "bytes": 36023,
+      "sha256": "130bee041cd9ebfd08212bb8d8279128fb3313df188158f6095f13b1c99a3872",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/figures/fig2_behaviour.pdf",
+          "sha256": "130bee041cd9ebfd08212bb8d8279128fb3313df188158f6095f13b1c99a3872"
+        }
+      ],
+      "description": "Unchanged figure from the final seed 1 report: boundary tagging and matched initial/final seed 1 probes."
+    },
+    "figures/behaviour_seed1.svg": {
+      "bytes": 50656,
+      "sha256": "175f8c824fc45aa2840cb789c27c7a6d7de1c0390082167b51ce8f897d2b3c81",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/figures/fig2_behaviour.svg",
+          "sha256": "175f8c824fc45aa2840cb789c27c7a6d7de1c0390082167b51ce8f897d2b3c81"
+        }
+      ],
+      "description": "Unchanged figure from the final seed 1 report: boundary tagging and matched initial/final seed 1 probes."
+    },
+    "data/seed1_behaviour_metrics.json": {
+      "bytes": 3710,
+      "sha256": "6f6c2c7131177ee75669abc69bc08d0f886da725f229e792581693ad3f8d985e",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/tag_reward_analysis.json",
+          "sha256": "6f6c2c7131177ee75669abc69bc08d0f886da725f229e792581693ad3f8d985e"
+        }
+      ],
+      "description": "First fixed seed 1 probe per size; tag events inferred from reward and action counts, not wins or unique captures."
+    },
+    "data/seed1_run_summary.csv": {
+      "bytes": 684,
+      "sha256": "48e2ecafe96bca1496bdb8f847cf0f0cf302c85928bc1bf58c5441490345f0b5",
+      "source_files": [
+        {
+          "path": "reports/seed1_report_neurips_20261105/data/numbers.json",
+          "sha256": "e89b753fe21288aeaef7cc6d3d3435177dcdf04140f485270da8461e35e284ec"
+        },
+        {
+          "path": "results/cs4246_seed1_checkpoint_visualizations_20261103/manifest.json",
+          "sha256": "a134d0b227220850545aa81bbad211357dcb09498956ad79b1dd4a4fa9179046"
+        }
+      ],
+      "description": "Final benchmark means and SD, separately labeled illustrative episode returns, and run links."
+    },
+    "README.txt": {
+      "bytes": 1700,
+      "sha256": "9de81d872d32cc9402134e72346b38592d510f3a12f7bec9d309a207d67f903d",
+      "source_bundle_files": [],
+      "description": "Brief file guide, replot instructions and metric notes."
+    },
+    "data/seed1_evaluations.csv": {
+      "bytes": 16688,
+      "sha256": "9632860fee05a53c32c94964812b42cb2b80bfcfbce10295b4504ef7648112d0",
+      "source_bundle_files": [
+        {
+          "path": "data/agents_25_seed1_eval.csv",
+          "sha256": "9bb73c25d9c66df733967c9a3ab460aa9cccddc79d02a56409ea77bc463bb30e"
+        },
+        {
+          "path": "data/agents_45_seed1_eval.csv",
+          "sha256": "f9516e844374d47fd7375681e7d892096c5d0a72c7fb14ae88e8a2ee39e400b7"
+        },
+        {
+          "path": "data/agents_61_seed1_eval.csv",
+          "sha256": "dc1bff537ef8f13a1466cba5d93c9e782f56693287ebd8125f9bec943626425c"
+        }
+      ],
+      "description": "Combined evaluation data: 303 points, with team/map/seed and 100-episode means and SD."
+    },
+    "data/seed1_behaviour_metrics.csv": {
+      "bytes": 804,
+      "sha256": "5861cf0cc5906f9f43e1df0132f13874706566a1e546f08d7f9cff01ebdf58e5",
+      "source_bundle_files": [
+        {
+          "path": "data/seed1_behaviour_metrics.json",
+          "sha256": "6f6c2c7131177ee75669abc69bc08d0f886da725f229e792581693ad3f8d985e"
+        }
+      ],
+      "description": "Six initial/final probe rows with returns, tag counts and percentages."
+    },
+    "replot.py": {
+      "bytes": 5624,
+      "sha256": "8842921e444febc6e064dcea3eb95be4ef40f39bac37ab189fc4f229c8ff8780",
+      "source_bundle_files": [
+        {
+          "path": "data/seed1_evaluations.csv",
+          "sha256": "9632860fee05a53c32c94964812b42cb2b80bfcfbce10295b4504ef7648112d0"
+        },
+        {
+          "path": "data/seed1_behaviour_metrics.csv",
+          "sha256": "5861cf0cc5906f9f43e1df0132f13874706566a1e546f08d7f9cff01ebdf58e5"
+        }
+      ],
+      "description": "Standalone plotting script with custom styles and colours."
+    }
+  },
+  "manifest_note": "This file is also part of the bundle; it does not hash itself.",
+  "bundle_revision": 2,
+  "behaviour_probe_rows": 6,
+  "replot_inputs": [
+    "data/seed1_evaluations.csv",
+    "data/seed1_behaviour_metrics.csv"
+  ],
+  "initial_builder_sha256": "09dc494182e31806173e747844ce7015a56a78f672ba19a197a4809ed24214f1"
+}

@@ -1,0 +1,26 @@
+# Parent directory containing the numbered training checkpoints.
+checkpoint_path: "/home/b/bach66/ExpoComm/work_dirs/ExpoComm_Battle35/iql_ExpoComm_one_peer_n7/ExpoComm_Battle35_s0/20261012_232152/models"
+load_step: 5008875
+evaluate: True
+render: False
+save_model: False
+save_replay: False
+test_nepisode: 1
+test_greedy: True
+runner: "episode"
+batch_size_run: 1
+buffer_size: 1
+use_cuda: False
+
+# Record one episode without opening a graphical window.
+record_video: True
+video_fps: 10
+video_path: "/home/b/bach66/ExpoComm/work_dirs/ExpoComm_Battle35/iql_ExpoComm_one_peer_n7/ExpoComm_Battle35_s0/20261012_232152/videos/battle35_5008875.gif"
+
+exp_name: ExpoComm_Battle35_eval
+run_name: ExpoComm_Battle35_eval_5008875
+seed: 0
+
+env_args:
+  map_size: 35 # 42 learned red agents versus 42 pretrained blue agents.
+  pretrained_ckpt: "battle.pt"

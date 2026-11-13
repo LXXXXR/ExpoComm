@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: PettingZoo
+Version: 1.12.0
+Summary: Gym for multi-agent reinforcement learning
+Home-page: https://github.com/PettingZoo-Team/PettingZoo
+Author: PettingZoo Team
+Author-email: justinkterry@gmail.com
+Keywords: Reinforcement Learning,game,RL,AI,gym
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6, <3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.18.0
+Requires-Dist: gym>=0.18.0
+Provides-Extra: all
+Requires-Dist: multi-agent-ale-py==0.1.11; extra == "all"
+Requires-Dist: pygame==2.0.0; extra == "all"
+Requires-Dist: python-chess==0.31.4; extra == "all"
+Requires-Dist: rlcard==1.0.4; extra == "all"
+Requires-Dist: hanabi-learning-environment==0.0.1; extra == "all"
+Requires-Dist: pymunk==6.2.0; extra == "all"
+Requires-Dist: magent==0.1.14; extra == "all"
+Requires-Dist: pyglet>=1.4.0; extra == "all"
+Requires-Dist: box2d-py==2.3.5; extra == "all"
+Requires-Dist: scipy>=1.4.1; extra == "all"
+Requires-Dist: pillow>=8.0.1; extra == "all"
+Provides-Extra: atari
+Requires-Dist: multi-agent-ale-py==0.1.11; extra == "atari"
+Requires-Dist: pygame==2.0.0; extra == "atari"
+Provides-Extra: butterfly
+Requires-Dist: pygame==2.0.0; extra == "butterfly"
+Requires-Dist: pymunk==6.2.0; extra == "butterfly"
+Provides-Extra: classic
+Requires-Dist: python-chess==0.31.4; extra == "classic"
+Requires-Dist: rlcard==1.0.4; extra == "classic"
+Requires-Dist: pygame==2.0.0; extra == "classic"
+Requires-Dist: hanabi-learning-environment==0.0.1; extra == "classic"
+Provides-Extra: magent
+Requires-Dist: magent==0.1.14; extra == "magent"
+Provides-Extra: mpe
+Requires-Dist: pyglet>=1.4.0; extra == "mpe"
+Provides-Extra: other
+Requires-Dist: pillow>=8.0.1; extra == "other"
+Provides-Extra: sisl
+Requires-Dist: pygame==2.0.0; extra == "sisl"
+Requires-Dist: box2d-py==2.3.5; extra == "sisl"
+Requires-Dist: pyglet>=1.4.0; extra == "sisl"
+Requires-Dist: scipy>=1.4.1; extra == "sisl"
+Provides-Extra: tests
+Requires-Dist: pynput; extra == "tests"
+
+<p align="center">
+    <img src="PettingZoo_Text.png" width="500px"/>
+</p>
+
+PettingZoo is a Python library for conducting research in multi-agent reinforcement learning. It's akin to a multi-agent version of OpenAI's Gym library.
+
+Our website, with comprehensive documentation, is [pettingzoo.ml](https://www.pettingzoo.ml)
+
+## Environments and Installation
+
+PettingZoo includes the following families of environments:
+
+* [Atari](https://www.pettingzoo.ml/atari): Multi-player Atari 2600 games (cooperative, competitive and mixed sum)
+* [Butterfly](https://www.pettingzoo.ml/butterfly): Cooperative graphical games developed by us, requiring a high degree of coordination
+* [Classic](https://www.pettingzoo.ml/classic): Classical games including card games, board games, etc.
+* [MAgent](https://www.pettingzoo.ml/magent): Configurable environments with massive numbers of particle agents, originally from https://github.com/geek-ai/MAgent
+* [MPE](https://www.pettingzoo.ml/mpe): A set of simple nongraphical communication tasks, originally from https://github.com/openai/multiagent-particle-envs
+* [SISL](https://www.pettingzoo.ml/sisl): 3 cooperative environments, originally from https://github.com/sisl/MADRL
+
+To install the pettingzoo base library, use `pip install pettingzoo`
+
+This does not include dependencies for all families of environments (there's a massive number, and some can be problematic to install on certain systems). You can install these dependencies for one family like `pip install pettingzoo[atari]` or use `pip install pettingzoo[all]` to install all dependencies.
+
+We support Python 3.6, 3.7, 3.8 and 3.9 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it.
+

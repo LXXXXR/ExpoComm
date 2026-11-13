@@ -1,0 +1,27 @@
+# checkpoint_path is the parent of the numbered checkpoint directories.
+checkpoint_path: "/home/b/bach66/ExpoComm/work_dirs/ExpoComm_Battle25/iql_ExpoComm_one_peer_n6/ExpoComm_Battle25_s0/20261012_220221/models"
+load_step: 5009240
+evaluate: True
+render: False
+save_model: False
+save_replay: False
+test_nepisode: 1
+test_greedy: True
+runner: "episode"
+batch_size_run: 1
+# Evaluation needs only one episode slot, not the training replay buffer.
+buffer_size: 1
+use_cuda: False
+
+# Capture RGB frames to a GIF without opening a graphical window.
+record_video: True
+video_fps: 10
+video_path: "/home/b/bach66/ExpoComm/work_dirs/ExpoComm_Battle25/iql_ExpoComm_one_peer_n6/ExpoComm_Battle25_s0/20261012_220221/videos/battle_5009240.gif"
+
+exp_name: ExpoComm_Battle25_eval
+run_name: ExpoComm_Battle25_eval_5009240
+seed: 0
+
+env_args:
+  map_size: 25 # 20 learned red agents versus 20 pretrained blue agents.
+  pretrained_ckpt: "battle.pt"
